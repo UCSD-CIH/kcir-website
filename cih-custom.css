@@ -150,19 +150,94 @@
 }
 
 /* ===================================
-   DESIGN TOKENS: PADDING
-   Global padding parameters for elements/components
+   DESIGN TOKENS: SPACING UTILITIES
+   Padding and margin utility classes using space-100 to space-400
 =================================== */
 
+/* Deprecated: replace with .py--400 once fully adopted */
 .padding-top-bottom-2rem {
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
 
+/* Padding: Individual sides */
+.pt--100 { padding-top: var(--space-100); }
+.pt--200 { padding-top: var(--space-200); }
+.pt--300 { padding-top: var(--space-300); }
+.pt--400 { padding-top: var(--space-400); }
+
+.pb--100 { padding-bottom: var(--space-100); }
+.pb--200 { padding-bottom: var(--space-200); }
+.pb--300 { padding-bottom: var(--space-300); }
+.pb--400 { padding-bottom: var(--space-400); }
+
+.pl--100 { padding-left: var(--space-100); }
+.pl--200 { padding-left: var(--space-200); }
+.pl--300 { padding-left: var(--space-300); }
+.pl--400 { padding-left: var(--space-400); }
+
+.pr--100 { padding-right: var(--space-100); }
+.pr--200 { padding-right: var(--space-200); }
+.pr--300 { padding-right: var(--space-300); }
+.pr--400 { padding-right: var(--space-400); }
+
+/* Padding: Axes and full */
+.px--100 { padding-left: var(--space-100); padding-right: var(--space-100); }
+.px--200 { padding-left: var(--space-200); padding-right: var(--space-200); }
+.px--300 { padding-left: var(--space-300); padding-right: var(--space-300); }
+.px--400 { padding-left: var(--space-400); padding-right: var(--space-400); }
+
+.py--100 { padding-top: var(--space-100); padding-bottom: var(--space-100); }
+.py--200 { padding-top: var(--space-200); padding-bottom: var(--space-200); }
+.py--300 { padding-top: var(--space-300); padding-bottom: var(--space-300); }
+.py--400 { padding-top: var(--space-400); padding-bottom: var(--space-400); }
+
+.p--100 { padding: var(--space-100); }
+.p--200 { padding: var(--space-200); }
+.p--300 { padding: var(--space-300); }
+.p--400 { padding: var(--space-400); }
+
+/* Margin: Individual sides */
+.mt--100 { margin-top: var(--space-100); }
+.mt--200 { margin-top: var(--space-200); }
+.mt--300 { margin-top: var(--space-300); }
+.mt--400 { margin-top: var(--space-400); }
+
+.mb--100 { margin-bottom: var(--space-100); }
+.mb--200 { margin-bottom: var(--space-200); }
+.mb--300 { margin-bottom: var(--space-300); }
+.mb--400 { margin-bottom: var(--space-400); }
+
+.ml--100 { margin-left: var(--space-100); }
+.ml--200 { margin-left: var(--space-200); }
+.ml--300 { margin-left: var(--space-300); }
+.ml--400 { margin-left: var(--space-400); }
+
+.mr--100 { margin-right: var(--space-100); }
+.mr--200 { margin-right: var(--space-200); }
+.mr--300 { margin-right: var(--space-300); }
+.mr--400 { margin-right: var(--space-400); }
+
+/* Margin: Axes and full */
+.mx--100 { margin-left: var(--space-100); margin-right: var(--space-100); }
+.mx--200 { margin-left: var(--space-200); margin-right: var(--space-200); }
+.mx--300 { margin-left: var(--space-300); margin-right: var(--space-300); }
+.mx--400 { margin-left: var(--space-400); margin-right: var(--space-400); }
+
+.my--100 { margin-top: var(--space-100); margin-bottom: var(--space-100); }
+.my--200 { margin-top: var(--space-200); margin-bottom: var(--space-200); }
+.my--300 { margin-top: var(--space-300); margin-bottom: var(--space-300); }
+.my--400 { margin-top: var(--space-400); margin-bottom: var(--space-400); }
+
+.m--100 { margin: var(--space-100); }
+.m--200 { margin: var(--space-200); }
+.m--300 { margin: var(--space-300); }
+.m--400 { margin: var(--space-400); }
+
 
 /* ===================================
-   DESIGN TOKENS: SPACING
-   Global spacing scale for layout and components
+   DESIGN TOKENS: SPACING SCALE
+   Global spacing variables based on an 8px baseline
 =================================== */
 
 :root {
@@ -335,10 +410,12 @@
   margin-top: auto;
 }
 
- 
 /* ===================================
-   STUDY CARD COMPONENT
+   COMPONENT: CARD SYSTEM
+   Shared layout rules and visual styles for card-based UI blocks
 =================================== */
+ 
+/* Study Card */
 
 .study-card {
   background-color: var(--color-sand-0);
