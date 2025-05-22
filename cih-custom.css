@@ -1,0 +1,407 @@
+/* ===================================
+   EXTERNAL FONT IMPORTS
+   Google Fonts used in typography tokens
+=================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* ===================================
+   DESIGN TOKENS: COLORS
+   Global color variables used across CIH sites & apps
+=================================== */
+
+:root {
+--color-bg-plain: #FFFFFF;
+--color-bg-subdued: #F2F6FA;
+
+--color-bg-navy-0: #DCDFE4;
+--color-bg-navy-15: #DCDFE4;
+--color-bg-navy-85: #394A63;
+--color-bg-navy-100: #182B49;
+
+--color-bg-blue-0: #D9E7F0;
+--color-bg-blue-15: #D9E7F0;
+--color-bg-blue-100: #00629B;
+
+--color-bg-yellow-0: #FFF5CC;
+--color-bg-yellow-20: #FFF5CC;
+--color-bg-yellow-100: #FFCD00;
+
+--color-bg-gold-0: #F4E9D0;
+--color-bg-gold-20: #F4E9D0;
+--color-bg-gold-100: #C69214;
+
+--color-bg-turquoise-0: #CCF4F7;
+--color-bg-turquoise-20: #CCF4F7;
+--color-bg-turquoise-100: #00C6D7;
+
+--color-bg-magenta-0: #F6E0EF;
+--color-bg-magenta-20: #F6E0EF;
+--color-bg-magenta-100: #D462AD;
+
+--color-bg-sand-0: #FDFCFA;
+--color-bg-sand-20: #FDFCFA;
+--color-bg-sand-100: #F5F0E6;
+
+--color-bg-citron-0: #FDFACC;
+--color-bg-citron-20: #FDFACC;
+--color-bg-citron-100: #F3E500;
+
+--color-bg-orange-0: #FEE7CC;
+--color-bg-orange-20: #FEE7CC;
+--color-bg-orange-100: #FC8900;
+
+--color-bg-green-0: #E2EAD8;
+--color-bg-green-20: #E2EAD8;
+--color-bg-green-100: #6E963B;
+
+--color-bg-stone-0: #F0EFEE;
+--color-bg-stone-20: #F0EFEE;
+--color-bg-stone-100: #B6B1A9;
+}
+
+/* ===================================
+   DESIGN TOKENS: SHADES
+   Neutral grayscale values for text, icons, and UI elements
+=================================== */
+:root {
+  --shade-white: #FFFFFF;
+  --shade-lightest: #F7F9FC;
+  --shade-light: #DCDEE0;
+  --shade-medium: #9FA1A3;
+  --shade-dark: #78797A;
+  --shade-darkest: #282929;
+  --shade-black: #000000;
+}
+
+/* ===================================
+   DESIGN TOKENS: TEXT COLORS
+   Used for type, icons, links, and UI labels
+=================================== */
+
+:root {
+  --color-text-paragraph: #282929;
+  --color-text-heading: #182B49;
+  --color-text-subdued: #747678;
+  --color-text-navy: #182B49;
+  --color-text-blue: #00629B;
+  --color-text-link: #00629B;
+  --color-text-success: #3D7F32;
+  --color-text-warning: #906A0E;
+  --color-text-disabled: #D2D4D6;
+  --color-text-danger: #B01030;
+  --color-text-on-light: #182B49;
+  --color-text-on-dark: #FFFFFF;
+}
+
+/* ===================================
+   DESIGN TOKENS: BORDER COLORS
+   Stroke colors for dividers, inputs, panels, and component outlines
+=================================== */
+
+:root {
+  --color-border-plain: #D2D4D6;
+  --color-border-subdued: #E4E5E6;
+  --color-border-disabled: #C8CED2;
+  --color-border-strong: #9E9AA3;
+  --color-border-blue: #00629B;
+  --color-border-navy: #182B49;
+}
+
+/* ===================================
+   TYPOGRAPHY TOKENS
+   Reusable text styles for UI components
+=================================== */
+
+.heading--primary h1 {
+  font-family: 'Teko', sans-serif;
+  font-weight: 600;
+  font-size: 56px;
+  line-height: 56px;
+  letter-spacing: -0.005em;
+  padding-bottom: var(--space-150);
+}
+
+.text--body-large * {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  letter-spacing: -0.005em;
+}
+
+.label--medium-caps {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 0.035em;
+  text-transform: uppercase;
+}
+
+.label--medium-caps * {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 0.035em;
+  text-transform: uppercase;
+}
+
+/* ===================================
+   DESIGN TOKENS: SPACING
+   Global spacing scale for layout and components
+=================================== */
+
+:root {
+  --space-000: 0px;
+  --space-025: 2px;
+  --space-050: 4px;
+  --space-100: 8px;
+  --space-150: 12px;
+  --space-200: 16px;
+  --space-250: 20px;
+  --space-300: 24px;
+  --space-400: 32px;
+  --space-500: 40px;
+  --space-600: 48px;
+  --space-800: 64px;
+  --space-1000: 80px;
+  --space-1200: 96px;
+  --space-1600: 128px;
+}
+
+/* ===================================
+   DESIGN TOKENS: BORDER RADIUS
+   Global corner radius scale for cards, buttons, inputs, etc.
+=================================== */
+
+:root {
+  --radius-000: 0px;
+  --radius-025: 2px;
+  --radius-050: 4px;
+  --radius-100: 8px;
+  --radius-150: 12px;
+  --radius-200: 16px;
+  --radius-300: 32px;
+  --radius-400: 64px;
+  --radius-999: 9999px; /* Full pill/round */
+}
+
+/* ===================================
+   DESIGN TOKENS: BORDER WIDTH
+   Consistent stroke weights for outlines, components, and dividers
+=================================== */
+
+:root {
+  --border-000: 0px;
+  --border-025: 0.5px;
+  --border-050: 1px;
+  --border-100: 2px;
+  --border-200: 4px;
+}
+
+/* ===================================
+   BUTTON COMPONENT
+=================================== */
+
+/* DXPR nested element override */
+.button--primary .az-button-content,
+.button--secondary .az-button-content,
+.button--tertiary .az-button-content {
+  all: unset;
+  display: inline-block;
+  padding: var(--space-200) var(--space-300); /* 16px 24px */
+  text-align: center;
+}
+
+.az-button-content.btn,
+.az-button-content.btn-link {
+  padding: 0 !important;
+}
+
+.button--primary .az-button-content p,
+.button--secondary .az-button-content p,
+.button--tertiary .az-button-content p {
+  all: unset;
+  display: inline;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.035em;
+  text-transform: uppercase;
+  color: inherit;
+}
+
+/* Base */
+.button {
+  padding: 20px 24px;
+  border-radius: var(--radius-100);
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  border: none;
+}
+
+.button:focus {
+  outline: 2px solid var(--color-bg-blue-100);
+  outline-offset: 2px;
+}
+
+.button:disabled,
+.button[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch; /* ensures both buttons take full container width */
+  gap: var(--space-200);
+}
+
+.button {
+  width: 100%;
+  max-width: 320px; /* or whatever you want */
+  margin-left: auto;
+  margin-right: auto;
+  padding: var(--space-200) var(--space-300); /* 16px 24px */
+  text-align: center;
+}
+
+/* Modifier: Primary (Yellow → Turquoise) */
+.button--primary {
+  background-color: var(--color-bg-yellow-100);
+  color: var(--color-text-on-light);
+}
+
+.button--primary:hover {
+  background-color: var(--color-bg-turquoise-100);
+  color: var(--color-text-on-light);
+}
+
+/* Modifier: Secondary (Blue → Navy) */
+.button--secondary {
+  background-color: var(--color-bg-blue-100);
+  color: var(--color-text-on-dark);
+}
+
+.button--secondary:hover {
+  background-color: var(--color-bg-navy-100);
+  color: var(--color-text-on-dark);
+}
+
+/* Modifier: Tertiary (Outline → Fill) */
+.button--tertiary {
+  background-color: var(--color-bg-plain);
+  color: var(--color-bg-blue-100);
+  border: 2px solid var(--color-bg-blue-100);
+}
+
+.button--tertiary:hover {
+  background-color: var(--color-bg-blue-100);
+  color: var(--color-text-on-dark);
+}
+
+.content .az-container > .az-section { padding-top: 100px;padding-bottom: 100px; }
+.content img { border-radius: 20px; }
+.az-icon { margin-bottom: 30px; }
+
+.button-bottom-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.button-bottom-panel .panel-content > div:last-child {
+  text-align: center;
+  margin-top: auto;
+}
+
+ 
+/* ===================================
+   STUDY CARD COMPONENT
+=================================== */
+
+.study-card {
+  background-color: var(--color-sand-0);
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.study-card__panel {
+  background-color: var(--color-sand-20);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.study-card__text {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.study-card__description {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.study-card__contact {
+  font-size: 16px;
+  line-height: 1.4;
+  color: var(--color-navy-85);
+}
+
+.study-card__footer {
+  margin-top: 24px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.study-card__footer .btn {
+  width: 100%;
+  max-width: 200px;
+}
+
+/* ===================================
+   HERO COMPONENT: GRADIENT OVERLAY
+   Reusable full-width section with background image and fade
+=================================== */
+
+.hero--overlay {
+  position: relative;
+  padding: 80px 0;
+  min-height: 800px;
+}
+
+.hero--overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.9) 40%, rgba(255, 255, 255, 0) 100%);
+  z-index: 1;
+  pointer-events: none;
+  display: block;
+}
+
+.hero--overlay > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Override for Bootstrap's .container-fluid inside hero */
+.hero--overlay .container-fluid {
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
