@@ -114,7 +114,36 @@
    Reusable text styles for UI components
 =================================== */
 
-.heading--primary h1 {
+/* Display styles for large visual headlines */
+
+.text--display-large * {
+  font-family: 'Teko', sans-serif;
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 64px;
+  letter-spacing: -0.01em;
+}
+
+.text--display-medium * {
+  font-family: 'Teko', sans-serif;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 48px;
+  letter-spacing: -0.01em;
+}
+
+.text--display-small * {
+  font-family: 'Teko', sans-serif;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 36px;
+  letter-spacing: -0.005em;
+}
+
+/* Semantic heading styles for structured content */
+
+.heading--primary h1,
+.heading--h1 h1 {
   font-family: 'Teko', sans-serif;
   font-weight: 600;
   font-size: 56px;
@@ -122,6 +151,40 @@
   letter-spacing: -0.005em;
   padding-bottom: var(--space-150);
 }
+
+.heading--h2 h2 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 36px;
+  letter-spacing: -0.01em;
+}
+
+.heading--h3 h3 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 26px;
+  letter-spacing: 0;
+}
+
+.heading--h4 h4 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0;
+}
+
+.heading--h5 h5 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0;
+}
+
+/* Body text styles for paragraphs and general content */
 
 .text--body-large * {
   font-family: 'Inter', sans-serif;
@@ -131,13 +194,65 @@
   letter-spacing: -0.005em;
 }
 
-.label--medium-caps {
+.text--body-default * {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0;
+}
+
+.text--body-small * {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0;
+}
+
+.text--body-xsmall * {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.01em;
+}
+
+.label--large-caps * {
   font-family: 'Inter', sans-serif;
   font-weight: 700;
-  font-size: 16px;
-  line-height: 16px;
-  letter-spacing: 0.035em;
+  font-size: 18px;
+  line-height: 18px;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
+}
+
+/* Meta styles for captions and breadcrumbs (small text) */
+
+.text--meta-caption * {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.01em;
+}
+
+.text--meta-breadcrumb * {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.01em;
+}
+
+/* Label styles for UI elements and microtext (bold/caps) */
+
+.label--large * {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+  letter-spacing: 0.03em;
 }
 
 .label--medium-caps * {
@@ -148,6 +263,23 @@
   letter-spacing: 0.035em;
   text-transform: uppercase;
 }
+
+.label--medium * {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 0.035em;
+}
+
+.label--small * {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: 0.03em;
+}
+
 /* ===================================
    DESIGN TOKENS: SPACING SCALE
    Global spacing variables based on an 8px baseline
