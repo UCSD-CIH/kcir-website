@@ -472,22 +472,64 @@ Gradient images, corner rounding, etc... */
   height: auto;
 }
 
-/* Custom corner rounding */
-
-/* Top corners only */
-.corner--rounded-top {
-  border-top-left-radius: 16px !important;
-  border-top-right-radius: 16px !important;
-  border-bottom-left-radius: 0 !important;
-  border-bottom-right-radius: 0 !important;
+/* Image wrapper with gradient overlay and top corners rounded */
+.image-gradient--top-rounded {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  overflow: hidden;
 }
 
-/* Bottom corners only */
-.corner--rounded-bottom {
-  border-top-left-radius: 0 !important;
-  border-top-right-radius: 0 !important;
-  border-bottom-left-radius: 16px !important;
-  border-bottom-right-radius: 16px !important;
+.image-gradient--top-rounded::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.85), rgba(255,255,255,0));
+  pointer-events: none;
+  z-index: 1;
+}
+
+.image-gradient--top-rounded img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Image wrapper with gradient overlay and bottom corners rounded */
+.image-gradient--bottom-rounded {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  overflow: hidden;
+}
+
+.image-gradient--bottom-rounded::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.85), rgba(255,255,255,0));
+  pointer-events: none;
+  z-index: 1;
+}
+
+.image-gradient--bottom-rounded img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 
