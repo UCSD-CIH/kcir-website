@@ -323,13 +323,13 @@
 
 /* Base */
 .button {
-  padding: 20px 24px;
+  padding: var(--space-200) var(--space-300); /* 16px 24px */
   border-radius: var(--radius-100);
-  display: inline-block;
   text-align: center;
   cursor: pointer;
   transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
   border: none;
+  white-space: nowrap;
 }
 
 .button:focus {
@@ -344,20 +344,18 @@
   pointer-events: none;
 }
 
-.button-group {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch; /* ensures both buttons take full container width */
-  gap: var(--space-200);
+.button--inline {
+  display: inline-block;
+  width: auto;
+  white-space: nowrap;
 }
 
-.button {
+.button--fill {
+  display: block;
   width: 100%;
-  max-width: 320px; /* or whatever you want */
+  max-width: 320px;
   margin-left: auto;
   margin-right: auto;
-  padding: var(--space-200) var(--space-300); /* 16px 24px */
-  text-align: center;
 }
 
 /* Modifier: Primary (Yellow → Turquoise) */
@@ -392,28 +390,6 @@
 .button--tertiary:hover {
   background-color: var(--color-bg-blue-100);
   color: var(--color-text-on-dark);
-}
-
-.content .az-container > .az-section { padding-top: 100px;padding-bottom: 100px; }
-.content img { border-radius: 20px; }
-.az-icon { margin-bottom: 30px; }
-
-.button-bottom-panel {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-}
-
-.button-bottom-panel .panel-content > div:last-child {
-  text-align: center;
-  margin-top: auto;
-}
-
-.btn-inline {
-  display: inline-block !important;
-  width: auto !important;
-  white-space: nowrap;
 }
 
 /* ===================================
@@ -530,3 +506,23 @@ Gradient images, etc... */
   padding-left: 1rem;
   padding-right: 1rem;
 }
+
+/* Styles below were possibly added by DXPR defaults or by Juli.
+   They don’t appear to be in active use but may have been helpful in past layouts. */
+/* 
+.content .az-container > .az-section { padding-top: 100px;padding-bottom: 100px; }
+.content img { border-radius: 20px; }
+.az-icon { margin-bottom: 30px; }
+
+.button-bottom-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.button-bottom-panel .panel-content > div:last-child {
+  text-align: center;
+  margin-top: auto;
+}
+ */
