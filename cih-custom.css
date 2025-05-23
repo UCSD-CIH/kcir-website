@@ -535,6 +535,24 @@ Gradient images, corner rounding, etc... */
   height: auto;
 }
 
+/* Text section with top corners rounded */
+.text-block--top-rounded {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  overflow: hidden;
+}
+
+/* Text section with bottom corners rounded */
+.text-block--bottom-rounded {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  overflow: hidden;
+}
+
 
 
 /* ===================================
