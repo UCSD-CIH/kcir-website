@@ -442,7 +442,7 @@
 }
 
 /* CARD SUB-COMPONENT PROPERTIES 
-Gradient images, etc... */
+Gradient images, corner rounding, etc... */
 
 /* For image gradients in cards */
 
@@ -471,6 +471,25 @@ Gradient images, etc... */
   width: 100%;
   height: auto;
 }
+
+/* Custom corner rounding */
+
+/* Top corners only */
+.card--rounded-top {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+/* Bottom corners only */
+.card--rounded-bottom {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
 
 /* ===================================
    HERO COMPONENT: GRADIENT OVERLAY
