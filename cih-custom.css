@@ -410,6 +410,12 @@
   margin-top: auto;
 }
 
+.btn-inline {
+  display: inline-block !important;
+  width: auto !important;
+  white-space: nowrap;
+}
+
 /* ===================================
    COMPONENT: CARD SYSTEM
    Shared layout rules and visual styles for card-based UI blocks
