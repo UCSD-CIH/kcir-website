@@ -161,6 +161,9 @@
 }
 
 /* Padding: Individual sides */
+
+/* pt=top, pb=bottom, pl=left, pt=right, px=left/right, py=top/bottom, p=all */
+
 .pt--100 { padding-top: var(--space-100); }
 .pt--200 { padding-top: var(--space-200); }
 .pt--300 { padding-top: var(--space-300); }
