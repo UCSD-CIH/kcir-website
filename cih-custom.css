@@ -148,96 +148,6 @@
   letter-spacing: 0.035em;
   text-transform: uppercase;
 }
-
-/* ===================================
-   DESIGN TOKENS: SPACING UTILITIES
-   Padding and margin utility classes using space-100 to space-400
-=================================== */
-
-/* Deprecated: replace with .py--400 once fully adopted */
-.padding-top-bottom-2rem {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
-
-/* Padding: Individual sides */
-
-/* pt=top, pb=bottom, pl=left, pt=right, px=left/right, py=top/bottom, p=all */
-
-.pt--100 { padding-top: var(--space-100); }
-.pt--200 { padding-top: var(--space-200); }
-.pt--300 { padding-top: var(--space-300); }
-.pt--400 { padding-top: var(--space-400); }
-
-.pb--100 { padding-bottom: var(--space-100); }
-.pb--200 { padding-bottom: var(--space-200); }
-.pb--300 { padding-bottom: var(--space-300); }
-.pb--400 { padding-bottom: var(--space-400); }
-
-.pl--100 { padding-left: var(--space-100); }
-.pl--200 { padding-left: var(--space-200); }
-.pl--300 { padding-left: var(--space-300); }
-.pl--400 { padding-left: var(--space-400); }
-
-.pr--100 { padding-right: var(--space-100); }
-.pr--200 { padding-right: var(--space-200); }
-.pr--300 { padding-right: var(--space-300); }
-.pr--400 { padding-right: var(--space-400); }
-
-/* Padding: Axes and full */
-.px--100 { padding-left: var(--space-100); padding-right: var(--space-100); }
-.px--200 { padding-left: var(--space-200); padding-right: var(--space-200); }
-.px--300 { padding-left: var(--space-300); padding-right: var(--space-300); }
-.px--400 { padding-left: var(--space-400); padding-right: var(--space-400); }
-
-.py--100 { padding-top: var(--space-100); padding-bottom: var(--space-100); }
-.py--200 { padding-top: var(--space-200); padding-bottom: var(--space-200); }
-.py--300 { padding-top: var(--space-300); padding-bottom: var(--space-300); }
-.py--400 { padding-top: var(--space-400); padding-bottom: var(--space-400); }
-
-.p--100 { padding: var(--space-100); }
-.p--200 { padding: var(--space-200); }
-.p--300 { padding: var(--space-300); }
-.p--400 { padding: var(--space-400); }
-
-/* Margin: Individual sides */
-.mt--100 { margin-top: var(--space-100); }
-.mt--200 { margin-top: var(--space-200); }
-.mt--300 { margin-top: var(--space-300); }
-.mt--400 { margin-top: var(--space-400); }
-
-.mb--100 { margin-bottom: var(--space-100); }
-.mb--200 { margin-bottom: var(--space-200); }
-.mb--300 { margin-bottom: var(--space-300); }
-.mb--400 { margin-bottom: var(--space-400); }
-
-.ml--100 { margin-left: var(--space-100); }
-.ml--200 { margin-left: var(--space-200); }
-.ml--300 { margin-left: var(--space-300); }
-.ml--400 { margin-left: var(--space-400); }
-
-.mr--100 { margin-right: var(--space-100); }
-.mr--200 { margin-right: var(--space-200); }
-.mr--300 { margin-right: var(--space-300); }
-.mr--400 { margin-right: var(--space-400); }
-
-/* Margin: Axes and full */
-.mx--100 { margin-left: var(--space-100); margin-right: var(--space-100); }
-.mx--200 { margin-left: var(--space-200); margin-right: var(--space-200); }
-.mx--300 { margin-left: var(--space-300); margin-right: var(--space-300); }
-.mx--400 { margin-left: var(--space-400); margin-right: var(--space-400); }
-
-.my--100 { margin-top: var(--space-100); margin-bottom: var(--space-100); }
-.my--200 { margin-top: var(--space-200); margin-bottom: var(--space-200); }
-.my--300 { margin-top: var(--space-300); margin-bottom: var(--space-300); }
-.my--400 { margin-top: var(--space-400); margin-bottom: var(--space-400); }
-
-.m--100 { margin: var(--space-100); }
-.m--200 { margin: var(--space-200); }
-.m--300 { margin: var(--space-300); }
-.m--400 { margin: var(--space-400); }
-
-
 /* ===================================
    DESIGN TOKENS: SPACING SCALE
    Global spacing variables based on an 8px baseline
@@ -290,6 +200,197 @@
   --border-100: 2px;
   --border-200: 4px;
 }
+
+/* ===================================
+   DESIGN TOKENS: SPACING UTILITIES
+   Padding and margin utility classes using space-100 to space-400
+=================================== */
+
+/* Deprecated: replace with .py--400 once fully adopted */
+.padding-top-bottom-2rem {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+/* Padding: Individual sides */
+/* pt=top, pb=bottom, pl=left, pt=right */
+
+.pt--000 { padding-top: var(--space-000); }
+.pt--025 { padding-top: var(--space-025); }
+.pt--050 { padding-top: var(--space-050); }
+.pt--100 { padding-top: var(--space-100); }
+.pt--150 { padding-top: var(--space-150); }
+.pt--200 { padding-top: var(--space-200); }
+.pt--250 { padding-top: var(--space-250); }
+.pt--300 { padding-top: var(--space-300); }
+.pt--400 { padding-top: var(--space-400); }
+.pt--500 { padding-top: var(--space-500); }
+.pt--600 { padding-top: var(--space-600); }
+.pt--800 { padding-top: var(--space-800); }
+.pt--1000 { padding-top: var(--space-1000); }
+.pt--1200 { padding-top: var(--space-1200); }
+.pt--1600 { padding-top: var(--space-1600); }
+
+.pb--000 { padding-bottom: var(--space-000); }
+.pb--025 { padding-bottom: var(--space-025); }
+.pb--050 { padding-bottom: var(--space-050); }
+.pb--100 { padding-bottom: var(--space-100); }
+.pb--150 { padding-bottom: var(--space-150); }
+.pb--200 { padding-bottom: var(--space-200); }
+.pb--250 { padding-bottom: var(--space-250); }
+.pb--300 { padding-bottom: var(--space-300); }
+.pb--400 { padding-bottom: var(--space-400); }
+.pb--500 { padding-bottom: var(--space-500); }
+.pb--600 { padding-bottom: var(--space-600); }
+.pb--800 { padding-bottom: var(--space-800); }
+.pb--1000 { padding-bottom: var(--space-1000); }
+.pb--1200 { padding-bottom: var(--space-1200); }
+.pb--1600 { padding-bottom: var(--space-1600); }
+
+.pl--000 { padding-left: var(--space-000); }
+.pl--025 { padding-left: var(--space-025); }
+.pl--050 { padding-left: var(--space-050); }
+.pl--100 { padding-left: var(--space-100); }
+.pl--150 { padding-left: var(--space-150); }
+.pl--200 { padding-left: var(--space-200); }
+.pl--250 { padding-left: var(--space-250); }
+.pl--300 { padding-left: var(--space-300); }
+.pl--400 { padding-left: var(--space-400); }
+.pl--500 { padding-left: var(--space-500); }
+.pl--600 { padding-left: var(--space-600); }
+.pl--800 { padding-left: var(--space-800); }
+.pl--1000 { padding-left: var(--space-1000); }
+.pl--1200 { padding-left: var(--space-1200); }
+.pl--1600 { padding-left: var(--space-1600); }
+
+.pr--000 { padding-right: var(--space-000); }
+.pr--025 { padding-right: var(--space-025); }
+.pr--050 { padding-right: var(--space-050); }
+.pr--100 { padding-right: var(--space-100); }
+.pr--150 { padding-right: var(--space-150); }
+.pr--200 { padding-right: var(--space-200); }
+.pr--250 { padding-right: var(--space-250); }
+.pr--300 { padding-right: var(--space-300); }
+.pr--400 { padding-right: var(--space-400); }
+.pr--500 { padding-right: var(--space-500); }
+.pr--600 { padding-right: var(--space-600); }
+.pr--800 { padding-right: var(--space-800); }
+.pr--1000 { padding-right: var(--space-1000); }
+.pr--1200 { padding-right: var(--space-1200); }
+.pr--1600 { padding-right: var(--space-1600); }
+
+/* Padding: Axes and full */
+/* px=left/right, py=top/bottom, p=all */
+
+.px--000 { padding-left: var(--space-000); padding-right: var(--space-000); }
+.px--025 { padding-left: var(--space-025); padding-right: var(--space-025); }
+.px--050 { padding-left: var(--space-050); padding-right: var(--space-050); }
+.px--150 { padding-left: var(--space-150); padding-right: var(--space-150); }
+.px--250 { padding-left: var(--space-250); padding-right: var(--space-250); }
+.px--500 { padding-left: var(--space-500); padding-right: var(--space-500); }
+.px--600 { padding-left: var(--space-600); padding-right: var(--space-600); }
+.px--800 { padding-left: var(--space-800); padding-right: var(--space-800); }
+.px--1000 { padding-left: var(--space-1000); padding-right: var(--space-1000); }
+.px--1200 { padding-left: var(--space-1200); padding-right: var(--space-1200); }
+.px--1600 { padding-left: var(--space-1600); padding-right: var(--space-1600); }
+
+.py--000 { padding-top: var(--space-000); padding-bottom: var(--space-000); }
+.py--025 { padding-top: var(--space-025); padding-bottom: var(--space-025); }
+.py--050 { padding-top: var(--space-050); padding-bottom: var(--space-050); }
+.py--150 { padding-top: var(--space-150); padding-bottom: var(--space-150); }
+.py--250 { padding-top: var(--space-250); padding-bottom: var(--space-250); }
+.py--500 { padding-top: var(--space-500); padding-bottom: var(--space-500); }
+.py--600 { padding-top: var(--space-600); padding-bottom: var(--space-600); }
+.py--800 { padding-top: var(--space-800); padding-bottom: var(--space-800); }
+.py--1000 { padding-top: var(--space-1000); padding-bottom: var(--space-1000); }
+.py--1200 { padding-top: var(--space-1200); padding-bottom: var(--space-1200); }
+.py--1600 { padding-top: var(--space-1600); padding-bottom: var(--space-1600); }
+
+.p--000 { padding: var(--space-000); }
+.p--025 { padding: var(--space-025); }
+.p--050 { padding: var(--space-050); }
+.p--150 { padding: var(--space-150); }
+.p--250 { padding: var(--space-250); }
+.p--500 { padding: var(--space-500); }
+.p--600 { padding: var(--space-600); }
+.p--800 { padding: var(--space-800); }
+.p--1000 { padding: var(--space-1000); }
+.p--1200 { padding: var(--space-1200); }
+.p--1600 { padding: var(--space-1600); }
+
+/* Margin: Individual sides */
+/* mt=top, mb=bottom, ml=left, mt=right */
+
+.mx--000 { margin-left: var(--space-000); margin-right: var(--space-000); }
+.mx--025 { margin-left: var(--space-025); margin-right: var(--space-025); }
+.mx--050 { margin-left: var(--space-050); margin-right: var(--space-050); }
+.mx--150 { margin-left: var(--space-150); margin-right: var(--space-150); }
+.mx--250 { margin-left: var(--space-250); margin-right: var(--space-250); }
+.mx--500 { margin-left: var(--space-500); margin-right: var(--space-500); }
+.mx--600 { margin-left: var(--space-600); margin-right: var(--space-600); }
+.mx--800 { margin-left: var(--space-800); margin-right: var(--space-800); }
+.mx--1000 { margin-left: var(--space-1000); margin-right: var(--space-1000); }
+.mx--1200 { margin-left: var(--space-1200); margin-right: var(--space-1200); }
+.mx--1600 { margin-left: var(--space-1600); margin-right: var(--space-1600); }
+
+.my--000 { margin-top: var(--space-000); margin-bottom: var(--space-000); }
+.my--025 { margin-top: var(--space-025); margin-bottom: var(--space-025); }
+.my--050 { margin-top: var(--space-050); margin-bottom: var(--space-050); }
+.my--150 { margin-top: var(--space-150); margin-bottom: var(--space-150); }
+.my--250 { margin-top: var(--space-250); margin-bottom: var(--space-250); }
+.my--500 { margin-top: var(--space-500); margin-bottom: var(--space-500); }
+.my--600 { margin-top: var(--space-600); margin-bottom: var(--space-600); }
+.my--800 { margin-top: var(--space-800); margin-bottom: var(--space-800); }
+.my--1000 { margin-top: var(--space-1000); margin-bottom: var(--space-1000); }
+.my--1200 { margin-top: var(--space-1200); margin-bottom: var(--space-1200); }
+.my--1600 { margin-top: var(--space-1600); margin-bottom: var(--space-1600); }
+
+.m--000 { margin: var(--space-000); }
+.m--025 { margin: var(--space-025); }
+.m--050 { margin: var(--space-050); }
+.m--150 { margin: var(--space-150); }
+.m--250 { margin: var(--space-250); }
+.m--500 { margin: var(--space-500); }
+.m--600 { margin: var(--space-600); }
+.m--800 { margin: var(--space-800); }
+.m--1000 { margin: var(--space-1000); }
+.m--1200 { margin: var(--space-1200); }
+.m--1600 { margin: var(--space-1600); }
+
+/* Margin: Axes and full */
+/* mx=left/right, my=tom/bottom, m=all */
+
+.mt--000 { margin-top: var(--space-000); }
+.mt--025 { margin-top: var(--space-025); }
+.mt--050 { margin-top: var(--space-050); }
+.mt--100 { margin-top: var(--space-100); }
+.mt--150 { margin-top: var(--space-150); }
+.mt--200 { margin-top: var(--space-200); }
+.mt--250 { margin-top: var(--space-250); }
+.mt--300 { margin-top: var(--space-300); }
+.mt--400 { margin-top: var(--space-400); }
+.mt--500 { margin-top: var(--space-500); }
+.mt--600 { margin-top: var(--space-600); }
+.mt--800 { margin-top: var(--space-800); }
+.mt--1000 { margin-top: var(--space-1000); }
+.mt--1200 { margin-top: var(--space-1200); }
+.mt--1600 { margin-top: var(--space-1600); }
+
+.mb--000 { margin-bottom: var(--space-000); }
+.mb--025 { margin-bottom: var(--space-025); }
+.mb--050 { margin-bottom: var(--space-050); }
+.mb--100 { margin-bottom: var(--space-100); }
+.mb--150 { margin-bottom: var(--space-150); }
+.mb--200 { margin-bottom: var(--space-200); }
+.mb--250 { margin-bottom: var(--space-250); }
+.mb--300 { margin-bottom: var(--space-300); }
+.mb--400 { margin-bottom: var(--space-400); }
+.mb--500 { margin-bottom: var(--space-500); }
+.mb--600 { margin-bottom: var(--space-600); }
+.mb--800 { margin-bottom: var(--space-800); }
+.mb--1000 { margin-bottom: var(--space-1000); }
+.mb--1200 { margin-bottom: var(--space-1200); }
+.mb--1600 { margin-bottom: var(--space-1600); }
 
 /* ===================================
    BUTTON COMPONENT
