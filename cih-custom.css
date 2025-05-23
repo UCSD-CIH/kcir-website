@@ -475,20 +475,21 @@ Gradient images, corner rounding, etc... */
 /* Custom corner rounding */
 
 /* Top corners only */
-.card--rounded-top {
-  border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
+.corner--rounded-top {
+  border-top-left-radius: 1rem !important;
+  border-top-right-radius: 1rem !important;
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
 }
 
 /* Bottom corners only */
-.card--rounded-bottom {
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  border-bottom-left-radius: 1rem;
-  border-bottom-right-radius: 1rem;
+.corner--rounded-bottom {
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+  border-bottom-left-radius: 1rem !important;
+  border-bottom-right-radius: 1rem !important;
 }
+
 
 
 /* ===================================
