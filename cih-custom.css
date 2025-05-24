@@ -143,7 +143,9 @@
 /* Semantic heading styles for structured content */
 
 .heading--primary h1,
-.heading--h1 h1 {
+.heading--h1 h1,
+.heading--h1 
+ {
   font-family: 'Teko', sans-serif;
   font-weight: 600;
   font-size: 56px;
@@ -152,7 +154,9 @@
   padding-bottom: var(--space-150);
 }
 
-.heading--h2 h2 {
+.heading--h2,
+.heading--h2 h2
+ {
   font-family: 'Inter', sans-serif;
   font-weight: 700;
   font-size: 32px;
@@ -160,6 +164,7 @@
   letter-spacing: -0.01em;
 }
 
+.heading--h3,
 .heading--h3 h3 {
   font-family: 'Inter', sans-serif;
   font-weight: 700;
@@ -168,6 +173,7 @@
   letter-spacing: 0;
 }
 
+.heading--h4,
 .heading--h4 h4 {
   font-family: 'Inter', sans-serif;
   font-weight: 600;
@@ -176,6 +182,7 @@
   letter-spacing: 0;
 }
 
+.heading--h5,
 .heading--h5 h5 {
   font-family: 'Inter', sans-serif;
   font-weight: 700;
