@@ -335,7 +335,7 @@
 
 /* ===================================
    DESIGN TOKENS: SPACING UTILITIES
-   Padding and margin utility classes using space-100 to space-400
+   Padding, margin and gap utility classes based on the spacing scale
 =================================== */
 
 /* Deprecated: replace with .py--400 once fully adopted */
@@ -523,6 +523,24 @@
 .mb--1000 { margin-bottom: var(--space-1000); }
 .mb--1200 { margin-bottom: var(--space-1200); }
 .mb--1600 { margin-bottom: var(--space-1600); }
+
+/* Gap: flex and grid spacing utilities */
+
+.gap--000 { gap: var(--space-000); }
+.gap--025 { gap: var(--space-025); }
+.gap--050 { gap: var(--space-050); }
+.gap--100 { gap: var(--space-100); }
+.gap--150 { gap: var(--space-150); }
+.gap--200 { gap: var(--space-200); }
+.gap--250 { gap: var(--space-250); }
+.gap--300 { gap: var(--space-300); }
+.gap--400 { gap: var(--space-400); }
+.gap--500 { gap: var(--space-500); }
+.gap--600 { gap: var(--space-600); }
+.gap--800 { gap: var(--space-800); }
+.gap--1000 { gap: var(--space-1000); }
+.gap--1200 { gap: var(--space-1200); }
+.gap--1600 { gap: var(--space-1600); }
 
 /* ===================================
    BUTTON COMPONENT
