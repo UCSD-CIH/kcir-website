@@ -583,7 +583,6 @@
   cursor: pointer;
   transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
   border: none;
-  white-space: nowrap;
 }
 
 .button:focus {
@@ -604,12 +603,17 @@
   white-space: nowrap;
 }
 
-.button--fill {
+.button--centered {
   display: block;
   width: 100%;
   max-width: 320px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.button--stretch {
+  display: block;
+  width: 100%;
 }
 
 /* Modifier: Primary (Yellow → Turquoise) */
@@ -804,8 +808,6 @@ Gradient images, corner rounding, etc... */
   overflow: hidden;
 }
 
-
-
 /* ===================================
    HERO COMPONENT: GRADIENT OVERLAY
    Reusable full-width section with background image and fade
@@ -834,11 +836,9 @@ Gradient images, corner rounding, etc... */
 
 /* Override for Bootstrap's .container-fluid inside hero */
 .hero--overlay .container-fluid {
-  max-width: 1140px;
+  max-width: 1184px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
 }
 
 /* Styles below were possibly added by DXPR defaults or by Juli.
