@@ -816,6 +816,17 @@ Gradient images, corner rounding, etc... */
 }
 
 /* ===================================
+   COMPONENT: DIVIDER
+   Horizontal rules for section separation
+=================================== */
+
+.divider {
+  border: none;
+  border-top: var(--border-050) solid var(--color-border-subdued);
+  margin: var(--space-600) 0;
+}
+
+/* ===================================
    HERO COMPONENT: GRADIENT OVERLAY
    Reusable full-width section with background image and fade
 =================================== */
