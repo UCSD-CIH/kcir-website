@@ -916,6 +916,11 @@ Gradient images, corner rounding, etc... */
 
 /* ===================================
    FEATURE CARD BASE STYLES
+   DXPR-friendly setup:
+   - Use .banner for top or bottom images (inline, not background)
+   - Avoid padding adjustments in editor; spacing is handled by CSS
+   - Use .icon for top visuals, .banner for background-like visuals
+   - Suggested order: icon → heading → text → button → banner
 =================================== */
 
 .feature-card {
@@ -925,6 +930,7 @@ Gradient images, corner rounding, etc... */
   justify-content: space-between;
   overflow: hidden;
   border-radius: var(--radius-200);
+  min-height: 320px; /* Prevent collapsed cards */
 }
 
 .feature-card.horiz {
@@ -936,17 +942,32 @@ Gradient images, corner rounding, etc... */
   display: flex;
   flex-direction: column;
   flex: 1;
-  gap: var(--space-300);
+  text-align: left; /* Ensure consistent alignment across children */
 }
 
-/* Banner image inside feature-card */
+/* Add spacing between all non-banner children */
+.feature-card .card-body > *:not(:last-child):not(.banner) {
+  margin-bottom: var(--space-300);
+}
+
+/* If banner is the first child, remove top padding */
+.feature-card .card-body > .banner:first-child {
+  margin-top: calc(-1 * var(--space-500));
+}
+
+/* If banner is the last child, remove bottom padding */
+.feature-card .card-body > .banner:last-child {
+  margin-bottom: calc(-1 * var(--space-500));
+}
+
+/* Banner image inside feature-card, placed as inline image */
 .feature-card .banner {
   position: relative;
   display: block;
   width: 100%;
-  margin: 0 calc(-1 * var(--space-500));
   overflow: hidden;
-  border-radius: var(--radius-200);
+  margin: 0;
+  border-radius: 0;
 }
 
 .feature-card .banner img {
@@ -978,11 +999,6 @@ Gradient images, corner rounding, etc... */
     var(--feature-gradient-mid, transparent) 30%,
     var(--feature-gradient-end, transparent) 100%
   );
-}
-
-/* Adds bottom padding to card body only if no .banner image is present */
-.feature-card:not(:has(.banner)) .card-body {
-  padding-bottom: var(--space-500);
 }
 
 .feature-card .icon {
