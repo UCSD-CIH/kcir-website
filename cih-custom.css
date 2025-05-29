@@ -885,7 +885,7 @@ Gradient images, corner rounding, etc... */
   left: 0;
   height: 100%;
   width: 100%;
-  background: linear-gradient(to bottom, rgba(255,255,255,0.85), rgba(255,255,255,0));
+  background: linear-gradient(to top, rgba(255,255,255,0.85), rgba(255,255,255,0));
   pointer-events: none;
   z-index: 1;
 }
