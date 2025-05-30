@@ -84,67 +84,67 @@
 
 .bg-navy {
   --feature-gradient-start: rgba(220, 223, 228, 1);
-  --feature-gradient-mid: rgba(220, 223, 228, 0.95);
+  --feature-gradient-mid: rgba(220, 223, 228, 0.4);
   --feature-gradient-end: rgba(220, 223, 228, 0);
 }
 
 .bg-blue {
   --feature-gradient-start: rgba(217, 231, 240, 1);
-  --feature-gradient-mid: rgba(217, 231, 240, 0.95);
+  --feature-gradient-mid: rgba(217, 231, 240, 0.4);
   --feature-gradient-end: rgba(217, 231, 240, 0);
 }
 
 .bg-yellow {
   --feature-gradient-start: rgba(255, 245, 204, 1);
-  --feature-gradient-mid: rgba(255, 245, 204, 0.95);
+  --feature-gradient-mid: rgba(255, 245, 204, 0.4);
   --feature-gradient-end: rgba(255, 245, 204, 0);
 }
 
 .bg-gold {
   --feature-gradient-start: rgba(244, 233, 208, 1);
-  --feature-gradient-mid: rgba(244, 233, 208, 0.95);
+  --feature-gradient-mid: rgba(244, 233, 208, 0.4);
   --feature-gradient-end: rgba(244, 233, 208, 0);
 }
 
 .bg-turquoise {
   --feature-gradient-start: rgba(204, 244, 247, 1);
-  --feature-gradient-mid: rgba(204, 244, 247, 0.95);
+  --feature-gradient-mid: rgba(204, 244, 247, 0.4);
   --feature-gradient-end: rgba(204, 244, 247, 0);
 }
 
 .bg-magenta {
   --feature-gradient-start: rgba(246, 224, 239, 1);
-  --feature-gradient-mid: rgba(246, 224, 239, 0.95);
+  --feature-gradient-mid: rgba(246, 224, 239, 0.4);
   --feature-gradient-end: rgba(246, 224, 239, 0);
 }
 
 .bg-sand {
   --feature-gradient-start: rgba(253, 252, 250, 1);
-  --feature-gradient-mid: rgba(253, 252, 250, 0.95);
+  --feature-gradient-mid: rgba(253, 252, 250, 0.4);
   --feature-gradient-end: rgba(253, 252, 250, 0);
 }
 
 .bg-citron {
   --feature-gradient-start: rgba(253, 250, 204, 1);
-  --feature-gradient-mid: rgba(253, 250, 204, 0.95);
+  --feature-gradient-mid: rgba(253, 250, 204, 0.4);
   --feature-gradient-end: rgba(253, 250, 204, 0);
 }
 
 .bg-orange {
   --feature-gradient-start: rgba(254, 231, 204, 1);
-  --feature-gradient-mid: rgba(254, 231, 204, 0.95);
+  --feature-gradient-mid: rgba(254, 231, 204, 0.4);
   --feature-gradient-end: rgba(254, 231, 204, 0);
 }
 
 .bg-green {
   --feature-gradient-start: rgba(226, 234, 216, 1);
-  --feature-gradient-mid: rgba(226, 234, 216, 0.95);
+  --feature-gradient-mid: rgba(226, 234, 216, 0.4);
   --feature-gradient-end: rgba(226, 234, 216, 0);
 }
 
 .bg-stone {
   --feature-gradient-start: rgba(240, 239, 238, 1);
-  --feature-gradient-mid: rgba(240, 239, 238, 0.95);
+  --feature-gradient-mid: rgba(240, 239, 238, 0.4);
   --feature-gradient-end: rgba(240, 239, 238, 0);
 }
 
