@@ -922,6 +922,7 @@ Gradient images, corner rounding, etc... */
    - Banner margins auto-subtracted when at top/bottom
    - Banner image bleeds full width with negative horizontal margin
    - Gradient fades correctly: down for top banners, up for bottom banners
+   - Horizontal cards: banner fades left/right based on order
    - Suggested structure: icon → heading → text → button → banner
 =================================== */
 
@@ -947,24 +948,21 @@ Gradient images, corner rounding, etc... */
   text-align: left;
 }
 
-/* Restore spacing between inner card content */
 .feature-card .card-body > .az-ctnr {
   display: flex;
   flex-direction: column;
   gap: var(--space-300);
 }
 
-/* Subtract top padding if .banner is visually first */
 .feature-card .card-body .banner:first-of-type {
   margin-top: calc(-1 * var(--space-500));
 }
 
-/* Subtract bottom padding if .banner is visually last */
 .feature-card .card-body .banner:last-of-type {
+  margin-top: calc(-1 * var(--space-300));
   margin-bottom: calc(-1 * var(--space-500));
 }
 
-/* Inline banner styling: removes rounding, ensures full-width layout */
 .feature-card .banner {
   position: relative;
   display: block;
@@ -984,12 +982,10 @@ Gradient images, corner rounding, etc... */
   z-index: 0;
 }
 
-/* Remove base gradient to prevent stacking */
 .feature-card .banner::after {
   background: none;
 }
 
-/* Gradient for top banners — fade at bottom */
 .feature-card .card-body .banner:first-of-type::after {
   content: "";
   position: absolute;
@@ -1004,7 +1000,6 @@ Gradient images, corner rounding, etc... */
   );
 }
 
-/* Gradient for bottom banners — fade at top */
 .feature-card .card-body .banner:last-of-type::after {
   content: "";
   position: absolute;
@@ -1013,6 +1008,25 @@ Gradient images, corner rounding, etc... */
   z-index: 1;
   background: linear-gradient(
     to bottom,
+    var(--feature-gradient-start, transparent) 0%,
+    var(--feature-gradient-mid, transparent) 30%,
+    var(--feature-gradient-end, transparent) 100%
+  );
+}
+
+/* Horizontal card logic — directional fade based on position */
+.feature-card.horiz .card-body > .az-ctnr > .banner:first-of-type::after {
+  background: linear-gradient(
+    to right,
+    var(--feature-gradient-start, transparent) 0%,
+    var(--feature-gradient-mid, transparent) 30%,
+    var(--feature-gradient-end, transparent) 100%
+  );
+}
+
+.feature-card.horiz .card-body > .az-ctnr > .banner:last-of-type::after {
+  background: linear-gradient(
+    to left,
     var(--feature-gradient-start, transparent) 0%,
     var(--feature-gradient-mid, transparent) 30%,
     var(--feature-gradient-end, transparent) 100%
