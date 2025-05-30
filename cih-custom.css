@@ -918,9 +918,11 @@ Gradient images, corner rounding, etc... */
    FEATURE CARD LAYOUT: BANNER POSITION LOGIC
    DXPR-friendly setup:
    - Use .banner for top or bottom images (inline, not background)
-   - Padding remains on .card-body; margin is auto-subtracted if .banner is top/bottom
-   - Margin-bottom applied between all non-banner children
-   - Works even if DXPR inserts container wrappers like .az-ctnr
+   - Padding remains on .card-body; spacing handled via gap
+   - Banner margins auto-subtracted when at top/bottom
+   - Banner image bleeds full width with negative horizontal margin
+   - Gradient fades down for top banners, up for bottom banners
+   - Works with DXPR wrappers like .az-ctnr
    - Suggested structure: icon → heading → text → button → banner
 =================================== */
 
@@ -931,7 +933,7 @@ Gradient images, corner rounding, etc... */
   justify-content: space-between;
   overflow: hidden;
   border-radius: var(--radius-200);
-  min-height: 320px; /* Prevent collapsed cards */
+  min-height: 320px;
 }
 
 .feature-card.horiz {
@@ -944,11 +946,7 @@ Gradient images, corner rounding, etc... */
   flex-direction: column;
   flex: 1;
   text-align: left;
-}
-
-/* Add spacing between all children except the last non-banner element */
-.feature-card .card-body > *:not(:last-child):not(.banner) {
-  margin-bottom: var(--space-300);
+  gap: var(--space-300);
 }
 
 /* Subtract top padding if .banner is the first element */
@@ -967,10 +965,12 @@ Gradient images, corner rounding, etc... */
 .feature-card .banner {
   position: relative;
   display: block;
-  width: 100%;
   overflow: hidden;
   margin: 0;
   border-radius: 0;
+  width: auto;
+  margin-left: calc(-1 * var(--space-500));
+  margin-right: calc(-1 * var(--space-500));
 }
 
 .feature-card .banner img {
@@ -981,7 +981,14 @@ Gradient images, corner rounding, etc... */
   z-index: 0;
 }
 
+/* Remove base gradient to prevent stacking */
 .feature-card .banner::after {
+  background: none;
+}
+
+/* Gradient for top banners — fade at bottom */
+.feature-card .card-body > .banner:first-child::after,
+.feature-card .card-body > .az-ctnr > .banner:first-child::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -995,9 +1002,16 @@ Gradient images, corner rounding, etc... */
   );
 }
 
-.feature-card.horiz .banner::after {
+/* Gradient for bottom banners — fade at top */
+.feature-card .card-body > .banner:last-child::after,
+.feature-card .card-body > .az-ctnr > .banner:last-child::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
   background: linear-gradient(
-    to right,
+    to top,
     var(--feature-gradient-start, transparent) 0%,
     var(--feature-gradient-mid, transparent) 30%,
     var(--feature-gradient-end, transparent) 100%
