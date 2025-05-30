@@ -918,11 +918,10 @@ Gradient images, corner rounding, etc... */
    FEATURE CARD LAYOUT: BANNER POSITION LOGIC
    DXPR-friendly setup:
    - Use .banner for top or bottom images (inline, not background)
-   - Padding remains on .card-body; spacing handled via gap
+   - Padding remains on .card-body; spacing handled via .az-ctnr gap
    - Banner margins auto-subtracted when at top/bottom
    - Banner image bleeds full width with negative horizontal margin
-   - Gradient fades down for top banners, up for bottom banners
-   - Works with DXPR wrappers like .az-ctnr
+   - Gradient fades correctly: down for top banners, up for bottom banners
    - Suggested structure: icon → heading → text → button → banner
 =================================== */
 
@@ -946,6 +945,12 @@ Gradient images, corner rounding, etc... */
   flex-direction: column;
   flex: 1;
   text-align: left;
+}
+
+/* Restore spacing between inner card content */
+.feature-card .card-body > .az-ctnr {
+  display: flex;
+  flex-direction: column;
   gap: var(--space-300);
 }
 
@@ -986,9 +991,9 @@ Gradient images, corner rounding, etc... */
   background: none;
 }
 
-/* Gradient for top banners — fade at bottom */
-.feature-card .card-body > .banner:first-child::after,
-.feature-card .card-body > .az-ctnr > .banner:first-child::after {
+/* Gradient for bottom banners — fade at top */
+.feature-card .card-body > .banner:last-child::after,
+.feature-card .card-body > .az-ctnr > .banner:last-child::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -1002,9 +1007,9 @@ Gradient images, corner rounding, etc... */
   );
 }
 
-/* Gradient for bottom banners — fade at top */
-.feature-card .card-body > .banner:last-child::after,
-.feature-card .card-body > .az-ctnr > .banner:last-child::after {
+/* Gradient for top banners — fade at bottom */
+.feature-card .card-body > .banner:first-child::after,
+.feature-card .card-body > .az-ctnr > .banner:first-child::after {
   content: "";
   position: absolute;
   inset: 0;
