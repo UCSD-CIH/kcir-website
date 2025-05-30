@@ -920,7 +920,7 @@ Gradient images, corner rounding, etc... */
    - Use .banner for top or bottom images (inline, not background)
    - Padding remains on .card-body; margin is auto-subtracted if .banner is top/bottom
    - Margin-bottom applied between all non-banner children
-   - Works even if DXPR inserts hidden wrappers or non-visible nodes
+   - Works even if DXPR inserts container wrappers like .az-ctnr
    - Suggested structure: icon → heading → text → button → banner
 =================================== */
 
@@ -943,7 +943,7 @@ Gradient images, corner rounding, etc... */
   display: flex;
   flex-direction: column;
   flex: 1;
-  text-align: left; /* Ensure consistent alignment across children */
+  text-align: left;
 }
 
 /* Add spacing between all children except the last non-banner element */
@@ -951,13 +951,15 @@ Gradient images, corner rounding, etc... */
   margin-bottom: var(--space-300);
 }
 
-/* Subtract top padding if a banner is the first visible .banner in the body */
-.feature-card .card-body > .banner:first-of-type {
+/* Subtract top padding if .banner is the first element */
+.feature-card .card-body > .banner:first-child,
+.feature-card .card-body > .az-ctnr > .banner:first-child {
   margin-top: calc(-1 * var(--space-500));
 }
 
-/* Subtract bottom padding if a banner is the last visible .banner in the body */
-.feature-card .card-body > .banner:last-of-type {
+/* Subtract bottom padding if .banner is the last element */
+.feature-card .card-body > .banner:last-child,
+.feature-card .card-body > .az-ctnr > .banner:last-child {
   margin-bottom: calc(-1 * var(--space-500));
 }
 
