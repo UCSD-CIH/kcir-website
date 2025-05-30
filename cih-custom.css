@@ -954,15 +954,13 @@ Gradient images, corner rounding, etc... */
   gap: var(--space-300);
 }
 
-/* Subtract top padding if .banner is the first element */
-.feature-card .card-body > .banner:first-child,
-.feature-card .card-body > .az-ctnr > .banner:first-child {
+/* Subtract top padding if .banner is visually first */
+.feature-card .card-body .banner:first-of-type {
   margin-top: calc(-1 * var(--space-500));
 }
 
-/* Subtract bottom padding if .banner is the last element */
-.feature-card .card-body > .banner:last-child,
-.feature-card .card-body > .az-ctnr > .banner:last-child {
+/* Subtract bottom padding if .banner is visually last */
+.feature-card .card-body .banner:last-of-type {
   margin-bottom: calc(-1 * var(--space-500));
 }
 
@@ -991,25 +989,8 @@ Gradient images, corner rounding, etc... */
   background: none;
 }
 
-/* Gradient for bottom banners — fade at top */
-.feature-card .card-body > .banner:last-child::after,
-.feature-card .card-body > .az-ctnr > .banner:last-child::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 1;
-  background: linear-gradient(
-    to bottom,
-    var(--feature-gradient-start, transparent) 0%,
-    var(--feature-gradient-mid, transparent) 30%,
-    var(--feature-gradient-end, transparent) 100%
-  );
-}
-
 /* Gradient for top banners — fade at bottom */
-.feature-card .card-body > .banner:first-child::after,
-.feature-card .card-body > .az-ctnr > .banner:first-child::after {
+.feature-card .card-body .banner:first-of-type::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -1017,6 +998,21 @@ Gradient images, corner rounding, etc... */
   z-index: 1;
   background: linear-gradient(
     to top,
+    var(--feature-gradient-start, transparent) 0%,
+    var(--feature-gradient-mid, transparent) 30%,
+    var(--feature-gradient-end, transparent) 100%
+  );
+}
+
+/* Gradient for bottom banners — fade at top */
+.feature-card .card-body .banner:last-of-type::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  background: linear-gradient(
+    to bottom,
     var(--feature-gradient-start, transparent) 0%,
     var(--feature-gradient-mid, transparent) 30%,
     var(--feature-gradient-end, transparent) 100%
