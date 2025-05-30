@@ -917,12 +917,12 @@ Gradient images, corner rounding, etc... */
 /* ===================================
    FEATURE CARD LAYOUT: BANNER POSITION LOGIC
    DXPR-friendly setup:
-   - Use .banner for top or bottom images (inline, not background)
+   - Use .banner for top, bottom, or side images (inline, not background)
    - Padding remains on .card-body; spacing handled via .az-ctnr gap
    - Banner margins auto-subtracted when at top/bottom
-   - Banner image bleeds full width with negative horizontal margin
-   - Gradient fades correctly: down for top banners, up for bottom banners
-   - Horizontal cards: banner fades left/right based on order
+   - Banner image bleeds full width or height with negative margin
+   - Gradient fades based on banner position and orientation
+   - Horizontal cards: content left, banner right (or reversed)
    - Suggested structure: icon → heading → text → button → banner
 =================================== */
 
@@ -986,6 +986,7 @@ Gradient images, corner rounding, etc... */
   background: none;
 }
 
+/* Vertical top banner */
 .feature-card .card-body .banner:first-of-type::after {
   content: "";
   position: absolute;
@@ -1000,6 +1001,7 @@ Gradient images, corner rounding, etc... */
   );
 }
 
+/* Vertical bottom banner */
 .feature-card .card-body .banner:last-of-type::after {
   content: "";
   position: absolute;
@@ -1014,8 +1016,25 @@ Gradient images, corner rounding, etc... */
   );
 }
 
-/* Horizontal card logic — directional fade based on position */
+/* Horizontal: top image (left side) */
+.feature-card.horiz .card-body > .az-ctnr > .banner:first-of-type {
+  margin-left: 0;
+  margin-right: 0;
+  width: auto;
+}
+
+.feature-card.horiz .card-body > .az-ctnr > .banner:last-of-type {
+  margin-left: 0;
+  margin-right: 0;
+  width: auto;
+}
+
 .feature-card.horiz .card-body > .az-ctnr > .banner:first-of-type::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
   background: linear-gradient(
     to right,
     var(--feature-gradient-start, transparent) 0%,
@@ -1025,6 +1044,11 @@ Gradient images, corner rounding, etc... */
 }
 
 .feature-card.horiz .card-body > .az-ctnr > .banner:last-of-type::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
   background: linear-gradient(
     to left,
     var(--feature-gradient-start, transparent) 0%,
