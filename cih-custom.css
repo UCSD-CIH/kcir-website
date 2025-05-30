@@ -915,12 +915,13 @@ Gradient images, corner rounding, etc... */
 }
 
 /* ===================================
-   FEATURE CARD BASE STYLES
+   FEATURE CARD LAYOUT: BANNER POSITION LOGIC
    DXPR-friendly setup:
    - Use .banner for top or bottom images (inline, not background)
-   - Avoid padding adjustments in editor; spacing is handled by CSS
-   - Use .icon for top visuals, .banner for background-like visuals
-   - Suggested order: icon → heading → text → button → banner
+   - Padding remains on .card-body; margin is auto-subtracted if .banner is top/bottom
+   - Margin-bottom applied between all non-banner children
+   - Works even if DXPR inserts hidden wrappers or non-visible nodes
+   - Suggested structure: icon → heading → text → button → banner
 =================================== */
 
 .feature-card {
@@ -945,22 +946,22 @@ Gradient images, corner rounding, etc... */
   text-align: left; /* Ensure consistent alignment across children */
 }
 
-/* Add spacing between all non-banner children */
+/* Add spacing between all children except the last non-banner element */
 .feature-card .card-body > *:not(:last-child):not(.banner) {
   margin-bottom: var(--space-300);
 }
 
-/* If banner is the first child, remove top padding */
-.feature-card .card-body > .banner:first-child {
+/* Subtract top padding if a banner is the first visible .banner in the body */
+.feature-card .card-body > .banner:first-of-type {
   margin-top: calc(-1 * var(--space-500));
 }
 
-/* If banner is the last child, remove bottom padding */
-.feature-card .card-body > .banner:last-child {
+/* Subtract bottom padding if a banner is the last visible .banner in the body */
+.feature-card .card-body > .banner:last-of-type {
   margin-bottom: calc(-1 * var(--space-500));
 }
 
-/* Banner image inside feature-card, placed as inline image */
+/* Inline banner styling: removes rounding, ensures full-width layout */
 .feature-card .banner {
   position: relative;
   display: block;
