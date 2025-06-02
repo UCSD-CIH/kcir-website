@@ -669,7 +669,7 @@
   font: var(--font-label-medium-caps);
   letter-spacing: var(--letter-spacing-label);
   text-transform: var(--text-transform-label-caps);
-  padding: var(--space-200) var(--space-300);
+  padding: var(--space-150) var(--space-250);
 }
 
 /* Base DXPR Button Reset */
@@ -744,6 +744,7 @@
 .btn-info:hover {
   background-color: var(--color-bg-blue-100);
   color: var(--color-text-on-dark);
+  border-color: var(--color-bg-blue-100); /* same as background fill */
 }
 
 /* Link: Text-only button with medium style */
@@ -762,9 +763,10 @@
 .btn .az-button-content {
   all: unset;
   display: inline-block;
-  padding: var(--space-200) var(--space-300);
+  padding: var(--space-150) var(--space-250);
   text-align: center;
 }
+
 /* ===================================
    COMPONENT: CARD SYSTEM
    Shared layout rules and visual styles for card-based UI blocks
