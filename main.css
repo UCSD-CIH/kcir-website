@@ -1101,6 +1101,13 @@ Gradient images, corner rounding, etc... */
   margin-right: auto;
 }
 
+/* Remove horizontal padding on nested containers inside hero overlay */
+.hero--overlay .container,
+.hero--overlay .row {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
 /* Styles below were possibly added by DXPR defaults or by Juli.
    They don’t appear to be in active use but may have been helpful in past layouts. */
 /* 
