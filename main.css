@@ -672,6 +672,14 @@
   padding: var(--space-150) var(--space-250);
 }
 
+.btn-primary:focus:active,
+.btn-secondary:focus:active,
+.btn-info:focus:active {
+  background-color: inherit;
+  color: inherit;
+  border-color: inherit;
+}
+
 /* Base DXPR Button Reset */
 .btn {
   border-radius: var(--radius-100);
@@ -757,6 +765,12 @@
   font: var(--font-label-medium);
   letter-spacing: var(--letter-spacing-label);
   text-transform: var(--text-transform-label-medium);
+}
+
+/* Fix: prevent Link button from inheriting uppercase transform */
+.btn-link .az-button-content,
+.btn-link .az-button-content * {
+  text-transform: var(--text-transform-label-medium) !important;
 }
 
 /* Button content wrapper (from DXPR module) */
