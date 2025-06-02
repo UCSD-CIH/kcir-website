@@ -649,27 +649,19 @@
 }
 
 /* ===================================
-   BUTTON COMPONENT
+   BUTTON COMPONENT (DXPR OVERRIDE)
+   Replaces custom button classes with DXPR default mappings
 =================================== */
 
-/* DXPR nested element override */
-.button--primary .az-button-content,
-.button--secondary .az-button-content,
-.button--tertiary .az-button-content {
+/* Button Content Styling for DXPR */
+.btn .az-button-content {
   all: unset;
   display: inline-block;
-  padding: var(--space-200) var(--space-300); /* 16px 24px */
+  padding: var(--space-200) var(--space-300);
   text-align: center;
 }
 
-.az-button-content.btn,
-.az-button-content.btn-link {
-  padding: 0 !important;
-}
-
-.button--primary .az-button-content p,
-.button--secondary .az-button-content p,
-.button--tertiary .az-button-content p {
+.btn .az-button-content p {
   all: unset;
   display: inline;
   font-family: 'Inter', sans-serif;
@@ -681,9 +673,8 @@
   color: inherit;
 }
 
-/* Base */
-.button {
-  padding: var(--space-200) var(--space-300); /* 16px 24px */
+/* Base DXPR Button Reset */
+.btn {
   border-radius: var(--radius-100);
   text-align: center;
   cursor: pointer;
@@ -691,25 +682,25 @@
   border: none;
 }
 
-.button:focus {
+.btn:focus {
   outline: 2px solid var(--color-bg-blue-100);
   outline-offset: 2px;
 }
 
-.button:disabled,
-.button[aria-disabled="true"] {
+.btn:disabled,
+.btn[aria-disabled="true"] {
   opacity: 0.5;
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.button--inline {
+.btn-inline {
   display: inline-block;
   width: auto;
   white-space: nowrap;
 }
 
-.button--centered {
+.btn-centered {
   display: block;
   width: 100%;
   max-width: 320px;
@@ -717,43 +708,82 @@
   margin-right: auto;
 }
 
-.button--stretch {
+.btn-stretch {
   display: block;
   width: 100%;
 }
 
-/* Modifier: Primary (Yellow → Turquoise) */
-.button--primary {
+/* === DXPR DEFAULT MAPPING === */
+
+/* Primary: Yellow → Turquoise on hover */
+.btn-primary {
   background-color: var(--color-bg-yellow-100);
   color: var(--color-text-on-light);
+  font: inherit;
+  padding: var(--space-200) var(--space-300);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.035em;
 }
 
-.button--primary:hover {
+.btn-primary:hover {
   background-color: var(--color-bg-turquoise-100);
   color: var(--color-text-on-light);
 }
 
-/* Modifier: Secondary (Blue → Navy) */
-.button--secondary {
+/* Secondary: Blue → Navy on hover */
+.btn-secondary {
   background-color: var(--color-bg-blue-100);
   color: var(--color-text-on-dark);
 }
 
-.button--secondary:hover {
+.btn-secondary:hover {
   background-color: var(--color-bg-navy-100);
   color: var(--color-text-on-dark);
 }
 
-/* Modifier: Tertiary (Outline → Fill) */
-.button--tertiary {
-  background-color: var(--color-bg-plain);
+/* Info (Tertiary): Blue outline → fill */
+.btn-info {
+  background-color: transparent;
   color: var(--color-bg-blue-100);
   border: 2px solid var(--color-bg-blue-100);
 }
 
-.button--tertiary:hover {
+.btn-info:hover {
   background-color: var(--color-bg-blue-100);
   color: var(--color-text-on-dark);
+}
+
+/* Link: Unstyled, just text */
+.btn-link {
+  background: none;
+  border: none;
+  color: var(--color-text-link);
+  text-decoration: underline;
+  padding: 0;
+  font-weight: 700;
+}
+
+/* Text style utility: Medium All Caps */
+.btn-primary .az-button-content,
+.btn-secondary .az-button-content,
+.btn-info .az-button-content {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.035em;
+  text-transform: uppercase;
+}
+
+/* Text style utility: Medium (for btn-link) */
+.btn-link .az-button-content {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0;
+  text-transform: none;
 }
 
 /* ===================================
