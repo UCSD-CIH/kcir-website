@@ -662,24 +662,14 @@
    Replaces custom button classes with DXPR default mappings
 =================================== */
 
-/* Button Content Styling for DXPR */
-.btn .az-button-content {
-  all: unset;
-  display: inline-block;
+/* Shared Typography and Padding */
+.btn-primary,
+.btn-secondary,
+.btn-info {
+  font: var(--font-label-medium-caps);
+  letter-spacing: var(--letter-spacing-label);
+  text-transform: var(--text-transform-label-caps);
   padding: var(--space-200) var(--space-300);
-  text-align: center;
-}
-
-.btn .az-button-content p {
-  all: unset;
-  display: inline;
-  font-family: 'Inter', sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: 0.035em;
-  text-transform: uppercase;
-  color: inherit;
 }
 
 /* Base DXPR Button Reset */
@@ -728,16 +718,10 @@
 .btn-primary {
   background-color: var(--color-bg-yellow-100);
   color: var(--color-text-on-light);
-  font: inherit;
-  padding: var(--space-200) var(--space-300);
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.035em;
 }
 
 .btn-primary:hover {
   background-color: var(--color-bg-turquoise-100);
-  color: var(--color-text-on-light);
 }
 
 /* Secondary: Blue → Navy on hover */
@@ -748,7 +732,6 @@
 
 .btn-secondary:hover {
   background-color: var(--color-bg-navy-100);
-  color: var(--color-text-on-dark);
 }
 
 /* Info (Tertiary): Blue outline → fill */
@@ -763,38 +746,25 @@
   color: var(--color-text-on-dark);
 }
 
-/* Link: Unstyled, just text */
+/* Link: Text-only button with medium style */
 .btn-link {
   background: none;
   border: none;
   color: var(--color-text-link);
   text-decoration: underline;
   padding: 0;
-  font-weight: 700;
+  font: var(--font-label-medium);
+  letter-spacing: var(--letter-spacing-label);
+  text-transform: var(--text-transform-label-medium);
 }
 
-/* Text style utility: Medium All Caps */
-.btn-primary .az-button-content,
-.btn-secondary .az-button-content,
-.btn-info .az-button-content {
-  font-family: 'Inter', sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: 0.035em;
-  text-transform: uppercase;
+/* Button content wrapper (from DXPR module) */
+.btn .az-button-content {
+  all: unset;
+  display: inline-block;
+  padding: var(--space-200) var(--space-300);
+  text-align: center;
 }
-
-/* Text style utility: Medium (for btn-link) */
-.btn-link .az-button-content {
-  font-family: 'Inter', sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: 0;
-  text-transform: none;
-}
-
 /* ===================================
    COMPONENT: CARD SYSTEM
    Shared layout rules and visual styles for card-based UI blocks
