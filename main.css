@@ -201,6 +201,15 @@
    Reusable text styles for UI components
 =================================== */
 
+:root {
+  /* Typography Tokens for Labels and Buttons */
+  --font-label-medium: 700 16px/16px 'Inter', sans-serif;
+  --font-label-medium-caps: 700 16px/16px 'Inter', sans-serif;
+  --letter-spacing-label: 0.035em;
+  --text-transform-label-medium: none;
+  --text-transform-label-caps: uppercase;
+}
+
 /* Display styles for large visual headlines */
 
 .text--display-large * {
