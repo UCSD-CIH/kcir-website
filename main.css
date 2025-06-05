@@ -455,6 +455,11 @@
   flex: 1 1 0;
 }
 
+/* Utility class to make an element grow to fill available space */
+.util--flex-grow {
+  flex-grow: 1;
+}
+
 /* Deprecated: replace with .py--400 once fully adopted */
 .padding-top-bottom-2rem {
   padding-top: 2rem;
