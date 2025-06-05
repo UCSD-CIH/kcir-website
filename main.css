@@ -441,10 +441,18 @@
    Padding, margin and gap utility classes based on the spacing scale
 =================================== */
 
-/* Utility class to make an element fill its parent container */
-.util--full-size {
-  width: 100%;
-  height: 100%;
+/* Flex container for equal-height columns */
+.layout__row--equal-height {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+/* Flex item to occupy full height of the parent */
+.layout__column--stretch {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 0;
 }
 
 /* Deprecated: replace with .py--400 once fully adopted */
