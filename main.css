@@ -441,22 +441,20 @@
    Padding, margin and gap utility classes based on the spacing scale
 =================================== */
 
-/* Flex container for equal-height columns */
-.layout__row--equal-height {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: stretch;
+/* Full viewport height utility */
+.util--vh-100 {
+  height: 100vh;
 }
 
-/* Flex item to occupy full height of the parent */
-.layout__column--stretch {
+/* Stretch column contents using Flexbox */
+.layout__column--flex {
   display: flex;
   flex-direction: column;
-  flex: 1 1 0;
+  justify-content: space-between;
 }
 
-/* Utility class to make an element grow to fill available space */
-.util--flex-grow {
+/* Stretch card inside column */
+.util--grow {
   flex-grow: 1;
 }
 
