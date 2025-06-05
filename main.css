@@ -1053,6 +1053,98 @@ Gradient images, corner rounding, etc... */
 .bg-frosted {
   background-color: rgba(255, 255, 255, 0.6);
 }
+/*juliana edits*/
+/* ===================================
+   FEATURE CARD LAYOUT: HORIZONTAL BANNER POSITIONING
+   DXPR-friendly setup:
+   - Use .banner for side images (inline, not background)
+   - Padding remains on .card-body; spacing handled via .az-ctnr gap
+   - Banner margins auto-subtracted when at side?
+   - Banner image half width with negative margin
+   - Gradient fades based on vertical position
+   - Suggested structure: icon → heading → text → button → banner
+=================================== */
+.feature-card.horizontal {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  overflow: hidden;
+  border-radius: var(--radius-200);
+  min-height: 320px;
+}
+
+.feature-card.horizontal .card-body {
+  padding: var(--space-500);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  text-align: left;
+  justify-content: center;
+}
+
+.feature-card.horizontal .card-body > .az-ctnr {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-300);
+}
+
+.feature-card.horizontal .card-body .banner:first-of-type {
+  margin-top: 0;
+}
+
+.feature-card.horizontal .card-body .banner:last-of-type {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.feature-card.horizontal .banner {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  border-radius: 0;
+  width: 50%;
+  flex-shrink: 0;
+}
+
+.feature-card.horizontal .banner img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.feature-card.horizontal .banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  background: linear-gradient(
+    to right,
+    var(--feature-gradient-start, transparent) 0%,
+    var(--feature-gradient-mid, transparent) 30%,
+    var(--feature-gradient-end, transparent) 100%
+  );
+}
+
+/* Optional: reversed version for image on right */
+.feature-card.horizontal.reverse {
+  flex-direction: row-reverse;
+}
+
+.feature-card.horizontal.reverse .banner::after {
+  background: linear-gradient(
+    to left,
+    var(--feature-gradient-start, transparent) 0%,
+    var(--feature-gradient-mid, transparent) 30%,
+    var(--feature-gradient-end, transparent) 100%
+  );
+}
+
+/*juliana edits*/
 
 /* ===================================
    HERO COMPONENT: GRADIENT OVERLAY
