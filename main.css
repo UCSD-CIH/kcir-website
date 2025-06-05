@@ -1053,6 +1053,69 @@ Gradient images, corner rounding, etc... */
 .bg-frosted {
   background-color: rgba(255, 255, 255, 0.6);
 }
+
+/* ===================================
+   HERO COMPONENT: GRADIENT OVERLAY
+   Reusable full-width section with background image and fade
+=================================== */
+
+.hero--overlay {
+  position: relative;
+  padding: 80px 0;
+  min-height: 800px;
+}
+
+.hero--overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.9) 40%, rgba(255, 255, 255, 0) 100%);
+  z-index: 1;
+  pointer-events: none;
+  display: block;
+}
+
+.hero--overlay > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Override for Bootstrap's .container-fluid inside hero */
+.hero--overlay .container-fluid {
+  max-width: 1184px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Remove horizontal padding on nested containers inside hero overlay */
+.hero--overlay .container,
+.hero--overlay .row {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Styles below were possibly added by DXPR defaults or by Juli.
+   They don’t appear to be in active use but may have been helpful in past layouts. */
+/* 
+.content .az-container > .az-section { padding-top: 100px;padding-bottom: 100px; }
+.content img { border-radius: 20px; }
+.az-icon { margin-bottom: 30px; }
+
+.button-bottom-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.button-bottom-panel .panel-content > div:last-child {
+  text-align: center;
+  margin-top: auto;
+}
+ */
+ 
+/* Testing Styles Below, Not Yet Merged — No Overrides */
+
 /*juliana edits*/
 /* ===================================
    FEATURE CARD LAYOUT: HORIZONTAL BANNER POSITIONING
@@ -1145,65 +1208,3 @@ Gradient images, corner rounding, etc... */
 }
 
 /*juliana edits*/
-
-/* ===================================
-   HERO COMPONENT: GRADIENT OVERLAY
-   Reusable full-width section with background image and fade
-=================================== */
-
-.hero--overlay {
-  position: relative;
-  padding: 80px 0;
-  min-height: 800px;
-}
-
-.hero--overlay::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.9) 40%, rgba(255, 255, 255, 0) 100%);
-  z-index: 1;
-  pointer-events: none;
-  display: block;
-}
-
-.hero--overlay > * {
-  position: relative;
-  z-index: 2;
-}
-
-/* Override for Bootstrap's .container-fluid inside hero */
-.hero--overlay .container-fluid {
-  max-width: 1184px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Remove horizontal padding on nested containers inside hero overlay */
-.hero--overlay .container,
-.hero--overlay .row {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-}
-
-/* Styles below were possibly added by DXPR defaults or by Juli.
-   They don’t appear to be in active use but may have been helpful in past layouts. */
-/* 
-.content .az-container > .az-section { padding-top: 100px;padding-bottom: 100px; }
-.content img { border-radius: 20px; }
-.az-icon { margin-bottom: 30px; }
-
-.button-bottom-panel {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-}
-
-.button-bottom-panel .panel-content > div:last-child {
-  text-align: center;
-  margin-top: auto;
-}
- */
- 
-/* Testing Styles Below, Not Yet Merged — No Overrides */
