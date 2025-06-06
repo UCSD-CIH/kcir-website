@@ -876,46 +876,71 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
 
 
 /* ===================================
-   COMPONENT: CARD SYSTEM
-   Shared layout rules and visual styles for card-based UI blocks
+   COMPONENT: STUDY CARD
+   Unified layout and style system for study cards
+   - Consistent BEM naming (.study-card__)
+   - Token-based color and spacing
+   - Compatible with both DXPR and View modes
 =================================== */
- 
-/* Study Card */
 
 .study-card {
   background-color: var(--color-sand-0);
-  border-radius: 16px;
-  padding: 24px;
+  border-radius: var(--radius-200);
+  padding: var(--space-400);
+  margin: var(--space-300) 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 320px;
 }
 
+.study-card__image {
+  border-radius: var(--radius-200);
+  overflow: hidden;
+  margin-bottom: var(--space-300);
+}
+
+.study-card__image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: inherit;
+}
+
+/* Panel section for info blocks */
 .study-card__panel {
   background-color: var(--color-sand-20);
-  border-radius: 12px;
-  padding: 16px;
-  margin-bottom: 16px;
+  border-radius: var(--radius-150);
+  padding: var(--space-300);
+  margin-bottom: var(--space-300);
 }
 
-.study-card__text {
-  font-size: 16px;
-  line-height: 1.6;
+.study-card__meta {
+  font-size: 0.95rem;
+  color: var(--color-gray-70);
+  margin-bottom: var(--space-150);
 }
 
 .study-card__description {
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.6;
-  margin-bottom: 12px;
+  margin-bottom: var(--space-200);
+  color: var(--color-gray-100);
 }
 
 .study-card__contact {
-  font-size: 16px;
+  font-size: 0.9rem;
   line-height: 1.4;
   color: var(--color-navy-85);
+  margin-bottom: var(--space-200);
+  word-break: break-word;
 }
 
 .study-card__footer {
-  margin-top: 24px;
+  margin-top: var(--space-400);
   display: flex;
-  gap: 16px;
+  gap: var(--space-200);
   flex-wrap: wrap;
 }
 
@@ -924,311 +949,44 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
   max-width: 200px;
 }
 
-/* CARD SUB-COMPONENT PROPERTIES 
-Gradient images, corner rounding, etc... */
-
-/* For image gradients in cards */
-
-.gradient-overlay-img {
-  position: relative;
-  display: inline-block;
-  width: 100%;
-  border-radius: 1rem;
-  overflow: hidden;
-}
-
-.gradient-overlay-img::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: linear-gradient(to bottom, rgba(255,255,255,0.85), rgba(255,255,255,0));
-  pointer-events: none;
-  z-index: 1;
-}
-
-.gradient-overlay-img img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-/* Image wrapper with gradient overlay and top corners rounded */
-.image-gradient--top-rounded {
-  position: relative;
-  display: inline-block;
-  width: 100%;
-  border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-  overflow: hidden;
-}
-
-.image-gradient--top-rounded::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: linear-gradient(to bottom, rgba(255,255,255,0.85), rgba(255,255,255,0));
-  pointer-events: none;
-  z-index: 1;
-}
-
-.image-gradient--top-rounded img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-/* Image wrapper with gradient overlay and bottom corners rounded */
-.image-gradient--bottom-rounded {
-  position: relative;
-  display: inline-block;
-  width: 100%;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  border-bottom-left-radius: 1rem;
-  border-bottom-right-radius: 1rem;
-  overflow: hidden;
-}
-
-.image-gradient--bottom-rounded::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: linear-gradient(to top, rgba(255,255,255,0.85), rgba(255,255,255,0));
-  pointer-events: none;
-  z-index: 1;
-}
-
-.image-gradient--bottom-rounded img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-/* Text section with top corners rounded */
-.text-block--top-rounded {
-  border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-  overflow: hidden;
-}
-
-/* Text section with bottom corners rounded */
-.text-block--bottom-rounded {
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  border-bottom-left-radius: 1rem;
-  border-bottom-right-radius: 1rem;
-  overflow: hidden;
-}
-
-/* ===================================
-   FEATURE CARD LAYOUT: VERTICAL BANNER POSITIONING
-   DXPR-friendly setup:
-   - Use .banner for top or bottom images (inline, not background)
-   - Padding remains on .card-body; spacing handled via .az-ctnr gap
-   - Banner margins auto-subtracted when at top/bottom
-   - Banner image bleeds full width with negative margin
-   - Gradient fades based on vertical position
-   - Suggested structure: icon → heading → text → button → banner
-=================================== */
-
-.feature-card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  overflow: hidden;
-  border-radius: var(--radius-200);
-  min-height: 320px;
-}
-
-.feature-card .card-body {
-  padding: var(--space-500);
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  text-align: left;
-}
-
-.feature-card .card-body > .az-ctnr {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-300);
-}
-
-.feature-card .card-body .banner:first-of-type {
-  margin-top: calc(-1 * var(--space-500));
-}
-
-.feature-card .card-body .banner:last-of-type {
-  margin-top: var(--space-150);
-  margin-bottom: calc(-1 * var(--space-500));
-}
-
-.feature-card .banner {
-  position: relative;
-  display: block;
-  overflow: hidden;
-  margin: 0;
-  border-radius: 0;
-  width: auto;
-  margin-left: calc(-1 * var(--space-500));
-  margin-right: calc(-1 * var(--space-500));
-}
-
-.feature-card .banner img {
-  display: block;
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  z-index: 0;
-}
-
-.feature-card .banner::after {
-  background: none;
-}
-
-/* Vertical top banner */
-.feature-card .card-body .banner:first-of-type::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 1;
-  background: linear-gradient(
-    to top,
-    var(--feature-gradient-start, transparent) 0%,
-    var(--feature-gradient-mid, transparent) 30%,
-    var(--feature-gradient-end, transparent) 100%
-  );
-}
-
-/* Vertical bottom banner */
-.feature-card .card-body .banner:last-of-type::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 1;
-  background: linear-gradient(
-    to bottom,
-    var(--feature-gradient-start, transparent) 0%,
-    var(--feature-gradient-mid, transparent) 30%,
-    var(--feature-gradient-end, transparent) 100%
-  );
-}
-
-.feature-card .icon {
-  width: 96px;
-  height: 96px;
-  flex-shrink: 0;
-  display: block;
-}
-
-.feature-card .icon img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  display: block;
-}
-
-.bg-frosted {
-  background-color: rgba(255, 255, 255, 0.6);
-}
-
-/* ===================================
-   STUDY CARD LAYOUT: GRID ITEM STYLING
-   View-based output from "Study Card" view mode
-   Wrapper class set via Views format settings (class: .study-card)
-   Fields are targeted using Drupal's auto-generated classes
-   Layout and spacing follow BEM-friendly structure
-   - Container: .study-card
-   - Child fields: targeted via field--name-field-XYZ
-   - Link fields use <a> styling for buttons
-=================================== */
-
-.study-card {
-  border: 1px solid #ccc;
-  border-radius: 16px;
-  padding: 1rem;
-  margin: 1rem;
-  background: #fff;
-  max-width: 320px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
-}
-
-/* ========== Metadata Fields ========== */
-
+/* Legacy Drupal field wrappers - fallback targeting */
 .study-card .field--name-field-study-type,
 .study-card .field--name-field-requirements,
 .study-card .field--name-field-duration {
-  font-size: 0.95rem;
-  margin-bottom: 0.25rem;
+  composes: study-card__meta;
 }
 
-/* ========== Summary/Description ========== */
-
-.study-card .field--name-field-summary {
-  margin: 1rem 0;
-  font-size: 1rem;
-  line-height: 1.4;
+.study-card .field--name-field-summary,
+.study-card .field--name-field-summary-short {
+  composes: study-card__description;
 }
-
-/* ========== Contact Information ========== */
 
 .study-card .field--name-field-contact-email,
 .study-card .field--name-field-contact-number {
-  font-size: 0.9rem;
-  margin-bottom: 0.5rem;
-  color: #005fa2;
-  word-break: break-word;
+  composes: study-card__contact;
 }
 
-/* ========== Action Buttons ========== */
-
 .study-card .field--name-field-sign-up-form a {
-  background-color: #005fa2;
+  background-color: var(--color-navy-100);
   color: #fff;
   padding: 0.5rem 1rem;
-  border-radius: 8px;
+  border-radius: var(--radius-100);
   text-decoration: none;
-  margin-right: 0.5rem;
   font-weight: bold;
   display: inline-block;
+  text-align: center;
 }
 
 .study-card .field--name-field-learn-more-link a {
-  border: 2px solid #888;
-  color: #444;
+  border: 2px solid var(--color-gray-50);
+  color: var(--color-gray-90);
   padding: 0.5rem 1rem;
-  border-radius: 8px;
+  border-radius: var(--radius-100);
   text-decoration: none;
   font-weight: bold;
   background-color: transparent;
   display: inline-block;
-}
-
-/* ========== Optional Image ========== */
-
-.study-card .field--name-field-study-image img {
-  max-width: 100%;
-  border-radius: 12px;
-  margin-bottom: 1rem;
+  text-align: center;
 }
 
 /* ===================================
