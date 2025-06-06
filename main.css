@@ -12,61 +12,66 @@
 =================================== */
 
 :root {
---color-bg-plain: #FFFFFF;
---color-bg-subdued: #F2F6FA;
+  --color-bg-plain: #FFFFFF;
 
---color-bg-navy-0: #DCDFE4;
---color-bg-navy-15: #DCDFE4;
---color-bg-navy-85: #394A63;
---color-bg-navy-100: #182B49;
+  --color-bg-subdued-soft: #F6F9FC;
+  --color-bg-subdued-strong: #E3EAF2;
 
---color-bg-blue-0: #D9E7F0;
---color-bg-blue-15: #D9E7F0;
---color-bg-blue-100: #00629B;
+  --color-bg-navy-20: #D1D6DC;
+  --color-bg-navy-100: #182B49;
+  --color-bg-navy-120: #0F1A30;
 
---color-bg-yellow-0: #FFF5CC;
---color-bg-yellow-20: #FFF5CC;
---color-bg-yellow-100: #FFCD00;
+  --color-bg-blue-20: #CCE1EF;
+  --color-bg-blue-100: #00629B;
+  --color-bg-blue-120: #004B73;
 
---color-bg-gold-0: #F4E9D0;
---color-bg-gold-20: #F4E9D0;
---color-bg-gold-100: #C69214;
+  --color-bg-yellow-20: #FFF5CC;
+  --color-bg-yellow-100: #FFCD00;
+  --color-bg-yellow-120: #CC9E00;
 
---color-bg-turquoise-0: #CCF4F7;
---color-bg-turquoise-20: #CCF4F7;
---color-bg-turquoise-100: #00C6D7;
+  --color-bg-gold-20: #F4E9D0;
+  --color-bg-gold-100: #C69214;
 
---color-bg-magenta-0: #F6E0EF;
---color-bg-magenta-20: #F6E0EF;
---color-bg-magenta-100: #D462AD;
+  --color-bg-turquoise-20: #CCF4F7;
+  --color-bg-turquoise-100: #00C6D7;
+  --color-bg-turquoise-120: #00A1AD;
 
---color-bg-sand-0: #FDFCFA;
---color-bg-sand-20: #FDFCFA;
---color-bg-sand-100: #F5F0E6;
+  --color-bg-magenta-20: #F6E0EF;
+  --color-bg-magenta-100: #D462AD;
 
---color-bg-citron-0: #FDFACC;
---color-bg-citron-20: #FDFACC;
---color-bg-citron-100: #F3E500;
+  --color-bg-sand-20: #FDFCFA;
+  --color-bg-sand-100: #F5F0E6;
 
---color-bg-orange-0: #FEE7CC;
---color-bg-orange-20: #FEE7CC;
---color-bg-orange-100: #FC8900;
+  --color-bg-citron-20: #FDFACC;
+  --color-bg-citron-100: #F3E500;
 
---color-bg-green-0: #E2EAD8;
---color-bg-green-20: #E2EAD8;
---color-bg-green-100: #6E963B;
+  --color-bg-orange-20: #FEE7CC;
+  --color-bg-orange-100: #FC8900;
 
---color-bg-stone-0: #F0EFEE;
---color-bg-stone-20: #F0EFEE;
---color-bg-stone-100: #B6B1A9;
+  --color-bg-green-20: #E2EAD8;
+  --color-bg-green-100: #6E963B;
+
+  --color-bg-stone-20: #F0EFEE;
+  --color-bg-stone-100: #B6B1A9;
+
+  --color-bg-disabled-soft: #EFF0F1;
+  --color-bg-disabled-strong: #CBD2D9;
+
+  --color-border-yellow: #FFCD00;
+  --color-border-blue: #00629B;
+  --color-border-navy: #182B49;
+  --color-border-disabled-soft: #D8DFE4;
+  --color-border-disabled-strong: #AEB6BC;
+  --color-border-subdued-soft: #EFF1F3;
+  --color-border-subdued-strong: #CBD2D9;
 }
 
 /* ===================================
    BACKGROUND COLOR UTILITIES
 =================================== */
 
-.bg-navy { background-color: var(--color-bg-navy-15); }
-.bg-blue { background-color: var(--color-bg-blue-15); }
+.bg-navy { background-color: var(--color-bg-navy-20); }
+.bg-blue { background-color: var(--color-bg-blue-20); }
 .bg-yellow { background-color: var(--color-bg-yellow-20); }
 .bg-gold { background-color: var(--color-bg-gold-20); }
 .bg-turquoise { background-color: var(--color-bg-turquoise-20); }
@@ -76,6 +81,14 @@
 .bg-orange { background-color: var(--color-bg-orange-20); }
 .bg-green { background-color: var(--color-bg-green-20); }
 .bg-stone { background-color: var(--color-bg-stone-20); }
+
+.bg-subdued { background-color: var(--color-bg-subdued); }
+.bg-subdued-soft { background-color: var(--color-bg-subdued-soft); }
+.bg-subdued-strong { background-color: var(--color-bg-subdued-strong); }
+
+.bg-disabled { background-color: var(--color-bg-disabled); }
+.bg-disabled-soft { background-color: var(--color-bg-disabled-soft); }
+.bg-disabled-strong { background-color: var(--color-bg-disabled-strong); }
 
 /* ===================================
    GRADIENT COLOR TOKENS
@@ -166,22 +179,22 @@
    DESIGN TOKENS: TEXT COLORS
    Used for type, icons, links, and UI labels
 =================================== */
-
 :root {
   --color-text-paragraph: #282929;
   --color-text-heading: #182B49;
-  --color-text-subdued: #747678;
+  --color-text-subdued-soft: #9FA1A3;
+  --color-text-subdued-strong: #5B5D60;
   --color-text-navy: #182B49;
   --color-text-blue: #00629B;
   --color-text-link: #00629B;
   --color-text-success: #3D7F32;
   --color-text-warning: #906A0E;
-  --color-text-disabled: #D2D4D6;
   --color-text-danger: #B01030;
+  --color-text-disabled-soft: #E0E2E4;
+  --color-text-disabled-strong: #A5AAAD;
   --color-text-on-light: #182B49;
   --color-text-on-dark: #FFFFFF;
 }
-
 /* ===================================
    DESIGN TOKENS: BORDER COLORS
    Stroke colors for dividers, inputs, panels, and component outlines
@@ -189,8 +202,10 @@
 
 :root {
   --color-border-plain: #D2D4D6;
-  --color-border-subdued: #E4E5E6;
-  --color-border-disabled: #C8CED2;
+  --color-border-subdued-soft: #EFF1F3;
+  --color-border-subdued-strong: #CBD2D9;
+  --color-border-disabled-soft: #D8DFE4;
+  --color-border-disabled-strong: #AEB6BC;
   --color-border-strong: #9E9AA3;
   --color-border-blue: #00629B;
   --color-border-navy: #182B49;
@@ -689,15 +704,7 @@
   padding: var(--space-150) var(--space-250);
 }
 
-.btn-primary:focus:active,
-.btn-secondary:focus:active,
-.btn-info:focus:active {
-  background-color: inherit;
-  color: inherit;
-  border-color: inherit;
-}
-
-/* Base DXPR Button Reset */
+/* Base Button Reset */
 .btn {
   border-radius: var(--radius-100);
   text-align: center;
@@ -737,9 +744,7 @@
   width: 100%;
 }
 
-/* === DXPR DEFAULT MAPPING === */
-
-/* Primary: Yellow → Turquoise on hover */
+/* Primary Button */
 .btn-primary {
   background-color: var(--color-bg-yellow-100);
   color: var(--color-text-on-light);
@@ -747,9 +752,14 @@
 
 .btn-primary:hover {
   background-color: var(--color-bg-turquoise-100);
+  text-decoration: none;
 }
 
-/* Secondary: Blue → Navy on hover */
+.btn-primary:active {
+  background-color: var(--color-bg-turquoise-120);
+}
+
+/* Secondary Button */
 .btn-secondary {
   background-color: var(--color-bg-blue-100);
   color: var(--color-text-on-dark);
@@ -757,9 +767,18 @@
 
 .btn-secondary:hover {
   background-color: var(--color-bg-navy-100);
+  text-decoration: none;
 }
 
-/* Info (Tertiary): Blue outline → fill */
+.btn-secondary:active {
+  background-color: var(--color-bg-navy-120);
+}
+
+.btn-secondary:visited {
+  color: var(--color-text-on-dark);
+}
+
+/* Tertiary Button (Info) */
 .btn-info {
   background-color: transparent;
   color: var(--color-bg-blue-100);
@@ -769,10 +788,17 @@
 .btn-info:hover {
   background-color: var(--color-bg-blue-100);
   color: var(--color-text-on-dark);
-  border-color: var(--color-bg-blue-100); /* same as background fill */
+  border-color: var(--color-bg-blue-100);
+  text-decoration: none;
 }
 
-/* Link: Text-only button with medium style */
+.btn-info:active {
+  background-color: var(--color-bg-blue-120);
+  border-color: var(--color-bg-blue-120);
+  color: var(--color-text-on-dark);
+}
+
+/* Link Button */
 .btn-link {
   background: none;
   border: none;
@@ -784,13 +810,39 @@
   text-transform: var(--text-transform-label-medium);
 }
 
+.btn-link:hover {
+  color: var(--color-text-blue);
+  text-decoration: none;
+}
+
+.btn-link:active {
+  color: var(--color-text-navy);
+}
+
+.btn-link:disabled,
+.btn-link[aria-disabled="true"] {
+  color: var(--color-text-disabled-strong);
+  text-decoration: none;
+  pointer-events: none;
+}
+
 /* Fix: prevent Link button from inheriting uppercase transform */
 .btn-link .az-button-content,
 .btn-link .az-button-content * {
   text-transform: var(--text-transform-label-medium) !important;
 }
 
-/* Button content wrapper (from DXPR module) */
+/* Reset visited state for all button variants */
+.btn-primary:visited,
+.btn-secondary:visited,
+.btn-info:visited,
+.btn-link:visited {
+  color: inherit;
+  background-color: inherit;
+  border-color: inherit;
+}
+
+/* DXPR module content wrapper */
 .btn .az-button-content {
   all: unset;
   display: inline-block;
