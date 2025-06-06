@@ -749,9 +749,11 @@
 }
 
 /* Primary Button */
-.btn-primary {
+.btn-primary,
+.btn-primary:visited {
   background-color: var(--color-bg-yellow-100);
   color: var(--color-text-on-light);
+  border-color: transparent;
 }
 
 .btn-primary:hover,
@@ -767,16 +769,12 @@
   border-color: transparent !important;
 }
 
-.btn-primary:visited {
-  color: var(--color-text-on-light) !important;
-  background-color: var(--color-bg-yellow-100) !important;
-  border-color: transparent !important;
-}
-
 /* Secondary Button */
-.btn-secondary {
+.btn-secondary,
+.btn-secondary:visited {
   background-color: var(--color-bg-blue-100);
   color: var(--color-text-on-dark);
+  border-color: transparent;
 }
 
 .btn-secondary:hover,
@@ -789,12 +787,6 @@
 .btn-secondary:active {
   background-color: var(--color-bg-navy-120) !important;
   color: var(--color-text-on-dark) !important;
-  border-color: transparent !important;
-}
-
-.btn-secondary:visited {
-  color: var(--color-text-on-dark) !important;
-  background-color: var(--color-bg-blue-100) !important;
   border-color: transparent !important;
 }
 
@@ -817,6 +809,12 @@
   border-color: var(--color-bg-blue-120) !important;
   color: var(--color-text-on-dark) !important;
   text-decoration: none;
+}
+
+.btn-info:visited {
+  color: var(--color-bg-blue-100);
+  background-color: transparent;
+  border-color: var(--color-bg-blue-100);
 }
 
 /* Link Button */
