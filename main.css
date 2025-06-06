@@ -1149,6 +1149,89 @@ Gradient images, corner rounding, etc... */
 }
 
 /* ===================================
+   STUDY CARD LAYOUT: GRID ITEM STYLING
+   View-based output from "Study Card" view mode
+   Wrapper class set via Views format settings (class: .study-card)
+   Fields are targeted using Drupal's auto-generated classes
+   Layout and spacing follow BEM-friendly structure
+   - Container: .study-card
+   - Child fields: targeted via field--name-field-XYZ
+   - Link fields use <a> styling for buttons
+=================================== */
+
+.study-card {
+  border: 1px solid #ccc;
+  border-radius: 16px;
+  padding: 1rem;
+  margin: 1rem;
+  background: #fff;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+/* ========== Metadata Fields ========== */
+
+.study-card .field--name-field-study-type,
+.study-card .field--name-field-requirements,
+.study-card .field--name-field-duration {
+  font-size: 0.95rem;
+  margin-bottom: 0.25rem;
+}
+
+/* ========== Summary/Description ========== */
+
+.study-card .field--name-field-summary {
+  margin: 1rem 0;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+/* ========== Contact Information ========== */
+
+.study-card .field--name-field-contact-email,
+.study-card .field--name-field-contact-number {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  color: #005fa2;
+  word-break: break-word;
+}
+
+/* ========== Action Buttons ========== */
+
+.study-card .field--name-field-sign-up-form a {
+  background-color: #005fa2;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  margin-right: 0.5rem;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.study-card .field--name-field-learn-more-link a {
+  border: 2px solid #888;
+  color: #444;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  background-color: transparent;
+  display: inline-block;
+}
+
+/* ========== Optional Image ========== */
+
+.study-card .field--name-field-study-image img {
+  max-width: 100%;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+/* ===================================
    HERO COMPONENT: GRADIENT OVERLAY
    Reusable full-width section with background image and fade
 =================================== */
