@@ -757,6 +757,7 @@
 
 .btn-primary:active {
   background-color: var(--color-bg-turquoise-120);
+  color: var(--color-text-navy);
 }
 
 /* Secondary Button */
@@ -796,6 +797,7 @@
   background-color: var(--color-bg-blue-120);
   border-color: var(--color-bg-blue-120);
   color: var(--color-text-on-dark);
+  text-decoration: none;
 }
 
 /* Link Button */
@@ -807,7 +809,7 @@
   padding: 0;
   font: var(--font-label-medium);
   letter-spacing: var(--letter-spacing-label);
-  text-transform: var(--text-transform-label-medium);
+  text-transform: none !important;
 }
 
 .btn-link:hover {
@@ -829,7 +831,7 @@
 /* Fix: prevent Link button from inheriting uppercase transform */
 .btn-link .az-button-content,
 .btn-link .az-button-content * {
-  text-transform: var(--text-transform-label-medium) !important;
+  text-transform: none !important;
 }
 
 /* Reset visited state for all button variants */
@@ -842,6 +844,11 @@
   border-color: inherit;
 }
 
+.btn-primary:visited:active {
+  color: var(--color-text-navy);
+  background-color: var(--color-bg-turquoise-120);
+}
+
 /* DXPR module content wrapper */
 .btn .az-button-content {
   all: unset;
@@ -849,7 +856,6 @@
   padding: var(--space-150) var(--space-250);
   text-align: center;
 }
-
 /* ===================================
    COMPONENT: CARD SYSTEM
    Shared layout rules and visual styles for card-based UI blocks
