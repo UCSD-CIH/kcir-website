@@ -769,6 +769,16 @@
   border-color: transparent !important;
 }
 
+/* DXPR form buttons: disabled state fix for input.button--primary.btn-primary */
+input.button--primary.btn-primary:disabled {
+  background-color: var(--color-bg-yellow-100);
+  color: var(--color-text-on-light);
+  border: none;
+  opacity: 1;
+  font: var(--font-label-medium-caps);
+  text-transform: uppercase;
+}
+
 /* Secondary Button */
 .btn-secondary,
 .btn-secondary:visited {
