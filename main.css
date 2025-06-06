@@ -714,6 +714,10 @@
 }
 
 .btn:focus {
+  outline: none;
+}
+
+.btn:focus-visible {
   outline: 2px solid var(--color-bg-blue-100);
   outline-offset: 2px;
 }
@@ -750,8 +754,10 @@
   color: var(--color-text-on-light);
 }
 
-.btn-primary:hover {
+.btn-primary:hover,
+.btn-primary:visited:hover {
   background-color: var(--color-bg-turquoise-100);
+  color: var(--color-text-on-light);
   text-decoration: none;
 }
 
@@ -773,8 +779,10 @@
   color: var(--color-text-on-dark);
 }
 
-.btn-secondary:hover {
+.btn-secondary:hover,
+.btn-secondary:visited:hover {
   background-color: var(--color-bg-navy-100);
+  color: var(--color-text-on-dark);
   text-decoration: none;
 }
 
@@ -805,9 +813,9 @@
 }
 
 .btn-info:active {
-  background-color: var(--color-bg-blue-120);
-  border-color: var(--color-bg-blue-120);
-  color: var(--color-text-on-dark);
+  background-color: var(--color-bg-blue-120) !important;
+  border-color: var(--color-bg-blue-120) !important;
+  color: var(--color-text-on-dark) !important;
   text-decoration: none;
 }
 
@@ -829,7 +837,7 @@
 }
 
 .btn-link:active {
-  color: var(--color-text-navy);
+  color: var(--color-text-navy) !important;
 }
 
 .btn-link:disabled,
