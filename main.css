@@ -96,15 +96,15 @@
 =================================== */
 
 .bg-navy {
-  --feature-gradient-start: rgba(220, 223, 228, 1);
-  --feature-gradient-mid: rgba(220, 223, 228, 0.4);
-  --feature-gradient-end: rgba(220, 223, 228, 0);
+  --feature-gradient-start: rgba(209, 214, 220, 1);
+  --feature-gradient-mid: rgba(209, 214, 220, 0.4);
+  --feature-gradient-end: rgba(209, 214, 220, 0);
 }
 
 .bg-blue {
-  --feature-gradient-start: rgba(217, 231, 240, 1);
-  --feature-gradient-mid: rgba(217, 231, 240, 0.4);
-  --feature-gradient-end: rgba(217, 231, 240, 0);
+  --feature-gradient-start: rgba(204, 225, 239, 1);
+  --feature-gradient-mid: rgba(204, 225, 239, 0.4);
+  --feature-gradient-end: rgba(204, 225, 239, 0);
 }
 
 .bg-yellow {
