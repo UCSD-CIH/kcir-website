@@ -713,8 +713,10 @@
   border: none;
 }
 
-.btn:focus {
-  outline: none;
+.btn:focus:not(:disabled),
+.btn:focus-visible:not(:disabled) {
+  outline: 2px solid var(--color-bg-blue-100);
+  outline-offset: 2px;
 }
 
 .btn:focus-visible {
@@ -754,6 +756,7 @@
   background-color: var(--color-bg-yellow-100);
   color: var(--color-text-on-light);
   border-color: transparent;
+  text-decoration: none;
 }
 
 .btn-primary:hover,
@@ -770,11 +773,11 @@
 }
 
 /* DXPR form buttons: disabled state fix for input.button--primary.btn-primary */
-input.button--primary.btn-primary:disabled {
-  background-color: var(--color-bg-yellow-100);
-  color: var(--color-text-on-light);
-  border: none;
-  opacity: 1;
+input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
+  background-color: var(--color-bg-yellow-100) !important;
+  color: var(--color-text-on-light) !important;
+  border: none !important;
+  opacity: 1 !important;
   font: var(--font-label-medium-caps);
   text-transform: uppercase;
 }
@@ -785,6 +788,7 @@ input.button--primary.btn-primary:disabled {
   background-color: var(--color-bg-blue-100);
   color: var(--color-text-on-dark);
   border-color: transparent;
+  text-decoration: none;
 }
 
 .btn-secondary:hover,
@@ -795,7 +799,7 @@ input.button--primary.btn-primary:disabled {
 }
 
 .btn-secondary:active {
-  background-color: var(--color-bg-navy-120) !important;
+  background-color: var(--color-bg-blue-120) !important;
   color: var(--color-text-on-dark) !important;
   border-color: transparent !important;
 }
@@ -825,6 +829,7 @@ input.button--primary.btn-primary:disabled {
   color: var(--color-bg-blue-100);
   background-color: transparent;
   border-color: var(--color-bg-blue-100);
+  text-decoration: none;
 }
 
 /* Link Button */
