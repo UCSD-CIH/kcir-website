@@ -14,7 +14,7 @@
 :root {
   --color-bg-plain: #FFFFFF;
   --color-bg-lightest: #F7F9FC;
-  --color-bg-light: #DCDEE0;
+  --color-bg-light: #DCDEE0 !important;
 
   --color-bg-navy-20: #D1D6DC;
   --color-bg-navy-100: #182B49;
