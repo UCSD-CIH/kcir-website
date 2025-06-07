@@ -85,7 +85,7 @@
 .bg-green { background-color: var(--color-bg-green-20); }
 .bg-stone { background-color: var(--color-bg-stone-20); }
 
-.bg-lightest { background-color: var(--color-bg-lightest); 
+.bg-lightest { background-color: var(--color-bg-lightest); }
 .bg-light { background-color: var(--color-bg-light); }
 
 .bg-subdued { background-color: var(--color-bg-subdued); }
@@ -179,12 +179,6 @@
   --feature-gradient-start: rgba(220, 222, 224, 1);
   --feature-gradient-mid: rgba(220, 222, 224, 0.4);
   --feature-gradient-end: rgba(220, 222, 224, 0);
-}
-
-.bg-medium {
-  --feature-gradient-start: rgba(159, 161, 163, 1);
-  --feature-gradient-mid: rgba(159, 161, 163, 0.4);
-  --feature-gradient-end: rgba(159, 161, 163, 0);
 }
 
 /* ===================================
