@@ -163,6 +163,24 @@
   --feature-gradient-end: rgba(240, 239, 238, 0);
 }
 
+.bg-lightest {
+  --feature-gradient-start: rgba(247, 249, 252, 1);
+  --feature-gradient-mid: rgba(247, 249, 252, 0.4);
+  --feature-gradient-end: rgba(247, 249, 252, 0);
+}
+
+.bg-light {
+  --feature-gradient-start: rgba(220, 222, 224, 1);
+  --feature-gradient-mid: rgba(220, 222, 224, 0.4);
+  --feature-gradient-end: rgba(220, 222, 224, 0);
+}
+
+.bg-medium {
+  --feature-gradient-start: rgba(159, 161, 163, 1);
+  --feature-gradient-mid: rgba(159, 161, 163, 0.4);
+  --feature-gradient-end: rgba(159, 161, 163, 0);
+}
+
 /* ===================================
    DESIGN TOKENS: SHADES
    Neutral grayscale values for text, icons, and UI elements
