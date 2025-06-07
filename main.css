@@ -85,7 +85,7 @@
 .bg-green { background-color: var(--color-bg-green-20); }
 .bg-stone { background-color: var(--color-bg-stone-20); }
 
-.bg-lightest { background-color: var(--color-bg-lightest); }
+.bg-lightest { background-color: var(--color-bg-lightest); 
 .bg-light { background-color: var(--color-bg-light); }
 
 .bg-subdued { background-color: var(--color-bg-subdued); }
