@@ -824,6 +824,10 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
   padding: calc(var(--space-150) - 2px) var(--space-250);
 }
 
+.btn-info .az-button-content {
+  padding: calc(var(--space-150) - 2px) var(--space-250);
+}
+
 .btn-info:hover {
   background-color: var(--color-bg-blue-100);
   color: var(--color-text-on-dark);
@@ -854,6 +858,11 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
   cursor: not-allowed;
   opacity: 1;
   pointer-events: none;
+}
+
+.btn-info:disabled .az-button-content,
+.btn-info[aria-disabled="true"] .az-button-content {
+  padding: calc(var(--space-150) - 2px) var(--space-250);
 }
 
 /* Link Button */
