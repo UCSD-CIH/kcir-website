@@ -702,36 +702,29 @@
 }
 
 /* ===================================
-   BUTTON COMPONENT (DXPR OVERRIDE)
-   Replaces custom button classes with DXPR default mappings
+   BUTTON COMPONENT (DXPR CUSTOMIZED)
+   Standardizes default DXPR buttons:
+   - Uses global tokens for spacing, typography, and border
+   - Consolidates variants: primary, secondary, info
+   - Replaces legacy custom button classes
 =================================== */
 
-/* Shared Typography and Padding */
-.btn-primary,
-.btn-secondary,
-.btn-info {
+/* Base Button Styles */
+.btn {
   font: var(--font-label-medium-caps);
   letter-spacing: var(--letter-spacing-label);
   text-transform: var(--text-transform-label-caps);
-  padding: var(--space-150) var(--space-250);
-}
-
-/* Base Button Reset */
-.btn {
   border-radius: var(--radius-100);
   text-align: center;
   cursor: pointer;
   transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
   border: none;
+  padding: var(--space-150) var(--space-250);
+  box-sizing: border-box;
 }
 
 .btn:focus:not(:disabled),
 .btn:focus-visible:not(:disabled) {
-  outline: 2px solid var(--color-bg-blue-100);
-  outline-offset: 2px;
-}
-
-.btn:focus-visible {
   outline: 2px solid var(--color-bg-blue-100);
   outline-offset: 2px;
 }
@@ -743,6 +736,7 @@
   pointer-events: none;
 }
 
+/* Utility Button Width Variants */
 .btn-inline {
   display: inline-block;
   width: auto;
@@ -767,7 +761,7 @@
 .btn-primary:visited {
   background-color: var(--color-bg-yellow-100);
   color: var(--color-text-on-light);
-  border-color: transparent;
+  border: var(--border-100) solid transparent;
   text-decoration: none;
 }
 
@@ -775,7 +769,6 @@
 .btn-primary:visited:hover {
   background-color: var(--color-bg-turquoise-100);
   color: var(--color-text-on-light);
-  text-decoration: none;
 }
 
 .btn-primary:active {
@@ -784,13 +777,12 @@
   border-color: transparent !important;
 }
 
-/* DXPR form buttons: disabled state fix for input.button--primary.btn-primary */
+.btn-primary:disabled,
 input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
   background-color: var(--color-bg-yellow-100) !important;
   color: var(--color-text-on-light) !important;
-  border: none !important;
+  border: var(--border-100) solid transparent !important;
   opacity: 1 !important;
-  font: var(--font-label-medium-caps);
   text-transform: uppercase;
 }
 
@@ -799,7 +791,7 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
 .btn-secondary:visited {
   background-color: var(--color-bg-blue-100);
   color: var(--color-text-on-dark);
-  border-color: transparent;
+  border: var(--border-100) solid transparent;
   text-decoration: none;
 }
 
@@ -807,7 +799,6 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
 .btn-secondary:visited:hover {
   background-color: var(--color-bg-navy-100);
   color: var(--color-text-on-dark);
-  text-decoration: none;
 }
 
 .btn-secondary:active {
@@ -816,35 +807,34 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
   border-color: transparent !important;
 }
 
-/* Tertiary Button (Info) */
+/* Tertiary Button (Info Variant) */
 .btn-info,
 .az-button-content.btn-info {
   background-color: transparent;
   color: var(--color-bg-blue-100);
-  border: var(--border-100) solid var(--color-bg-blue-100);
-  padding: calc(var(--space-150) - 2px) var(--space-250);
+  border: var(--border-100) solid transparent;
   box-sizing: border-box;
 }
 
-.btn-info:hover {
+.btn-info:hover,
+.az-button-content.btn-info:hover {
   background-color: var(--color-bg-blue-100);
   color: var(--color-text-on-dark);
   border-color: var(--color-bg-blue-100);
-  text-decoration: none;
 }
 
-.btn-info:active {
+.btn-info:active,
+.az-button-content.btn-info:active {
   background-color: var(--color-bg-blue-120) !important;
-  border-color: var(--color-bg-blue-120) !important;
   color: var(--color-text-on-dark) !important;
-  text-decoration: none;
+  border-color: var(--color-bg-blue-120) !important;
 }
 
-.btn-info:visited {
-  color: var(--color-bg-blue-100);
+.btn-info:visited,
+.az-button-content.btn-info:visited {
   background-color: transparent;
+  color: var(--color-bg-blue-100);
   border-color: var(--color-bg-blue-100);
-  text-decoration: none;
 }
 
 .btn-info:disabled,
@@ -854,8 +844,6 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
   background-color: var(--color-bg-disabled-soft);
   color: var(--color-text-disabled-soft);
   border: var(--border-100) solid var(--color-border-disabled-soft);
-  padding: calc(var(--space-150) - 2px) var(--space-250);
-  box-sizing: border-box;
   cursor: not-allowed;
   opacity: 1;
   pointer-events: none;
