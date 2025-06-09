@@ -820,7 +820,8 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
 .btn-info {
   background-color: transparent;
   color: var(--color-bg-blue-100);
-  border: 2px solid var(--color-bg-blue-100);
+  border: var(--border-100) solid var(--color-bg-blue-100);
+  padding: calc(var(--space-150) - 2px) var(--space-250);
 }
 
 .btn-info:hover {
@@ -842,6 +843,17 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
   background-color: transparent;
   border-color: var(--color-bg-blue-100);
   text-decoration: none;
+}
+
+.btn-info:disabled,
+.btn-info[aria-disabled="true"] {
+  background-color: var(--color-bg-disabled-soft);
+  color: var(--color-text-disabled-soft);
+  border: var(--border-100) solid var(--color-border-disabled-soft);
+  padding: calc(var(--space-150) - 2px) var(--space-250);
+  cursor: not-allowed;
+  opacity: 1;
+  pointer-events: none;
 }
 
 /* Link Button */
