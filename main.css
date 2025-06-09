@@ -902,6 +902,7 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
 /* DXPR module content wrapper */
 .btn .az-button-content {
   all: unset;
+  box-sizing: border-box;
   display: inline-block;
   padding: var(--space-150) var(--space-250);
   text-align: center;
