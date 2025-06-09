@@ -817,15 +817,13 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
 }
 
 /* Tertiary Button (Info) */
-.btn-info {
+.btn-info,
+.az-button-content.btn-info {
   background-color: transparent;
   color: var(--color-bg-blue-100);
   border: var(--border-100) solid var(--color-bg-blue-100);
   padding: calc(var(--space-150) - 2px) var(--space-250);
-}
-
-.btn-info .az-button-content {
-  padding: calc(var(--space-150) - 2px) var(--space-250);
+  box-sizing: border-box;
 }
 
 .btn-info:hover {
@@ -850,19 +848,17 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
 }
 
 .btn-info:disabled,
-.btn-info[aria-disabled="true"] {
+.btn-info[aria-disabled="true"],
+.az-button-content.btn-info:disabled,
+.az-button-content.btn-info[aria-disabled="true"] {
   background-color: var(--color-bg-disabled-soft);
   color: var(--color-text-disabled-soft);
   border: var(--border-100) solid var(--color-border-disabled-soft);
   padding: calc(var(--space-150) - 2px) var(--space-250);
+  box-sizing: border-box;
   cursor: not-allowed;
   opacity: 1;
   pointer-events: none;
-}
-
-.btn-info:disabled .az-button-content,
-.btn-info[aria-disabled="true"] .az-button-content {
-  padding: calc(var(--space-150) - 2px) var(--space-250);
 }
 
 /* Link Button */
@@ -897,15 +893,6 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
 .btn-link .az-button-content,
 .btn-link .az-button-content * {
   text-transform: none !important;
-}
-
-/* DXPR module content wrapper */
-.btn .az-button-content {
-  all: unset;
-  box-sizing: border-box;
-  display: inline-block;
-  padding: var(--space-150) var(--space-250);
-  text-align: center;
 }
 
 
