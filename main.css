@@ -1128,8 +1128,8 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
   flex: 1;
   text-align: left;
    /* === START: test-[juliana]-[text-z-index] === */
-z-index: 2;
-/* === END: test-[juliana]-[text-z-index] === */
+   z-index: 999;
+   /* === END: test-[juliana]-[text-z-index] === */
 }
 
 .feature-card .card-body > .az-ctnr {
@@ -1352,7 +1352,6 @@ z-index: 2;
 
 .gradient-overlay-horizontal {
   position: relative;
-   z-index: 0;
   overflow: hidden;
 }
 
@@ -1361,7 +1360,7 @@ z-index: 2;
   position: absolute;
   inset: 0;
   pointer-events: none;
-  z-index: 0;
+  z-index: 1;
   background: linear-gradient(
     to right,
     #E2EAD8 50%,
