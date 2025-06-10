@@ -265,18 +265,20 @@
 
 /* Semantic heading styles for structured content */
 
+h1,
 .heading--primary h1,
 .heading--h1 h1,
 .heading--h1 
  {
-  font-family: 'Teko', sans-serif;
-  font-weight: 600 !important;
+  font-family: 'Teko', sans-serif !important;
   font-size: 56px;
-  line-height: 56px;
+  font-weight: 600 !important;
   letter-spacing: -0.005em;
+  line-height: 56px;
   padding-bottom: var(--space-150);
 }
 
+h2,
 .heading--h2,
 .heading--h2 h2
  {
@@ -287,6 +289,7 @@
   letter-spacing: -0.01em;
 }
 
+h3,
 .heading--h3,
 .heading--h3 h3 {
   font-family: 'Inter', sans-serif;
@@ -296,6 +299,7 @@
   letter-spacing: 0;
 }
 
+h4,
 .heading--h4,
 .heading--h4 h4 {
   font-family: 'Inter', sans-serif;
@@ -305,12 +309,23 @@
   letter-spacing: 0;
 }
 
+h5,
 .heading--h5,
 .heading--h5 h5 {
   font-family: 'Inter', sans-serif;
   font-weight: 700 !important;
   font-size: 16px;
   line-height: 20px;
+  letter-spacing: 0;
+}
+
+h6,
+.heading--h6,
+.heading--h6 h6 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600 !important;
+  font-size: 14px;
+  line-height: 18px;
   letter-spacing: 0;
 }
 
@@ -324,9 +339,12 @@
   letter-spacing: -0.005em;
 }
 
+p,
+div,
+
 .text--body-default * {
-  font-family: 'Inter', sans-serif;
-  font-weight: 400;
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 400 !important;
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0;
@@ -408,6 +426,85 @@
   font-size: 14px;
   line-height: 14px;
   letter-spacing: 0.03em;
+}
+
+address,
+.text--body-address * {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0;
+  font-style: normal; /* override browser default italic if undesired */
+}
+
+/* === DXPR-Compatible Text Styles (mapped to DS tokens) === */
+
+/* Lead text = body large */
+.lead,
+.text--body-large * {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  letter-spacing: -0.005em;
+}
+
+/* Muted text */
+.text-muted {
+  color: var(--color-text-subdued-soft);
+}
+
+/* Text alignment utilities */
+.text-start {
+  text-align: left;
+}
+.text-center {
+  text-align: center;
+}
+.text-end {
+  text-align: right;
+}
+.text-justify {
+  text-align: justify;
+}
+
+/* Highlight text (uses .text-primary for compatibility) */
+.text-primary {
+  color: var(--color-text-blue); /* Use theme text blue */
+  background-color: var(--color-bg-yellow-20); /* Optional: highlight */
+}
+
+/* Subtle text */
+.text-secondary {
+  color: var(--color-text-subdued-strong);
+}
+
+/* Small caption */
+.small.text-muted,
+.caption-small {
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--color-text-subdued-soft);
+}
+
+/* Emphasis mark */
+.mark.bg-primary.text-white {
+  background-color: var(--color-bg-blue-100);
+  color: var(--color-text-on-dark);
+  padding: 0 0.25em;
+  border-radius: var(--radius-050);
+}
+
+/* Inline code */
+code.bg-light {
+  font-family: monospace;
+  font-size: 14px;
+  background-color: var(--color-bg-lightest);
+  color: var(--color-text-paragraph);
+  padding: var(--space-050) var(--space-100);
+  border-radius: var(--radius-050);
+  display: inline-block;
 }
 
 /* ===================================
