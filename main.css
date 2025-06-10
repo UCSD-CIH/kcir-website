@@ -1349,6 +1349,7 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
 
 .gradient-overlay-horizontal {
   position: relative;
+   z-index: 1;
   overflow: hidden;
 }
 
