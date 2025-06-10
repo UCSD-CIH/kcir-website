@@ -1361,7 +1361,7 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
   z-index: 1;
   background: linear-gradient(
     to right,
-    #E2EAD8 0%,
+    #E2EAD8 50%,
     rgba(226, 234, 216, 0) 100%
   );
 }
