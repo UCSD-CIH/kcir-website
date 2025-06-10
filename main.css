@@ -1344,3 +1344,20 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
+
+/* === START: test-[juliana]-[horizontal-overlay] === */
+
+.feature-card.gradient-overlay-horizontal::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  background: linear-gradient(
+    to right,
+    #E2EAD8 0%,
+    rgba(226, 234, 216, 0) 100%
+  );
+}
+
+/* === END: test-[juliana]-[horizontal-overlay] === */
