@@ -1128,7 +1128,7 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
   flex: 1;
   text-align: left;
    /* === START: test-[juliana]-[text-z-index] === */
-   z-index: 999;
+   z-index: 3;
    /* === END: test-[juliana]-[text-z-index] === */
 }
 
