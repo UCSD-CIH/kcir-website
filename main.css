@@ -86,7 +86,6 @@
 
 .bg-lightest { background-color: var(--color-bg-lightest); }
 
-.bg-subdued { background-color: var(--color-bg-subdued); }
 .bg-subdued-soft { background-color: var(--color-bg-subdued-soft); }
 .bg-subdued-strong { background-color: var(--color-bg-subdued-strong); }
 
@@ -807,7 +806,7 @@ code.bg-light {
 
 .divider {
   border: none;
-  border-top: var(--border-050) solid var(--color-border-subdued);
+  border-top: var(--border-050) solid var(--color-border-subdued-strong);
   margin: var(--space-600) 0;
 }
 
