@@ -708,7 +708,7 @@ code.bg-light {
 .pr--1600 { padding-right: var(--space-1600); }
 
 /* Margin: Axes and full */
-/* mx=left/right, my=tom/bottom, m=all */
+/* mt=top, mb=bottom, ml=left, mt=right */
 
 .mt--000 { margin-top: var(--space-000); }
 .mt--025 { margin-top: var(--space-025); }
@@ -742,8 +742,41 @@ code.bg-light {
 .mb--1200 { margin-bottom: var(--space-1200); }
 .mb--1600 { margin-bottom: var(--space-1600); }
 
+.ml--000 { margin-left: var(--space-000); }
+.ml--025 { margin-left: var(--space-025); }
+.ml--050 { margin-left: var(--space-050); }
+.ml--100 { margin-left: var(--space-100); }
+.ml--150 { margin-left: var(--space-150); }
+.ml--200 { margin-left: var(--space-200); }
+.ml--250 { margin-left: var(--space-250); }
+.ml--300 { margin-left: var(--space-300); }
+.ml--400 { margin-left: var(--space-400); }
+.ml--500 { margin-left: var(--space-500); }
+.ml--600 { margin-left: var(--space-600); }
+.ml--800 { margin-left: var(--space-800); }
+.ml--1000 { margin-left: var(--space-1000); }
+.ml--1200 { margin-left: var(--space-1200); }
+.ml--1600 { margin-left: var(--space-1600); }
+
+.mr--000 { margin-right: var(--space-000); }
+.mr--025 { margin-right: var(--space-025); }
+.mr--050 { margin-right: var(--space-050); }
+.mr--100 { margin-right: var(--space-100); }
+.mr--150 { margin-right: var(--space-150); }
+.mr--200 { margin-right: var(--space-200); }
+.mr--250 { margin-right: var(--space-250); }
+.mr--300 { margin-right: var(--space-300); }
+.mr--400 { margin-right: var(--space-400); }
+.mr--500 { margin-right: var(--space-500); }
+.mr--600 { margin-right: var(--space-600); }
+.mr--800 { margin-right: var(--space-800); }
+.mr--1000 { margin-right: var(--space-1000); }
+.mr--1200 { margin-right: var(--space-1200); }
+.mr--1600 { margin-right: var(--space-1600); }
+
 /* Margin: Individual sides */
-/* mt=top, mb=bottom, ml=left, mt=right */
+/* mx=left/right, my=tom/bottom, m=all */
+
 
 .mx--000 { margin-left: var(--space-000); margin-right: var(--space-000); }
 .mx--025 { margin-left: var(--space-025); margin-right: var(--space-025); }
