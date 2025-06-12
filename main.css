@@ -916,6 +916,32 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
   border-color: transparent !important;
 }
 
+/* Secondary Alt Button */
+.btn-secondary-alt,
+.btn-secondary-alt:visited {
+  background-color: var(--color-bg-blue-100);
+  color: var(--color-text-on-dark);
+  border: var(--border-100) solid transparent;
+  text-decoration: none;
+  border-radius: var(--radius-999)
+  padding-top: var(--space-200);
+  padding-bottom: var(--space-200);
+  padding-left: var(--space-250);
+  padding-right: var(--space-250);
+}
+
+.btn-secondary-alt:hover,
+.btn-secondary-alt:visited:hover {
+  background-color: var(--color-bg-navy-100);
+  color: var(--color-text-on-dark);
+}
+
+.btn-secondary-alt:active {
+  background-color: var(--color-bg-blue-120) !important;
+  color: var(--color-text-on-dark) !important;
+  border-color: transparent !important;
+}
+
 /* Tertiary Button (Info Variant) */
 .btn-info,
 .az-button-content.btn-info {
