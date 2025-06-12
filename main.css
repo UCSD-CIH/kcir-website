@@ -1021,117 +1021,10 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
 
 /* ===================================
    COMPONENT: STUDY CARD
-   Unified layout and style system for study cards
-   - Consistent BEM naming (.study-card__)
-   - Token-based color and spacing
-   - Compatible with both DXPR and View modes
 =================================== */
 
-.study-card {
-  background-color: var(--color-sand-0);
-  border-radius: var(--radius-200);
-  padding: var(--space-400);
-  margin: var(--space-300) 0;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  max-width: 320px;
-}
 
-.study-card__image {
-  border-radius: var(--radius-200);
-  overflow: hidden;
-  margin-bottom: var(--space-300);
-}
 
-.study-card__image img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: inherit;
-}
-
-/* Panel section for info blocks */
-.study-card__panel {
-  background-color: var(--color-sand-20);
-  border-radius: var(--radius-150);
-  padding: var(--space-300);
-  margin-bottom: var(--space-300);
-}
-
-.study-card__meta {
-  font-size: 0.95rem;
-  color: var(--color-gray-70);
-  margin-bottom: var(--space-150);
-}
-
-.study-card__description {
-  font-size: 1rem;
-  line-height: 1.6;
-  margin-bottom: var(--space-200);
-  color: var(--color-gray-100);
-}
-
-.study-card__contact {
-  font-size: 0.9rem;
-  line-height: 1.4;
-  color: var(--color-navy-85);
-  margin-bottom: var(--space-200);
-  word-break: break-word;
-}
-
-.study-card__footer {
-  margin-top: var(--space-400);
-  display: flex;
-  gap: var(--space-200);
-  flex-wrap: wrap;
-}
-
-.study-card__footer .btn {
-  width: 100%;
-  max-width: 200px;
-}
-
-/* Legacy Drupal field wrappers - fallback targeting */
-.study-card .field--name-field-study-type,
-.study-card .field--name-field-requirements,
-.study-card .field--name-field-duration {
-  composes: study-card__meta;
-}
-
-.study-card .field--name-field-summary,
-.study-card .field--name-field-summary-short {
-  composes: study-card__description;
-}
-
-.study-card .field--name-field-contact-email,
-.study-card .field--name-field-contact-number {
-  composes: study-card__contact;
-}
-
-.study-card .field--name-field-sign-up-form a {
-  background-color: var(--color-navy-100);
-  color: #fff;
-  padding: 0.5rem 1rem;
-  border-radius: var(--radius-100);
-  text-decoration: none;
-  font-weight: bold;
-  display: inline-block;
-  text-align: center;
-}
-
-.study-card .field--name-field-learn-more-link a {
-  border: 2px solid var(--color-gray-50);
-  color: var(--color-gray-90);
-  padding: 0.5rem 1rem;
-  border-radius: var(--radius-100);
-  text-decoration: none;
-  font-weight: bold;
-  background-color: transparent;
-  display: inline-block;
-  text-align: center;
-}
 
 /* ===================================
    FEATURE CARD LAYOUT: VERTICAL BANNER POSITIONING
@@ -1150,6 +1043,7 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
   flex-direction: column;
   justify-content: space-between;
   overflow: hidden;
+  border: var(--border-050) solid var(--color-border-subdued-strong);
   border-radius: var(--radius-200);
   min-height: 320px;
 }
