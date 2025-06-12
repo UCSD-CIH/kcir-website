@@ -1342,6 +1342,28 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
 }
 
 /* ===================================
+   FEATURE CARD LAYOUT: HORIZONTAL OVERLAY
+=================================== */
+
+.gradient-overlay-horizontal {
+  position: relative;
+  overflow: hidden;
+}
+
+.gradient-overlay-horizontal::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  background: linear-gradient(
+    to right,
+    #E2EAD8 50%,
+    rgba(226, 234, 216, 0) 100%
+  );
+}
+
+/* ===================================
    Scotty's Study Page Styles
 =================================== */
 
@@ -1419,52 +1441,3 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
-
-/* === START: test-[juliana]-[horizontal-overlay] === */
-
-.gradient-overlay-horizontal {
-  position: relative;
-  overflow: hidden;
-}
-
-.gradient-overlay-horizontal::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 1;
-  background: linear-gradient(
-    to right,
-    #E2EAD8 50%,
-    rgba(226, 234, 216, 0) 100%
-  );
-}
-
-/* === END: test-[juliana]-[horizontal-overlay] === */
-
-/* === START: test-[juliana]-[drop-down] === */
-/* accordion color classes */
-
-.accordion-green { --accordion-bg: var(--color-bg-green-20); }
-.accordion-navy { --accordion-bg: var(--color-bg-navy-20); }
-.accordion-blue { --accordion-bg: var(--color-bg-blue-20); }
-.accordion-yellow { --accordion-bg: var(--color-bg-yellow-20); }
-.accordion-gold { --accordion-bg: var(--color-bg-gold-20); }
-.accordion-turquoise { --accordion-bg: var(--color-bg-turquoise-20); }
-.accordion-magenta { --accordion-bg: var(--color-bg-magenta-20); }
-.accordion-sand { --accordion-bg: var(--color-bg-sand-20); }
-.accordion-citron { --accordion-bg: var(--color-bg-citron-20); }
-.accordion-orange { --accordion-bg: var(--color-bg-orange-20); }
-.accordion-green { --accordion-bg: var(--color-bg-green-20); }
-.accordion-stone { --accordion-bg: var(--color-bg-stone-20); }
-
-.accordion-item .accordion-button {
-    background: var(--accordion-bg);
-    color: var(--dxt-color-headertext);
-}
-.accordion-item .accordion-button:not(.collapsed) {
-    background: var(--accordion-bg);
-    color: var(--dxt-color-base);
-}
-
-/* === END: test-[juliana]-[drop-down] === */
