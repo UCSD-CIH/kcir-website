@@ -1335,3 +1335,43 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
+
+/* ===================================
+   ACCORDION COMPONENT: COLOR & TEXT STYLING
+   Apply accordion-color class only to collapse panel element to apply styles
+=================================== */
+
+.accordion-green { --accordion-bg: var(--color-bg-green-20); }
+.accordion-navy { --accordion-bg: var(--color-bg-navy-20); }
+.accordion-blue { --accordion-bg: var(--color-bg-blue-20); }
+.accordion-yellow { --accordion-bg: var(--color-bg-yellow-20); }
+.accordion-gold { --accordion-bg: var(--color-bg-gold-20); }
+.accordion-turquoise { --accordion-bg: var(--color-bg-turquoise-20); }
+.accordion-magenta { --accordion-bg: var(--color-bg-magenta-20); }
+.accordion-sand { --accordion-bg: var(--color-bg-sand-20); }
+.accordion-citron { --accordion-bg: var(--color-bg-citron-20); }
+.accordion-orange { --accordion-bg: var(--color-bg-orange-20); }
+.accordion-green { --accordion-bg: var(--color-bg-green-20); }
+.accordion-stone { --accordion-bg: var(--color-bg-stone-20); }
+
+.accordion-item .accordion-button {
+    background: var(--accordion-bg);
+    color: var(--dxt-color-headertext);
+font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  letter-spacing: -0.005em; /*text body large*/
+}
+.accordion-item .accordion-button:not(.collapsed) {
+    background: var(--accordion-bg);
+    color: var(--dxt-color-base);
+} 
+.accordion-item .accordion-body {
+  background: var(--accordion-bg);
+ font-family: 'Inter', sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0; /*text body default*/
+}
