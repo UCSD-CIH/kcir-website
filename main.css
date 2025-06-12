@@ -15,11 +15,11 @@
   --color-bg-plain: #FFFFFF;
   --color-bg-lightest: #F7F9FC;
 
-  --color-bg-navy-20: #D1D6DC;
+  --color-bg-navy-20: #DCDFE4;
   --color-bg-navy-100: #182B49;
   --color-bg-navy-120: #0F1A30;
 
-  --color-bg-blue-20: #CCE1EF;
+  --color-bg-blue-20: #D9E7F0;
   --color-bg-blue-100: #00629B;
   --color-bg-blue-120: #004B73;
 
@@ -32,7 +32,7 @@
 
   --color-bg-turquoise-20: #CCF4F7;
   --color-bg-turquoise-100: #00C6D7;
-  --color-bg-turquoise-120: #00A1AD;
+  --color-bg-turquoise-120: #00A8B7;
 
   --color-bg-magenta-20: #F6E0EF;
   --color-bg-magenta-100: #D462AD;
@@ -46,17 +46,17 @@
   --color-bg-orange-20: #FEE7CC;
   --color-bg-orange-100: #FC8900;
 
-  --color-bg-green-20: #E2EAD8;
+  --color-bg-green-20: #E8F5D7;
   --color-bg-green-100: #6E963B;
 
   --color-bg-stone-20: #F0EFEE;
   --color-bg-stone-100: #B6B1A9;
 
-  --color-bg-subdued-soft: #F6F9FC;
-  --color-bg-subdued-strong: #E3EAF2;
+  --color-bg-subdued-soft: #F2F7FC;
+  --color-bg-subdued-strong: #E4E5E6;
 
-  --color-bg-disabled-soft: #EFF0F1;
-  --color-bg-disabled-strong: #CBD2D9;
+  --color-bg-disabled-soft: #F2F2F2;
+  --color-bg-disabled-strong: #E0E0E0;
 
   --color-border-yellow: #FFCD00;
   --color-border-blue: #00629B;
