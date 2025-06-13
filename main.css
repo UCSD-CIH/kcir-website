@@ -1083,6 +1083,35 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
    COMPONENT: STUDY CARD
 =================================== */
 
+.view-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-200); /* adjust spacing as needed */
+}
+
+@media (max-width: 768px) {
+  .view-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+.study-card {
+  background-color: var(--color-bg-subdued-soft);
+  border: var(--border-050) solid var(--color-text-subdued-soft);
+  border-radius: var(--radius-200);
+  padding: var(--space-500) var(--space-600);
+}
+
+.study-card h2 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 1.4;
+  letter-spacing: 0;
+  margin: 0 0 var(--space-200);
+  color: var(--color-text-heading);
+}
+
 .study-card .field--name-field-study-status {
   background-color: var(--color-bg-green-20);
   border-radius: var(--radius-999);
@@ -1113,7 +1142,7 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
   display: inline-block;
   padding: var(--space-100) var(--space-250);
   font-family: 'Inter', sans-serif;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 14px;
   line-height: 14px;
   letter-spacing: 0.05em;
@@ -1138,7 +1167,7 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
   border-radius: var(--radius-999);
   box-sizing: border-box;
   cursor: pointer;
-  font: var(--font-label-medium-caps);
+  font: var(--font-label-small-caps);
   letter-spacing: var(--letter-spacing-label);
   padding: var(--space-150) var(--space-600);
   text-align: center;
@@ -1147,7 +1176,6 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
   background-color: var(--color-bg-blue-100);
   color: var(--color-text-blue);
   overflow: hidden;
-  padding: var(--space-150) var(--space-500);
   white-space: nowrap;
   text-decoration: none;
   position: relative;
@@ -1161,7 +1189,7 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
 .field--name-field-sign-up-form a::before {
   content: "LEARN MORE >";
   color: var(--color-text-on-dark);
-  font: var(--font-label-medium-caps);
+  font: var(--font-label-small-caps);
   letter-spacing: var(--letter-spacing-label);
   text-transform: var(--text-transform-label-caps);
   display: flex;
@@ -1174,8 +1202,6 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
   height: 100%;
   pointer-events: none;
 }
-
-
 
 /* ===================================
    FEATURE CARD LAYOUT: VERTICAL BANNER POSITIONING
