@@ -1083,10 +1083,11 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
    COMPONENT: STUDY CARD
 =================================== */
 
+/* Layout: 2-up grid with mobile fallback */
 .view-content {
   display: grid;
+  gap: var(--space-200);
   grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-200); /* adjust spacing as needed */
 }
 
 @media (max-width: 768px) {
@@ -1095,79 +1096,21 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
   }
 }
 
+/* Study Card wrapper */
 .study-card {
   background-color: var(--color-bg-subdued-soft);
   border: var(--border-050) solid var(--color-text-subdued-soft);
-  color: var(--color-text-paragraph);
   border-radius: var(--radius-200);
-  padding: var(--space-500) var(--space-600) 0 var(--space-500)
-}
-
-.study-card h2 {
-  font-family: var(--font-heading);
-  font-weight: 600 !important;
-  font-size: 24px !important;
-  line-height: 1.1;
-  letter-spacing: 0;
-  margin: 0 0 var(--space-200);
-  color: var(--color-text-heading);
-}
-
-/* Study Card Tags */
-.study-card .field--name-field-study-status {
-  background-color: var(--color-bg-green-20);
-  border-radius: var(--radius-999);
-  display: inline-block;
-  padding: var(--space-150) var(--space-300);
-  font-family: 'Inter', sans-serif;
-  font-weight: 500 !important;
-  font-size: 14px;
-  line-height: 14px;
-  letter-spacing: 0.05em;
   color: var(--color-text-paragraph);
+  padding: var(--space-500) var(--space-600) 0 var(--space-500);
 }
 
-.study-card .field--name-field-study-status .field__item::before {
-  content: "🟢";
-}
-
-.study-card .field--name-field-studytype {
-  background-color: var(--color-bg-sand-100);
-  border-radius: var(--radius-999);
-  display: inline-block;
-  padding: var(--space-150) var(--space-300);
-  font-family: 'Inter', sans-serif;
-  font-weight: 500 !important;
-  font-size: 14px;
-  line-height: 14px;
-  letter-spacing: 0.05em;
-  color: var(--color-text-paragraph);
-  margin-left: var(--space-050);
-}
-
-.study-card .field--name-field-studytype .field__item::before {
-  content: "🏷️";
-}
-
-/* Study Card Tags: Emoji Icon Styles */
-.study-card .field--name-field-study-status .field__item::before
-.study-card .field--name-field-studytype .field__item::before {
-  display: inline-block;
-  font-size: 12px;
-  margin-right: var(--space-100);
-}
-
-/* Study Card Tags: Hide Field Labels */
-.study-card .field--name-field-study-status .field__label,
-.study-card .field--name-field-studytype .field__label,
-.study-card .field--name-field-sign-up-form .field__label {
+/* Study Card: hide author (submitted) block */
+.study-card div.author {
   display: none;
 }
 
-.study-card .field--name-field-sign-up-form .field__label {
-  display: none;
-}
-
+/* Study Card CTA Button */
 .field--name-field-sign-up-form a {
   background-color: var(--color-bg-blue-100);
   border: none;
@@ -1211,8 +1154,63 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
   width: 100%;
 }
 
-.study-card div.author {
+/* Study Card: hide field labels */
+.study-card .field--name-field-sign-up-form .field__label,
+.study-card .field--name-field-study-status .field__label,
+.study-card .field--name-field-studytype .field__label {
   display: none;
+}
+
+/* Study Card Heading (H2 styled as H3) */
+.study-card h2 {
+  color: var(--color-text-heading);
+  font-family: var(--font-heading);
+  font-size: 24px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0;
+  line-height: 1.1;
+  margin: 0 0 var(--space-200);
+}
+
+/* Study Card: Tag Styles (shared) */
+.study-card .field--name-field-study-status,
+.study-card .field--name-field-studytype {
+  background-color: var(--color-bg-sand-100); /* override below for status */
+  border-radius: var(--radius-999);
+  color: var(--color-text-paragraph);
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500 !important;
+  letter-spacing: 0.05em;
+  line-height: 14px;
+  padding: var(--space-150) var(--space-300);
+}
+
+/* Study Card: Override tag background for status */
+.study-card .field--name-field-study-status {
+  background-color: var(--color-bg-green-20);
+}
+
+/* Study Card: Icon spacing (shared across tags) */
+.study-card .field--name-field-study-status .field__item::before,
+.study-card .field--name-field-studytype .field__item::before {
+  display: inline-block;
+  font-size: 12px;
+  margin-right: var(--space-100);
+}
+
+/* Study Card: Emoji icons */
+.study-card .field--name-field-study-status .field__item::before {
+  content: "🟢";
+}
+
+.study-card .field--name-field-studytype {
+  margin-left: var(--space-050);
+}
+
+.study-card .field--name-field-studytype .field__item::before {
+  content: "🏷️";
 }
 
 /* ===================================
