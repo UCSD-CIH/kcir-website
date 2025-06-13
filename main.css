@@ -353,7 +353,6 @@ h6,
 }
 
 p,
-div,
 
 .text--body-default * {
   font-family: 'Inter', sans-serif !important;
@@ -1104,9 +1103,9 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
 
 .study-card h2 {
   font-family: var(--font-heading);
-  font-weight: 600;
-  font-size: 32px;
-  line-height: 1.4;
+  font-weight: 600 !important;
+  font-size: 32px !important;
+  line-height: 1.1;
   letter-spacing: 0;
   margin: 0 0 var(--space-200);
   color: var(--color-text-heading);
@@ -1116,9 +1115,9 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
   background-color: var(--color-bg-green-20);
   border-radius: var(--radius-999);
   display: inline-block;
-  padding: var(--space-100) var(--space-250);
+  padding: var(--space-150) var(--space-300);
   font-family: 'Inter', sans-serif;
-  font-weight: 600;
+  font-weight: 500 !important;
   font-size: 14px;
   line-height: 14px;
   letter-spacing: 0.05em;
@@ -1140,9 +1139,9 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
   background-color: var(--color-bg-sand-100);
   border-radius: var(--radius-999);
   display: inline-block;
-  padding: var(--space-100) var(--space-250);
+  padding: var(--space-150) var(--space-300);
   font-family: 'Inter', sans-serif;
-  font-weight: 500;
+  font-weight: 500 !important;
   font-size: 14px;
   line-height: 14px;
   letter-spacing: 0.05em;
@@ -1169,7 +1168,7 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
   cursor: pointer;
   font: var(--font-label-small-caps);
   letter-spacing: var(--letter-spacing-label);
-  padding: var(--space-150) var(--space-600);
+  padding: var(--space-150) var(--space-800);
   text-align: center;
   text-transform: var(--text-transform-label-caps);
   transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
