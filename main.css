@@ -1156,13 +1156,21 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
   display: none;
 }
 
-.study-card .field--name-field-sign-up-form a::before {
-  content: "Learn More >";
+.field--name-field-sign-up-form a::before {
+  content: "LEARN MORE >";
   color: var(--color-text-on-dark);
+  font: var(--font-label-medium-caps);
+  letter-spacing: var(--letter-spacing-label);
+  text-transform: var(--text-transform-label-caps);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
+  top: 0;
   left: 0;
-  right: 0;
-  text-align: center;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
 }
 
 
