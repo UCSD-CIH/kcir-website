@@ -1098,7 +1098,7 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
   background-color: var(--color-bg-subdued-soft);
   border: var(--border-050) solid var(--color-text-subdued-soft);
   border-radius: var(--radius-200);
-  padding: var(--space-500) var(--space-600);
+  padding: var(--space-500) var(--space-600) 0 var(--space-500)
 }
 
 .study-card h2 {
@@ -1200,6 +1200,10 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
   width: 100%;
   height: 100%;
   pointer-events: none;
+}
+
+.study-card div.author {
+  display: none;
 }
 
 /* ===================================
