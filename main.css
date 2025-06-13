@@ -554,6 +554,7 @@ code.bg-light {
   --space-400: 32px;
   --space-500: 40px;
   --space-600: 48px;
+  --space-700: 56px;
   --space-800: 64px;
   --space-1000: 80px;
   --space-1200: 96px;
@@ -1097,6 +1098,7 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
 .study-card {
   background-color: var(--color-bg-subdued-soft);
   border: var(--border-050) solid var(--color-text-subdued-soft);
+  color: var(--color-text-paragraph);
   border-radius: var(--radius-200);
   padding: var(--space-500) var(--space-600) 0 var(--space-500)
 }
@@ -1104,13 +1106,14 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
 .study-card h2 {
   font-family: var(--font-heading);
   font-weight: 600 !important;
-  font-size: 32px !important;
+  font-size: 24px !important;
   line-height: 1.1;
   letter-spacing: 0;
   margin: 0 0 var(--space-200);
   color: var(--color-text-heading);
 }
 
+/* Study Card Tags */
 .study-card .field--name-field-study-status {
   background-color: var(--color-bg-green-20);
   border-radius: var(--radius-999);
@@ -1124,15 +1127,8 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
   color: var(--color-text-paragraph);
 }
 
-.study-card .field--name-field-study-status .field__label {
-  display: none;
-}
-
 .study-card .field--name-field-study-status .field__item::before {
   content: "🟢";
-  display: inline-block;
-  font-size: 14px;
-  margin-right: var(--space-050);
 }
 
 .study-card .field--name-field-studytype {
@@ -1149,15 +1145,27 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
   margin-left: var(--space-050);
 }
 
-.study-card .field--name-field-studytype .field__label {
+.study-card .field--name-field-studytype .field__item::before {
+  content: "🏷️";
+}
+
+/* Study Card Tags: Emoji Icon Styles */
+.study-card .field--name-field-study-status .field__item::before
+.study-card .field--name-field-studytype .field__item::before {
+  display: inline-block;
+  font-size: 12px;
+  margin-right: var(--space-100);
+}
+
+/* Study Card Tags: Hide Field Labels */
+.study-card .field--name-field-study-status .field__label,
+.study-card .field--name-field-studytype .field__label,
+.study-card .field--name-field-sign-up-form .field__label {
   display: none;
 }
 
-.study-card .field--name-field-studytype .field__item::before {
-  content: "🏷️";
-  display: inline-block;
-  font-size: 14px;
-  margin-right: var(--space-050);
+.study-card .field--name-field-sign-up-form .field__label {
+  display: none;
 }
 
 .field--name-field-sign-up-form a {
@@ -1174,17 +1182,13 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
   letter-spacing: var(--letter-spacing-label);
   margin: var(--space-300) 0 var(--space-250) 0;
   overflow: hidden;
-  padding: var(--space-100) var(--space-800);
+  padding: var(--space-150) var(--space-700);
   position: relative;
   text-align: center;
   text-decoration: none;
   text-transform: var(--text-transform-label-caps);
   transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
   white-space: nowrap;
-}
-
-.study-card .field--name-field-sign-up-form .field__label {
-  display: none;
 }
 
 .field--name-field-sign-up-form a::before {
@@ -1206,6 +1210,7 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
   top: 0;
   width: 100%;
 }
+
 .study-card div.author {
   display: none;
 }
