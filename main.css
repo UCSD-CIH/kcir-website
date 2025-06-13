@@ -1161,24 +1161,26 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
 }
 
 .field--name-field-sign-up-form a {
-  display: inline-block;
+  background-color: var(--color-bg-blue-100);
   border: none;
   border-radius: var(--radius-999);
   box-sizing: border-box;
+  color: var(--color-text-blue);
   cursor: pointer;
-  font: var(--font-label-small-caps);
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500 !important;
   letter-spacing: var(--letter-spacing-label);
-  padding: var(--space-150) var(--space-800);
+  margin: var(--space-300) 0 var(--space-250) 0;
+  overflow: hidden;
+  padding: var(--space-100) var(--space-800);
+  position: relative;
   text-align: center;
+  text-decoration: none;
   text-transform: var(--text-transform-label-caps);
   transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
-  background-color: var(--color-bg-blue-100);
-  color: var(--color-text-blue);
-  overflow: hidden;
   white-space: nowrap;
-  text-decoration: none;
-  position: relative;
-  margin: var(--space-300) 0 var(--space-250) 0;
 }
 
 .study-card .field--name-field-sign-up-form .field__label {
@@ -1186,22 +1188,24 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
 }
 
 .field--name-field-sign-up-form a::before {
-  content: "LEARN MORE >";
-  color: var(--color-text-on-dark);
-  font: var(--font-label-small-caps);
-  letter-spacing: var(--letter-spacing-label);
-  text-transform: var(--text-transform-label-caps);
-  display: flex;
   align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+  color: var(--color-text-on-dark);
+  content: "LEARN MORE >";
+  display: flex;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500 !important;
   height: 100%;
+  justify-content: center;
+  left: 0;
+  letter-spacing: var(--letter-spacing-label);
+  padding: var(--space-100) var(--space-800);
   pointer-events: none;
+  position: absolute;
+  text-transform: var(--text-transform-label-caps);
+  top: 0;
+  width: 100%;
 }
-
 .study-card div.author {
   display: none;
 }
