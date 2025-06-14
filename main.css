@@ -1110,54 +1110,39 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
   display: none;
 }
 
-/* Study Card CTA Button */
-.field--name-field-sign-up-form a {
+/* Study Card: Learn More button */
+.field--name-field-study-learn-more a {
   background-color: var(--color-bg-blue-100);
-  border: none;
+  border: var(--border-100) solid transparent;
   border-radius: var(--radius-999);
-  box-sizing: border-box;
-  color: var(--color-text-blue);
+  color: var(--color-text-on-dark);
   cursor: pointer;
   display: inline-block;
   font-family: 'Inter', sans-serif;
   font-size: 14px;
-  font-weight: 500 !important;
+  font-weight: 600;
   letter-spacing: var(--letter-spacing-label);
   margin: var(--space-300) 0 var(--space-250) 0;
-  overflow: hidden;
-  padding: var(--space-150) var(--space-700);
-  position: relative;
+  padding: var(--space-100) var(--space-400);
   text-align: center;
   text-decoration: none;
-  text-transform: var(--text-transform-label-caps);
-  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
-  white-space: nowrap;
+  text-transform: uppercase;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.field--name-field-sign-up-form a::before {
-  align-items: center;
-  color: var(--color-text-on-dark);
-  content: "LEARN MORE >";
-  display: flex;
-  font-family: 'Inter', sans-serif;
-  font-size: 14px;
-  font-weight: 500 !important;
-  height: 100%;
-  justify-content: center;
-  left: 0;
-  letter-spacing: var(--letter-spacing-label);
-  padding: var(--space-100) var(--space-800);
-  pointer-events: none;
-  position: absolute;
-  text-transform: var(--text-transform-label-caps);
-  top: 0;
-  width: 100%;
+.field--name-field-study-learn-more a:hover {
+  background-color: var(--color-bg-navy-100);
+}
+
+.field--name-field-study-learn-more a:active {
+  background-color: var(--color-bg-blue-120);
 }
 
 /* Study Card: hide field labels */
-.study-card .field--name-field-sign-up-form .field__label,
+.study-card .field--name-field-study-summary .field__label,
+.study-card .field--name-field-study-learn-more .field__label,
 .study-card .field--name-field-study-status .field__label,
-.study-card .field--name-field-studytype .field__label {
+.study-card .field--name-field-study-type .field__label {
   display: none;
 }
 
@@ -1174,7 +1159,7 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
 
 /* Study Card: Tag Styles (shared) */
 .study-card .field--name-field-study-status,
-.study-card .field--name-field-studytype {
+.study-card .field--name-field-study-type {
   background-color: var(--color-bg-sand-100); /* override below for status */
   border-radius: var(--radius-999);
   color: var(--color-text-paragraph);
@@ -1194,7 +1179,7 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
 
 /* Study Card: Icon spacing (shared across tags) */
 .study-card .field--name-field-study-status .field__item::before,
-.study-card .field--name-field-studytype .field__item::before {
+.study-card .field--name-field-study-type .field__item::before {
   display: inline-block;
   font-size: 12px;
   margin-right: var(--space-100);
@@ -1205,11 +1190,11 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
   content: "🟢";
 }
 
-.study-card .field--name-field-studytype {
+.study-card .field--name-field-study-type {
   margin-left: var(--space-050);
 }
 
-.study-card .field--name-field-studytype .field__item::before {
+.study-card .field--name-field-study-type .field__item::before {
   content: "🏷️";
 }
 
