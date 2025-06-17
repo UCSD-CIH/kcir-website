@@ -1127,8 +1127,8 @@ footer.submitted {
   font-size: 14px;
   font-weight: 600;
   letter-spacing: var(--letter-spacing-label);
-  margin: var(--space-300) 0 var(--space-400) 0;
-  padding: var(--space-250) var(--space-300);
+  margin: var(--space-300) 0 var(--space-500) 0;
+  padding: var(--space-150) var(--space-300);
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
