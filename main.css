@@ -1164,11 +1164,11 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
 }
 
 /* ================================
-   Study Tag Styles: Status Tags
+   Study Tag Styles
    (uses :has() — not Firefox-safe)
 ================================ */
 
-/* Base pill style */
+/* Base pill style (inherited by all tag types) */
 .field--name-field-study-status,
 .field--name-field-study-type,
 .field--name-field-study-model {
@@ -1179,55 +1179,64 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
   font-size: 14px;
   letter-spacing: 0.01em;
   line-height: 1;
-  padding: 6px 14px;
+  padding: var(--space-150) var(--space-300);
 }
 
-/* Recruiting — Term ID 20 */
+/* Disable tag links (keep them in DOM for styling) */
+.field--name-field-study-status a,
+.field--name-field-study-type a,
+.field--name-field-study-model a {
+  pointer-events: none;
+  text-decoration: none;
+  color: inherit;
+  cursor: default;
+}
+
+/* Shared styles for tag emojis */
+.field--name-field-study-status a::before,
+.field--name-field-study-type a::before,
+.field--name-field-study-model a::before {
+  margin-right: var(--space-150);
+  font-size: 12px;
+  position: relative;
+  top: -0.5px;
+}
+
+/* Status: Recruiting — 🟢 (term ID 20) */
 .field--name-field-study-status:has(a[href$="/20"]) {
   background-color: var(--color-bg-green-20);
 }
 .field--name-field-study-status:has(a[href$="/20"]) a::before {
   content: "🟢";
-  margin-right: 6px;
-  font-size: 12px;
-  position: relative;
-  top: -0.5px;
 }
 
-/* Active (Not Recruiting) — Term ID 21 */
+/* Status: Active — ⏳ (term ID 21) */
 .field--name-field-study-status:has(a[href$="/21"]) {
   background-color: var(--color-bg-citron-20);
 }
 .field--name-field-study-status:has(a[href$="/21"]) a::before {
   content: "⏳";
-  margin-right: 6px;
-  font-size: 12px;
-  position: relative;
-  top: -0.5px;
 }
 
-/* Completed Term ID 22 */
+/* Status: Completed — 🎯 (term ID 22) */
 .field--name-field-study-status:has(a[href$="/22"]) {
   background-color: var(--color-bg-orange-20);
 }
 .field--name-field-study-status:has(a[href$="/22"]) a::before {
   content: "🎯";
-  margin-right: 6px;
-  font-size: 12px;
-  position: relative;
-  top: -0.5px;
 }
 
-/* PBR Term ID 23 */
-.field--name-field-study-status:has(a[href$="/23"]) {
+/* Study Type */
+.field--name-field-study-type {
+  background-color: var(--color-bg-lightest);
+}
+
+/* Model: PBR — 🏥 (term ID 23) */
+.field--name-field-study-model:has(a[href$="/23"]) {
   background-color: var(--color-bg-magenta-20);
 }
-.field--name-field-study-status:has(a[href$="/23"]) a::before {
+.field--name-field-study-model:has(a[href$="/23"]) a::before {
   content: "🏥";
-  margin-right: 6px;
-  font-size: 12px;
-  position: relative;
-  top: -0.5px;
 }
 
 /* ===================================
