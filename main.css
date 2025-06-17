@@ -1103,7 +1103,7 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
 
 /* Study Card wrapper */
 .study-card {
-  background-color: var(--color-bg-subdued-soft);
+  background-color: var(--color-bg-lightest);
   border: var(--border-050) solid var(--color-border-subdued-strong);
   border-radius: var(--radius-200);
   color: var(--color-text-paragraph);
@@ -1184,7 +1184,7 @@ footer.submitted {
   letter-spacing: 0.01em;
   line-height: 1;
   margin: 0 var(--space-200) var(--space-250) 0;
-  padding: var(--space-150) var(--space-300);
+  padding: var(--space-200) var(--space-300);
 }
 
 /* Disable tag links (keep them in DOM for styling) */
