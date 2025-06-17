@@ -1183,7 +1183,7 @@ footer.submitted {
   font-size: 14px;
   letter-spacing: 0.01em;
   line-height: 1;
-  margin: 0 var(--space-200) var(--space-250) 0;
+  margin: 0 var(--space-150) var(--space-150) 0;
   padding: var(--space-200) var(--space-300);
 }
 
