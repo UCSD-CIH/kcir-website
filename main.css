@@ -1236,6 +1236,10 @@ footer.submitted {
   background-color: var(--color-bg-stone-20);
 }
 
+.field--name-field-study-type a::before {
+  content: "🏷️";
+}
+
 /* Model: PBR — 🏥 (term ID 23) */
 .field--name-field-study-model:has(a[href$="/23"]) {
   background-color: var(--color-bg-magenta-20);
