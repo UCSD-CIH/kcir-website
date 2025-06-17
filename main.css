@@ -7,7 +7,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 /* ===================================
-   DESIGN TOKENS: COLORS
+   DESIGN TOKENS: BACKGROUND COLORS
    Global color variables used across CIH sites & apps
 =================================== */
 
@@ -15,41 +15,41 @@
   --color-bg-plain: #FFFFFF;
   --color-bg-lightest: #F7F9FC;
 
-  --color-bg-navy-20: #DCDFE4;
+  --color-bg-navy-20: rgba(24, 43, 73, 0.15);
   --color-bg-navy-100: #182B49;
   --color-bg-navy-120: #0F1A30;
 
-  --color-bg-blue-20: #D9E7F0;
+  --color-bg-blue-20: rgba(0, 98, 155, 0.15);
   --color-bg-blue-100: #00629B;
   --color-bg-blue-120: #004B73;
 
-  --color-bg-yellow-20: #FFF5CC;
+  --color-bg-yellow-20: rgba(255, 205, 0, 0.20);
   --color-bg-yellow-100: #FFCD00;
   --color-bg-yellow-120: #CC9E00;
 
-  --color-bg-gold-20: #F4E9D0;
+  --color-bg-gold-20: rgba(198, 146, 20, 0.20);
   --color-bg-gold-100: #C69214;
 
-  --color-bg-turquoise-20: #CCF4F7;
+  --color-bg-turquoise-20: rgba(0, 198, 215, 0.20);
   --color-bg-turquoise-100: #00C6D7;
   --color-bg-turquoise-120: #00A8B7;
 
-  --color-bg-magenta-20: #F6E0EF;
+  --color-bg-magenta-20: rgba(212, 98, 173, 0.15);
   --color-bg-magenta-100: #D462AD;
 
-  --color-bg-sand-20: #FDFCFA;
+  --color-bg-sand-20: rgba(245, 240, 230, 0.20);
   --color-bg-sand-100: #F5F0E6;
 
-  --color-bg-citron-20: #FDFACC;
+  --color-bg-citron-20: rgba(243, 229, 0, 0.20);
   --color-bg-citron-100: #F3E500;
 
-  --color-bg-orange-20: #FEE7CC;
+  --color-bg-orange-20: rgba(252, 137, 0, 0.15);
   --color-bg-orange-100: #FC8900;
 
-  --color-bg-green-20: #E8F5D7;
+  --color-bg-green-20: rgba(110, 150, 59, 0.15);
   --color-bg-green-100: #6E963B;
 
-  --color-bg-stone-20: #F0EFEE;
+  --color-bg-stone-20: rgba(182, 177, 169, 0.15);
   --color-bg-stone-100: #B6B1A9;
 
   --color-bg-subdued-soft: #F2F7FC;
@@ -57,128 +57,6 @@
 
   --color-bg-disabled-soft: #F2F2F2;
   --color-bg-disabled-strong: #E0E0E0;
-
-  --color-border-yellow: #FFCD00;
-  --color-border-blue: #00629B;
-  --color-border-navy: #182B49;
-  --color-border-disabled-soft: #D8DFE4;
-  --color-border-disabled-strong: #AEB6BC;
-  --color-border-subdued-soft: #EFF1F3;
-  --color-border-subdued-strong: #CBD2D9;
-  
-}
-
-/* ===================================
-   BACKGROUND COLOR UTILITIES + GRADIENTS
-   Adds matching faded gradient variables for image overlays
-=================================== */
-
-.bg-navy {
-  background-color: var(--color-bg-navy-20); /* #DCDFE4 */
-  --feature-gradient-start: rgba(220, 223, 228, 1);
-  --feature-gradient-mid: rgba(220, 223, 228, 0.4);
-  --feature-gradient-end: rgba(220, 223, 228, 0);
-}
-
-.bg-blue {
-  background-color: var(--color-bg-blue-20); /* #D9E7F0 */
-  --feature-gradient-start: rgba(217, 231, 240, 1);
-  --feature-gradient-mid: rgba(217, 231, 240, 0.4);
-  --feature-gradient-end: rgba(217, 231, 240, 0);
-}
-
-.bg-yellow {
-  background-color: var(--color-bg-yellow-20); /* #FFF5CC */
-  --feature-gradient-start: rgba(255, 245, 204, 1);
-  --feature-gradient-mid: rgba(255, 245, 204, 0.4);
-  --feature-gradient-end: rgba(255, 245, 204, 0);
-}
-
-.bg-gold {
-  background-color: var(--color-bg-gold-20); /* #F4E9D0 */
-  --feature-gradient-start: rgba(244, 233, 208, 1);
-  --feature-gradient-mid: rgba(244, 233, 208, 0.4);
-  --feature-gradient-end: rgba(244, 233, 208, 0);
-}
-
-.bg-turquoise {
-  background-color: var(--color-bg-turquoise-20); /* #CCF4F7 */
-  --feature-gradient-start: rgba(204, 244, 247, 1);
-  --feature-gradient-mid: rgba(204, 244, 247, 0.4);
-  --feature-gradient-end: rgba(204, 244, 247, 0);
-}
-
-.bg-magenta {
-  background-color: var(--color-bg-magenta-20); /* #F6E0EF */
-  --feature-gradient-start: rgba(246, 224, 239, 1);
-  --feature-gradient-mid: rgba(246, 224, 239, 0.4);
-  --feature-gradient-end: rgba(246, 224, 239, 0);
-}
-
-.bg-sand {
-  background-color: var(--color-bg-sand-20); /* #FDFCFA */
-  --feature-gradient-start: rgba(253, 252, 250, 1);
-  --feature-gradient-mid: rgba(253, 252, 250, 0.4);
-  --feature-gradient-end: rgba(253, 252, 250, 0);
-}
-
-.bg-citron {
-  background-color: var(--color-bg-citron-20); /* #FDFACC */
-  --feature-gradient-start: rgba(253, 250, 204, 1);
-  --feature-gradient-mid: rgba(253, 250, 204, 0.4);
-  --feature-gradient-end: rgba(253, 250, 204, 0);
-}
-
-.bg-orange {
-  background-color: var(--color-bg-orange-20); /* #FEE7CC */
-  --feature-gradient-start: rgba(254, 231, 204, 1);
-  --feature-gradient-mid: rgba(254, 231, 204, 0.4);
-  --feature-gradient-end: rgba(254, 231, 204, 0);
-}
-
-.bg-green {
-  background-color: var(--color-bg-green-20); /* #E8F5D7 */
-  --feature-gradient-start: rgba(232, 245, 215, 1);
-  --feature-gradient-mid: rgba(232, 245, 215, 0.4);
-  --feature-gradient-end: rgba(232, 245, 215, 0);
-}
-
-.bg-stone {
-  background-color: var(--color-bg-stone-20); /* #F0EFEE */
-  --feature-gradient-start: rgba(240, 239, 238, 1);
-  --feature-gradient-mid: rgba(240, 239, 238, 0.4);
-  --feature-gradient-end: rgba(240, 239, 238, 0);
-}
-
-.bg-lightest {
-  background-color: var(--color-bg-lightest); /* #F7F9FC */
-  --feature-gradient-start: rgba(247, 249, 252, 1);
-  --feature-gradient-mid: rgba(247, 249, 252, 0.4);
-  --feature-gradient-end: rgba(247, 249, 252, 0);
-}
-
-.bg-subdued-soft {
-  background-color: var(--color-bg-subdued-soft); /* #F2F7FC */
-}
-
-.bg-subdued-strong {
-  background-color: var(--color-bg-subdued-strong); /* #E4E5E6 */
-}
-
-.bg-disabled-soft {
-  background-color: var(--color-bg-disabled-soft); /* #F2F2F2 */
-}
-
-.bg-disabled-strong {
-  background-color: var(--color-bg-disabled-strong); /* #E0E0E0 */
-}
-
-.bg-disabled {
-  background-color: var(--color-bg-disabled-soft); /* fallback */
-}
-
-.bg-frosted {
-  background-color: rgba(255, 255, 255, 0.6);
 }
 
 /* ===================================
@@ -227,8 +105,126 @@
   --color-border-disabled-soft: #D8DFE4;
   --color-border-disabled-strong: #AEB6BC;
   --color-border-strong: #9E9AA3;
-  --color-border-blue: #00629B;
   --color-border-navy: #182B49;
+  --color-border-blue: #00629B;
+  --color-border-citron: #F3E500;
+  --color-border-magenta-soft: rgba(224, 0, 148, 0.5);
+  --color-border-green-soft: rgba(110, 150, 59, 0.5);
+  --color-border-orange-soft: rgba(252, 137, 0, 0.5);
+  --color-border-stone-soft: rgba(182, 177, 169, 0.6);
+}
+
+/* ===================================
+   BACKGROUND COLOR UTILITIES + GRADIENTS
+   Adds matching faded gradient variables for image overlays
+=================================== */
+
+.bg-navy {
+  background-color: var(--color-bg-navy-20);
+  --gradient-bg-start: rgba(220, 223, 228, 1);
+  --gradient-bg-mid: rgba(220, 223, 228, 0.4);
+  --gradient-bg-end: rgba(220, 223, 228, 0);
+}
+
+.bg-blue {
+  background-color: var(--color-bg-blue-20);
+  --gradient-bg-start: rgba(217, 231, 240, 1);
+  --gradient-bg-mid: rgba(217, 231, 240, 0.4);
+  --gradient-bg-end: rgba(217, 231, 240, 0);
+}
+
+.bg-yellow {
+  background-color: var(--color-bg-yellow-20);
+  --gradient-bg-start: rgba(255, 245, 204, 1);
+  --gradient-bg-mid: rgba(255, 245, 204, 0.4);
+  --gradient-bg-end: rgba(255, 245, 204, 0);
+}
+
+.bg-gold {
+  background-color: var(--color-bg-gold-20);
+  --gradient-bg-start: rgba(244, 233, 208, 1);
+  --gradient-bg-mid: rgba(244, 233, 208, 0.4);
+  --gradient-bg-end: rgba(244, 233, 208, 0);
+}
+
+.bg-turquoise {
+  background-color: var(--color-bg-turquoise-20);
+  --gradient-bg-start: rgba(204, 244, 247, 1);
+  --gradient-bg-mid: rgba(204, 244, 247, 0.4);
+  --gradient-bg-end: rgba(204, 244, 247, 0);
+}
+
+.bg-magenta {
+  background-color: var(--color-bg-magenta-20);
+  --gradient-bg-start: rgba(246, 224, 239, 1);
+  --gradient-bg-mid: rgba(246, 224, 239, 0.4);
+  --gradient-bg-end: rgba(246, 224, 239, 0);
+}
+
+.bg-sand {
+  background-color: var(--color-bg-sand-20);
+  --gradient-bg-start: rgba(253, 252, 250, 1);
+  --gradient-bg-mid: rgba(253, 252, 250, 0.4);
+  --gradient-bg-end: rgba(253, 252, 250, 0);
+}
+
+.bg-citron {
+  background-color: var(--color-bg-citron-20);
+  --gradient-bg-start: rgba(253, 250, 204, 1);
+  --gradient-bg-mid: rgba(253, 250, 204, 0.4);
+  --gradient-bg-end: rgba(253, 250, 204, 0);
+}
+
+.bg-orange {
+  background-color: var(--color-bg-orange-20);
+  --gradient-bg-start: rgba(254, 231, 204, 1);
+  --gradient-bg-mid: rgba(254, 231, 204, 0.4);
+  --gradient-bg-end: rgba(254, 231, 204, 0);
+}
+
+.bg-green {
+  background-color: var(--color-bg-green-20);
+  --gradient-bg-start: rgba(232, 245, 215, 1);
+  --gradient-bg-mid: rgba(232, 245, 215, 0.4);
+  --gradient-bg-end: rgba(232, 245, 215, 0);
+}
+
+.bg-stone {
+  background-color: var(--color-bg-stone-20);
+  --gradient-bg-start: rgba(240, 239, 238, 1);
+  --gradient-bg-mid: rgba(240, 239, 238, 0.4);
+  --gradient-bg-end: rgba(240, 239, 238, 0);
+}
+
+.bg-lightest {
+  background-color: var(--color-bg-lightest);
+  --gradient-bg-start: rgba(247, 249, 252, 1);
+  --gradient-bg-mid: rgba(247, 249, 252, 0.4);
+  --gradient-bg-end: rgba(247, 249, 252, 0);
+}
+
+.bg-subdued-soft {
+  background-color: var(--color-bg-subdued-soft); /* #F2F7FC */
+}
+
+.bg-subdued-strong {
+  background-color: var(--color-bg-subdued-strong); /* #E4E5E6 */
+}
+
+.bg-disabled-soft {
+  background-color: var(--color-bg-disabled-soft); /* #F2F2F2 */
+}
+
+.bg-disabled-strong {
+  background-color: var(--color-bg-disabled-strong); /* #E0E0E0 */
+}
+
+.bg-disabled {
+  background-color: var(--color-bg-disabled-soft); /* fallback */
+}
+
+.bg-frosted {
+  background-color: rgba(255, 255, 255, 0.6);
 }
 
 /* ===================================
@@ -1328,9 +1324,9 @@ footer.submitted {
   z-index: 1;
   background: linear-gradient(
     to top,
-    var(--feature-gradient-start, transparent) 0%,
-    var(--feature-gradient-mid, transparent) 30%,
-    var(--feature-gradient-end, transparent) 100%
+    var(--bg-gradient-start, transparent) 0%,
+    var(--bg-gradient-mid, transparent) 30%,
+    var(--bg-gradient-end, transparent) 100%
   );
 }
 
@@ -1343,9 +1339,9 @@ footer.submitted {
   z-index: 1;
   background: linear-gradient(
     to bottom,
-    var(--feature-gradient-start, transparent) 0%,
-    var(--feature-gradient-mid, transparent) 30%,
-    var(--feature-gradient-end, transparent) 100%
+    var(--bg-gradient-start, transparent) 0%,
+    var(--bg-gradient-mid, transparent) 30%,
+    var(--bg-gradient-end, transparent) 100%
   );
 }
 
@@ -1433,9 +1429,9 @@ footer.submitted {
   z-index: 1;
   background: linear-gradient(
     to right,
-    var(--feature-gradient-start, transparent) 0%,
-    var(--feature-gradient-mid, transparent) 30%,
-    var(--feature-gradient-end, transparent) 100%
+    var(--bg-gradient-start, transparent) 0%,
+    var(--bg-gradient-mid, transparent) 30%,
+    var(--bg-gradient-end, transparent) 100%
   );
 }
 
@@ -1447,9 +1443,9 @@ footer.submitted {
 .feature-card.horizontal.reverse .banner::after {
   background: linear-gradient(
     to left,
-    var(--feature-gradient-start, transparent) 0%,
-    var(--feature-gradient-mid, transparent) 30%,
-    var(--feature-gradient-end, transparent) 100%
+    var(--bg-gradient-start, transparent) 0%,
+    var(--bg-gradient-mid, transparent) 30%,
+    var(--bg-gradient-end, transparent) 100%
   );
 }
 
