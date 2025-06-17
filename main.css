@@ -114,7 +114,7 @@
   --color-border-stone-soft: rgba(182, 177, 169, 0.6);
 }
 
-/* ===================================
+1/* ===================================
    BACKGROUND COLOR UTILITIES + GRADIENTS
    Adds matching faded gradient variables for image overlays
 =================================== */
@@ -1127,8 +1127,8 @@ footer.submitted {
   font-size: 14px;
   font-weight: 600;
   letter-spacing: var(--letter-spacing-label);
-  margin: var(--space-300) 0 var(--space-250) 0;
-  padding: var(--space-100) var(--space-400);
+  margin: var(--space-300) 0 var(--space-400) 0;
+  padding: var(--space-250) var(--space-300);
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
@@ -1180,7 +1180,7 @@ footer.submitted {
   letter-spacing: 0.01em;
   line-height: 1;
   margin: 0 var(--space-150) var(--space-150) 0;
-  padding: var(--space-200) var(--space-300);
+  padding: var(--space-150) var(--space-250);
 }
 
 /* Disable tag links (keep them in DOM for styling) */
@@ -1232,7 +1232,6 @@ footer.submitted {
 
 /* Study Type */
 .field--name-field-study-type {
-  background-color: var(--color-bg-stone-20);
   border: var(--border-050) solid var(--color-border-stone-soft);
 }
 .field--name-field-study-type a::before {
@@ -1241,8 +1240,7 @@ footer.submitted {
 
 /* Model: PBR — 🏥 (term ID 23) */
 .field--name-field-study-model:has(a[href$="/23"]) {
-  background-color: var(--color-bg-magenta-20);
-  border: var(--border-050) solid var(--color-border-magenta-soft);
+  border: var(--border-050) solid var(--color-border-stone-soft);
 }
 .field--name-field-study-model:has(a[href$="/23"]) a::before {
   content: "🏥";
