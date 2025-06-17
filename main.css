@@ -1083,16 +1083,21 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
    COMPONENT: STUDY CARD
 =================================== */
 
-/* Layout: 2-up grid with mobile fallback */
-.view-content {
-  display: grid;
-  gap: var(--space-200);
-  grid-template-columns: repeat(2, 1fr);
+.view-studies .view-content {
+  column-count: 2;
+  column-gap: var(--space-200);
 }
 
-@media (max-width: 768px) {
-  .view-content {
-    grid-template-columns: 1fr;
+.view-studies .views-row {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: var(--space-200);
+  break-inside: avoid;
+}
+
+@media (max-width: 640px) {
+  .view-studies .view-content {
+    column-count: 1;
   }
 }
 
@@ -1142,7 +1147,8 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
 .study-card .field--name-field-study-summary .field__label,
 .study-card .field--name-field-study-learn-more .field__label,
 .study-card .field--name-field-study-status .field__label,
-.study-card .field--name-field-study-type .field__label {
+.study-card .field--name-field-study-type .field__label,
+.study-card .field--name-field-study-model .field__label {
   display: none;
 }
 
@@ -1157,45 +1163,71 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
   margin: 0 0 var(--space-200);
 }
 
-/* Study Card: Tag Styles (shared) */
-.study-card .field--name-field-study-status,
-.study-card .field--name-field-study-type {
-  background-color: var(--color-bg-sand-100); /* override below for status */
-  border-radius: var(--radius-999);
-  color: var(--color-text-paragraph);
+/* ================================
+   Study Tag Styles: Status Tags
+   (uses :has() — not Firefox-safe)
+================================ */
+
+/* Base pill style */
+.field--name-field-study-status,
+.field--name-field-study-type,
+.field--name-field-study-model {
   display: inline-block;
+  border-radius: var(--radius-999);
   font-family: 'Inter', sans-serif;
+  font-weight: 600;
   font-size: 14px;
-  font-weight: 500 !important;
-  letter-spacing: 0.05em;
-  line-height: 14px;
-  padding: var(--space-150) var(--space-300);
+  letter-spacing: 0.01em;
+  line-height: 1;
+  padding: 6px 14px;
 }
 
-/* Study Card: Override tag background for status */
-.study-card .field--name-field-study-status {
+/* Recruiting — Term ID 20 */
+.field--name-field-study-status:has(a[href$="/20"]) {
   background-color: var(--color-bg-green-20);
 }
-
-/* Study Card: Icon spacing (shared across tags) */
-.study-card .field--name-field-study-status .field__item::before,
-.study-card .field--name-field-study-type .field__item::before {
-  display: inline-block;
-  font-size: 12px;
-  margin-right: var(--space-100);
-}
-
-/* Study Card: Emoji icons */
-.study-card .field--name-field-study-status .field__item::before {
+.field--name-field-study-status:has(a[href$="/20"]) a::before {
   content: "🟢";
+  margin-right: 6px;
+  font-size: 12px;
+  position: relative;
+  top: -0.5px;
 }
 
-.study-card .field--name-field-study-type {
-  margin-left: var(--space-050);
+/* Active (Not Recruiting) — Term ID 21 */
+.field--name-field-study-status:has(a[href$="/21"]) {
+  background-color: var(--color-bg-citron-20);
+}
+.field--name-field-study-status:has(a[href$="/21"]) a::before {
+  content: "⏳";
+  margin-right: 6px;
+  font-size: 12px;
+  position: relative;
+  top: -0.5px;
 }
 
-.study-card .field--name-field-study-type .field__item::before {
-  content: "🏷️";
+/* Completed Term ID 22 */
+.field--name-field-study-status:has(a[href$="/22"]) {
+  background-color: var(--color-bg-orange-20);
+}
+.field--name-field-study-status:has(a[href$="/22"]) a::before {
+  content: "🎯";
+  margin-right: 6px;
+  font-size: 12px;
+  position: relative;
+  top: -0.5px;
+}
+
+/* PBR Term ID 23 */
+.field--name-field-study-status:has(a[href$="/23"]) {
+  background-color: var(--color-bg-magenta-20);
+}
+.field--name-field-study-status:has(a[href$="/23"]) a::before {
+  content: "🏥";
+  margin-right: 6px;
+  font-size: 12px;
+  position: relative;
+  top: -0.5px;
 }
 
 /* ===================================
