@@ -1104,7 +1104,7 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
 /* Study Card wrapper */
 .study-card {
   background-color: var(--color-bg-subdued-soft);
-  border: var(--border-050) solid var(--color-text-subdued-soft);
+  border: var(--border-050) solid var(--color-border-subdued-strong);
   border-radius: var(--radius-200);
   color: var(--color-text-paragraph);
   padding: var(--space-500) var(--space-600) 0 var(--space-500);
@@ -1113,6 +1113,10 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
 /* Study Card: hide author (submitted) block */
 .study-card div.author {
   display: none;
+}
+
+footer.submitted {
+  margin-bottom: 0;
 }
 
 /* Study Card: Learn More button */
@@ -1179,6 +1183,7 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
   font-size: 14px;
   letter-spacing: 0.01em;
   line-height: 1;
+  margin: 0 var(--space-200) var(--space-250) 0;
   padding: var(--space-150) var(--space-300);
 }
 
@@ -1228,7 +1233,7 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
 
 /* Study Type */
 .field--name-field-study-type {
-  background-color: var(--color-bg-lightest);
+  background-color: var(--color-bg-stone-20);
 }
 
 /* Model: PBR — 🏥 (term ID 23) */
