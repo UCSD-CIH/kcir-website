@@ -1116,7 +1116,7 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
 }
 
 footer.submitted {
-  margin-bottom: 0;
+  margin-bottom: 0 !important;
 }
 
 /* Study Card: Learn More button */
