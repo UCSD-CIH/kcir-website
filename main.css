@@ -1135,11 +1135,16 @@ footer.submitted {
 }
 
 /* Study Card: CTA buttons */
+
+.field--name-field-study-apply,
+.field--name-field-study-learn-more {
+  display: inline-block;
+  margin: var(--space-300) 0 var(--space-600) 0;
+}
 .field--name-field-study-apply a,
 .field--name-field-study-learn-more a {
   border-radius: var(--radius-999);
   cursor: pointer;
-  display: inline-block;
   font-family: 'Inter', sans-serif;
   font-size: 14px;
   font-weight: 600;
@@ -1199,7 +1204,9 @@ footer.submitted {
 }
 
 .study-card .field--name-field-clearfix {
-display: none
+  font-size: 0;
+  line-height: 0;
+  color: transparent;
 }
 
 /* Study Card: Tag Styles */
@@ -1216,7 +1223,7 @@ display: none
   letter-spacing: 0.01em;
   line-height: 1;
   margin: 0 var(--space-150) var(--space-150) 0;
-  padding: var(--space-150) var(--space-250);
+  padding: var(--space-100) var(--space-250);
 }
 
 .field--name-field-study-status {
