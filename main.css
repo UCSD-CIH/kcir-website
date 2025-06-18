@@ -1114,6 +1114,17 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
   padding: var(--space-500) var(--space-600) 0 var(--space-500);
 }
 
+/* Study Card: hide field labels */
+.study-card .field--name-field-study-name .field__label,
+.study-card .field--name-field-study-status .field__label,
+.study-card .field--name-field-study-type .field__label,
+.study-card .field--name-field-study-model .field__label,
+.study-card .field--name-field-study-summary .field__label,
+.study-card .field--name-field-study-apply .field__label,
+.study-card .field--name-field-study-learn-more .field__label {
+  display: none;
+}
+
 /* Study Card: hide author (submitted) block */
 .study-card div.author {
   display: none;
@@ -1123,12 +1134,10 @@ footer.submitted {
   margin-bottom: 0 !important;
 }
 
-/* Study Card: Learn More button */
+/* Study Card: CTA buttons */
+.field--name-field-study-apply a,
 .field--name-field-study-learn-more a {
-  background-color: var(--color-bg-blue-100);
-  border: var(--border-100) solid transparent;
   border-radius: var(--radius-999);
-  color: var(--color-text-on-dark);
   cursor: pointer;
   display: inline-block;
   font-family: 'Inter', sans-serif;
@@ -1143,25 +1152,38 @@ footer.submitted {
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.field--name-field-study-learn-more a:hover {
+.field--name-field-study-apply a {
+  background-color: var(--color-bg-blue-100);
+  border: var(--border-100) solid transparent;
+  color: var(--color-text-on-dark);
+}
+
+.field--name-field-study-apply a:hover {
   background-color: var(--color-bg-navy-100);
+}
+
+.field--name-field-study-apply a:active {
+  background-color: var(--color-bg-blue-120);
+}
+
+.field--name-field-study-learn-more  {
+  background-color: none;
+  border: var(--border-100) solid var(--color-border-blue);
+  color: var(--color-text-link);
+}
+
+.field--name-field-study-learn-more a:hover {
+  background-color: var(--color-bg-blue-100);
+  color: var(--color-text-on-dark);
 }
 
 .field--name-field-study-learn-more a:active {
   background-color: var(--color-bg-blue-120);
+  color: var(--color-text-on-dark);
 }
 
-/* Study Card: hide field labels */
-.study-card .field--name-field-study-summary .field__label,
-.study-card .field--name-field-study-learn-more .field__label,
-.study-card .field--name-field-study-status .field__label,
-.study-card .field--name-field-study-type .field__label,
-.study-card .field--name-field-study-model .field__label {
-  display: none;
-}
-
-/* Study Card Heading (H2 styled as H3) */
-.study-card h2 {
+/* Study Card: Study Name (H2 styled as H3) */
+.study-card .field--name-field-study-name .field__item {
   color: var(--color-text-heading);
   font-family: var(--font-heading);
   font-size: 24px !important;
@@ -1169,6 +1191,11 @@ footer.submitted {
   letter-spacing: 0;
   line-height: 1.1;
   margin: 0 0 var(--space-200);
+}
+
+/* Study Card: Hide Title field */
+.study-card h2:first-of-type {
+  display: none;
 }
 
 /* ================================
@@ -1189,6 +1216,10 @@ footer.submitted {
   line-height: 1;
   margin: 0 var(--space-150) var(--space-150) 0;
   padding: var(--space-150) var(--space-250);
+}
+
+.field--name-field-study-status {
+  margin: 0 0 var(--space-250) 0;
 }
 
 /* Disable tag links (keep them in DOM for styling) */
