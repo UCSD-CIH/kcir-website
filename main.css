@@ -1144,7 +1144,7 @@ footer.submitted {
   font-size: 14px;
   font-weight: 600;
   letter-spacing: var(--letter-spacing-label);
-  margin: var(--space-300) 0 var(--space-500) 0;
+  margin: var(--space-300) var(--space-200) var(--space-500) 0;
   padding: var(--space-150) var(--space-300);
   text-align: center;
   text-decoration: none;
@@ -1166,7 +1166,7 @@ footer.submitted {
   background-color: var(--color-bg-blue-120);
 }
 
-.field--name-field-study-learn-more  {
+.field--name-field-study-learn-more a {
   background-color: none;
   border: var(--border-100) solid var(--color-border-blue);
   color: var(--color-text-link);
@@ -1198,10 +1198,11 @@ footer.submitted {
   display: none;
 }
 
-/* ================================
-   Study Tag Styles
-   (uses :has() — not Firefox-safe)
-================================ */
+.study-card .field--name-field-clearfix {
+display: none
+}
+
+/* Study Card: Tag Styles */
 
 /* Base pill style (inherited by all tag types) */
 .field--name-field-study-status,
