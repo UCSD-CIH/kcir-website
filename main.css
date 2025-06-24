@@ -121,9 +121,9 @@
 
 .bg-navy {
   background-color: var(--color-bg-navy-20);
---gradient-bg-start: rgba(228, 233, 239, 1);
---gradient-bg-mid: rgba(228, 233, 239, 0.4);
---gradient-bg-end: rgba(228, 233, 239, 0);
+  --gradient-bg-start: rgba(220, 223, 228, 1);
+  --gradient-bg-mid: rgba(220, 223, 228, 0.4);
+  --gradient-bg-end: rgba(220, 223, 228, 0);
 }
 
 .bg-blue {
