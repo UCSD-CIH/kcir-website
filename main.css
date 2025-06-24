@@ -1373,9 +1373,9 @@ footer.submitted {
   z-index: 1;
   background: linear-gradient(
     to top,
-    var(--bg-gradient-start, transparent) 0%,
-    var(--bg-gradient-mid, transparent) 30%,
-    var(--bg-gradient-end, transparent) 100%
+    var(--gradient-bg-start, transparent) 0%,
+    var(--gradient-bg-mid, transparent) 30%,
+    var(--gradient-bg-end, transparent) 100%
   );
 }
 
@@ -1388,9 +1388,9 @@ footer.submitted {
   z-index: 1;
   background: linear-gradient(
     to bottom,
-    var(--bg-gradient-start, transparent) 0%,
-    var(--bg-gradient-mid, transparent) 30%,
-    var(--bg-gradient-end, transparent) 100%
+    var(--gradient-bg-start, transparent) 0%,
+    var(--gradient-bg-mid, transparent) 30%,
+    var(--gradient-bg-end, transparent) 100%
   );
 }
 
@@ -1478,23 +1478,23 @@ footer.submitted {
   z-index: 1;
   background: linear-gradient(
     to right,
-    var(--bg-gradient-start, transparent) 0%,
-    var(--bg-gradient-mid, transparent) 30%,
-    var(--bg-gradient-end, transparent) 100%
+    var(--gradient-bg-start, transparent) 0%,
+    var(--gradient-bg-mid, transparent) 30%,
+    var(--gradient-bg-end, transparent) 100%
   );
 }
 
-/* Optional: reversed version for image on right */
-.feature-card.horizontal.reverse {
-  flex-direction: row-reverse;
-}
-
 .feature-card.horizontal.reverse .banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
   background: linear-gradient(
     to left,
-    var(--bg-gradient-start, transparent) 0%,
-    var(--bg-gradient-mid, transparent) 30%,
-    var(--bg-gradient-end, transparent) 100%
+    var(--gradient-bg-start, transparent) 0%,
+    var(--gradient-bg-mid, transparent) 30%,
+    var(--gradient-bg-end, transparent) 100%
   );
 }
 
