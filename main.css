@@ -1089,18 +1089,18 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
 
 
 /* ===================================
-   COMPONENT: STUDY CARD
+   COMPONENT: STUDY CARDS
 =================================== */
 
 .view-studies .view-content {
   column-count: 2;
-  column-gap: var(--space-200);
+  column-gap: var(--space-400);
 }
 
 .view-studies .views-row {
   display: inline-block;
   width: 100%;
-  margin-bottom: var(--space-200);
+  margin-bottom: var(--space-400);
   break-inside: avoid;
 }
 
