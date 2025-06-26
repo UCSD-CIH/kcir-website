@@ -1287,6 +1287,12 @@ footer.submitted {
   content: "🎯";
 }
 
+/* Hide Sign Up button for Status: Completed */
+.study-card:has(.field--name-field-study-status a[href="/taxonomy/term/22"]) 
+  .field--name-field-study-apply {
+  display: none;
+}
+
 /* Study Type */
 .field--name-field-study-type {
   border: var(--border-050) solid var(--color-border-stone-soft);
