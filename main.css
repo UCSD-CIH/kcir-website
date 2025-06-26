@@ -340,6 +340,7 @@ h6,
 
 /* Body text styles for paragraphs and general content */
 
+.text--body-large,
 .text--body-large * {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
@@ -1092,9 +1093,13 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
    COMPONENT: STUDY CARDS
 =================================== */
 
+.view-studies .view-header {
+}
+
 .view-studies .view-content {
   column-count: 2;
   column-gap: var(--space-400);
+  margin-top: var(--space-500);
 }
 
 .view-studies .views-row {
