@@ -28,7 +28,6 @@ third_party_settings:
   field_group:
     group_study_tags:
       children:
-        - group_study_layout
         - field_study_status
         - field_study_type
         - field_study_model
@@ -79,7 +78,6 @@ third_party_settings:
         - group_study_body
         - group_study_sidebar
       label: Layout
-      parent_name: group_study_tags
       region: hidden
       weight: 0
       format_type: html_element
