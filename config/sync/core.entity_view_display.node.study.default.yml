@@ -24,7 +24,7 @@ dependencies:
     - link
     - text
     - user
-third_party_settings:
+third_party_settings:third_party_settings:
   field_group:
     group_study_tags:
       children:
@@ -56,7 +56,7 @@ third_party_settings:
         - field_study_contact_phone
         - field_study_apply
       label: 'Study Details'
-      parent_name: group_study_layout
+      parent_name: group_study_body
       region: content
       weight: 2
       format_type: html_element
@@ -72,33 +72,13 @@ third_party_settings:
         attributes: ''
         effect: none
         speed: fast
-    group_study_layout:
-      children:
-        - group_study_body
-        - group_study_sidebar
-      label: Layout
-      region: hidden
-      weight: 0
-      format_type: html_element
-      format_settings:
-        classes: group--study-layout
-        show_empty_fields: false
-        id: ''
-        label_as_html: false
-        element: div
-        show_label: false
-        label_element: h3
-        label_element_classes: ''
-        attributes: ''
-        effect: none
-        speed: fast
     group_study_body:
       children:
         - group_study_tags
+        - group_study_sidebar
         - field_study_description
         - field_study_eligibility
       label: 'Study Body'
-      parent_name: group_study_layout
       region: hidden
       weight: 1
       format_type: html_element
