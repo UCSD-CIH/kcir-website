@@ -32,7 +32,6 @@ third_party_settings:
         - field_study_type
         - field_study_model
       label: 'Study Tags'
-      parent_name: group_study_body
       region: content
       weight: 2
       format_type: html_element
