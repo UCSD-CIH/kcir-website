@@ -1382,9 +1382,20 @@ footer.submitted {
   text-decoration: underline;
 }
 
-.group--study-sidebar .field--name-field-study-apply a {
-  text-decoration: none !important;
-  color: var(--color-text-on-dark) !important;
+.page-node-type-study .field--name-field-study-apply a {
+  background-color: var(--color-bg-yellow-100);
+  border: var(--border-100) solid transparent;
+  border-radius: var(--radius-100);
+  color: var(--color-text-on-light);
+  cursor: pointer;
+  display: inline-block;
+  font: var(--font-label-medium-caps);
+  letter-spacing: var(--letter-spacing-label);
+  padding: var(--space-200) var(--space-300);
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
 .group--study-sidebar .field--name-field-study-apply {
