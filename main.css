@@ -1333,6 +1333,15 @@ footer.submitted {
 .page-node-type-study .group--study-tags {
   flex: 1 0 100%;
   margin-bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-150);
+}
+
+.page-node-type-study .group--study-tags .field {
+  margin: 0;
+  display: flex;
+  align-items: center;
 }
 
 .page-node-type-study .group--study-body {
@@ -1368,6 +1377,16 @@ footer.submitted {
   color: var(--color-text-heading);
 }
 
+.group--study-sidebar .field a {
+  color: var(--color-text-link) !important;
+  text-decoration: underline;
+}
+
+.group--study-sidebar .field--name-field-study-apply a {
+  text-decoration: none !important;
+  color: var(--color-text-on-dark) !important;
+}
+
 .group--study-sidebar .field__label {
   font-size: 16px;
   font-weight: 700;
@@ -1378,6 +1397,10 @@ footer.submitted {
 }
 
 .page-node-type-study .field--name-field-study-description {
+  margin-bottom: var(--space-200);
+}
+
+.page-node-type-study .field--name-field-study-description p {
   font-size: 20px;
   font-weight: 400;
   letter-spacing: -0.005em;
@@ -1392,7 +1415,7 @@ footer.submitted {
   font-weight: 700;
   letter-spacing: 0;
   line-height: 32px;
-  margin: var(--space-200) 0 var(--space-100) 0;
+  margin: var(--space-250) 0 var(--space-050) 0;
   color: var(--color-text-heading);
 }
 
