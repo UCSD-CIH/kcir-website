@@ -1324,10 +1324,10 @@ footer.submitted {
 
 .page-node-type-study h1.page-title {
   font-family: 'Inter', sans-serif !important;
-  font-weight: 700 !important;
   font-size: 32px !important;
-  line-height: 40px;
+  font-weight: 700 !important;
   letter-spacing: -0.01em;
+  line-height: 40px;
 }
 
 .page-node-type-study .group--study-tags {
@@ -1345,8 +1345,19 @@ footer.submitted {
   min-width: 280px;
 }
 
+.group--study-sidebar {
+  display: flex;
+  flex: 1 1 320px;
+  flex-direction: column;
+  gap: var(--space-300);
+  max-width: 360px;
+  padding: var(--space-500);
+  border: var(--border-050) solid var(--color-border-subdued-strong);
+  border-radius: var(--radius-200);
+  background-color: var(--color-bg-lightest);
+}
+
 .group--study-sidebar::before {
-  color: var(--color-text-heading);
   content: "Study Details";
   display: block;
   font-size: 20px;
@@ -1354,34 +1365,35 @@ footer.submitted {
   letter-spacing: 0;
   line-height: 24px;
   margin-bottom: var(--space-100);
+  color: var(--color-text-heading);
 }
 
 .group--study-sidebar .field__label {
-  color: var(--color-text-heading);
-  font-weight: 700;
   font-size: 16px;
-  line-height: 20px;
+  font-weight: 700;
   letter-spacing: 0;
-  margin-bottom: var(--space-100);
+  line-height: 20px;
+  margin-bottom: var(--space-025);
+  color: var(--color-text-heading);
 }
 
 .page-node-type-study .field--name-field-study-description {
-  font-weight: 400;
   font-size: 20px;
-  line-height: 32px;
+  font-weight: 400;
   letter-spacing: -0.005em;
+  line-height: 32px;
 }
 
 .field--name-field-study-activities .field__label,
 .field--name-field-study-additional-info .field__label,
 .field--name-field-study-benefits .field__label,
 .field--name-field-study-eligibility .field__label {
-  color: var(--color-text-heading);
-  font-weight: 700;
   font-size: 24px;
-  line-height: 32px;
+  font-weight: 700;
   letter-spacing: 0;
-  margin-bottom: var(--space-100);
+  line-height: 32px;
+  margin: var(--space-200) 0 var(--space-100) 0;
+  color: var(--color-text-heading);
 }
 
 /* ===================================
