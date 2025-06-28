@@ -1313,22 +1313,13 @@ footer.submitted {
    COMPONENT: STUDY PAGE
 =================================== */
 
-.group--study-layout {
+.page-node-type-study .group--study-layout {
   display: flex;
+  flex: 1 0 100%;
   flex-wrap: wrap;
+  gap: var(--space-400);
   justify-content: space-between;
-  gap: var(--space-600);
-  margin-top: var(--space-600);
-}
-
-.group--study-body {
-  flex: 1 1 60%;
-  min-width: 320px;
-}
-
-.group--study-sidebar {
-  flex: 1 1 32%;
-  min-width: 280px;
+  margin-top: 0;
 }
 
 .page-node-type-study h1.page-title {
@@ -1337,6 +1328,60 @@ footer.submitted {
   font-size: 32px !important;
   line-height: 40px;
   letter-spacing: -0.01em;
+}
+
+.page-node-type-study .group--study-tags {
+  flex: 1 0 100%;
+  margin-bottom: 0;
+}
+
+.page-node-type-study .group--study-body {
+  flex: 1 1 60%;
+  min-width: 320px;
+}
+
+.page-node-type-study .group--study-sidebar {
+  flex: 1 1 32%;
+  min-width: 280px;
+}
+
+.group--study-sidebar::before {
+  color: var(--color-text-heading);
+  content: "Study Details";
+  display: block;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 24px;
+  margin-bottom: var(--space-100);
+}
+
+.group--study-sidebar .field__label {
+  color: var(--color-text-heading);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0;
+  margin-bottom: var(--space-100);
+}
+
+.page-node-type-study .field--name-field-study-description {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  letter-spacing: -0.005em;
+}
+
+.field--name-field-study-activities .field__label,
+.field--name-field-study-additional-info .field__label,
+.field--name-field-study-benefits .field__label,
+.field--name-field-study-eligibility .field__label {
+  color: var(--color-text-heading);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0;
+  margin-bottom: var(--space-100);
 }
 
 /* ===================================
