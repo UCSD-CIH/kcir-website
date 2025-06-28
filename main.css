@@ -1146,13 +1146,14 @@ footer.submitted {
 
 /* Study Card: CTA buttons */
 
-.field--name-field-study-apply,
-.field--name-field-study-learn-more {
+.study-card .field--name-field-study-apply,
+.study-card .field--name-field-study-learn-more {
   display: inline-block;
   margin: var(--space-300) 0 var(--space-600) 0;
 }
-.field--name-field-study-apply a,
-.field--name-field-study-learn-more a {
+
+.study-card .field--name-field-study-apply a,
+.study-card .field--name-field-study-learn-more a {
   border-radius: var(--radius-999);
   cursor: pointer;
   font-family: 'Inter', sans-serif;
@@ -1167,17 +1168,17 @@ footer.submitted {
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.field--name-field-study-apply a {
+.study-card .field--name-field-study-apply a {
   background-color: var(--color-bg-blue-100);
   border: var(--border-100) solid transparent;
   color: var(--color-text-on-dark);
 }
 
-.field--name-field-study-apply a:hover {
+.study-card .field--name-field-study-apply a:hover {
   background-color: var(--color-bg-navy-100);
 }
 
-.field--name-field-study-apply a:active {
+.study-card .field--name-field-study-apply a:active {
   background-color: var(--color-bg-blue-120);
 }
 
@@ -1386,7 +1387,7 @@ footer.submitted {
   background-color: var(--color-bg-yellow-100);
   border: var(--border-100) solid transparent;
   border-radius: var(--radius-100);
-  color: var(--color-text-on-light);
+  color: var(--color-text-on-light) !important;
   cursor: pointer;
   display: inline-block;
   font: var(--font-label-medium-caps);
@@ -1412,7 +1413,7 @@ footer.submitted {
 }
 
 .page-node-type-study .field--name-field-study-description {
-  margin-bottom: var(--space-200);
+  margin-bottom: var(--space-400);
 }
 
 .page-node-type-study .field--name-field-study-description p {
