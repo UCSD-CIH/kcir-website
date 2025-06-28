@@ -1315,6 +1315,7 @@ footer.submitted {
 =================================== */
 
 .page-node-type-study .group--study-layout {
+  align-items: flex-start;
   display: flex;
   flex: 1 0 100%;
   flex-wrap: wrap;
@@ -1400,7 +1401,7 @@ footer.submitted {
 }
 
 .group--study-sidebar .field--name-field-study-apply {
-  margin: var(--space-300) 0 var(--space-600) 0;
+  margin: var(--space-150) 0 0 0;
 }
 
 .group--study-sidebar .field__label {
