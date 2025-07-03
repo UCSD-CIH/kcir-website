@@ -1729,6 +1729,7 @@ footer.submitted {
 .accordion-orange { --accordion-bg: var(--color-bg-orange-20); }
 .accordion-green { --accordion-bg: var(--color-bg-green-20); }
 .accordion-stone { --accordion-bg: var(--color-bg-stone-20); }
+.accordion-subdued-soft { --accordion-bg: var(--color-bg-subdued-soft); }
 
 .accordion-item .accordion-button {
     background: var(--accordion-bg);
