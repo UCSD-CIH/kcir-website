@@ -1124,14 +1124,14 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
   content: "Search Studies";
   position: absolute;
   top: 50%;
-  left: var(--space-300);
+  left: var(--space-600);
   transform: translateY(-50%);
   font-family: 'Inter', sans-serif;
   font-size: 16px;
   color: var(--color-text-subdued-strong);
   pointer-events: none;
-  transition: opacity 0.2s ease;
   opacity: 1;
+  transition: opacity 0.2s ease;
 }
 
 /* Magnifying glass icon */
