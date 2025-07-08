@@ -1107,8 +1107,8 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
 .view-studies .form-item-keys input.form-text {
   position: relative;
   width: 100%;
-  padding-top: var(--space-150);
-  padding-bottom: var(--space-150);
+  padding-top: var(--space-100);
+  padding-bottom: var(--space-100);
   padding-left: var(--space-600);
   padding-right: var(--space-600);
   border: var(--border-050) solid var(--color-border-strong);
