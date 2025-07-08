@@ -1095,56 +1095,61 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
 
 .view-studies .form-item-keys {
   position: relative;
-  display: inline-block;
+  display: flex;
+  align-items: center;
+}
+
+/* Hide the label above the field */
+.view-studies .form-item-keys label {
+  display: none;
 }
 
 .view-studies .form-item-keys input.form-text {
-  border: var(--border-050) solid var(--color-border-strong);
-  border-radius: var(--radius-999);
+  position: relative;
+  width: 100%;
   padding-top: var(--space-150);
   padding-bottom: var(--space-150);
   padding-left: var(--space-600);
   padding-right: var(--space-600);
-  font-size: 16px;
+  border: var(--border-050) solid var(--color-border-strong);
+  border-radius: var(--radius-999);
   font-family: 'Inter', sans-serif;
+  font-size: 16px;
   color: var(--color-text-paragraph);
   background-color: var(--shade-white);
-  width: 100%;
 }
 
+/* Faux placeholder label */
+.view-studies .form-item-keys::before {
+  content: "Search Studies";
+  position: absolute;
+  left: var(--space-300);
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  color: var(--color-text-subdued-strong);
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+/* Magnifying glass icon */
 .view-studies .form-item-keys::after {
   content: "";
   position: absolute;
   right: var(--space-300);
-  top: 50%;
-  transform: translateY(-50%);
-  pointer-events: none;
   width: 16px;
   height: 16px;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' stroke='%235B5D60' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-size: 16px 16px;
-  transition: opacity 0.2s ease;
-}
-
-.view-studies .form-item-keys::before {
-  content: "Search Studies";
-  font-size: 16px;
-  font-family: 'Inter', sans-serif;
-  color: var(--color-text-subdued-strong);
-  position: absolute;
-  left: var(--space-300);
-  top: 50%;
-  transform: translateY(-50%);
   pointer-events: none;
   transition: opacity 0.2s ease;
 }
 
+/* Hide label and icon on focus */
 .view-studies .form-item-keys:focus-within::before,
 .view-studies .form-item-keys:focus-within::after {
   opacity: 0;
 }
-
 
 /* ===================================
    COMPONENT: STUDY CARDS
