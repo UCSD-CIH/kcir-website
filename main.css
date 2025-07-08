@@ -1096,7 +1096,7 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
 .view-studies .form-item-keys {
   position: relative;
   display: flex;
-  align-items: center;
+  align-items: stretch;
 }
 
 /* Hide the label above the field */
@@ -1123,19 +1123,24 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
 .view-studies .form-item-keys::before {
   content: "Search Studies";
   position: absolute;
+  top: 50%;
   left: var(--space-300);
+  transform: translateY(-50%);
   font-family: 'Inter', sans-serif;
   font-size: 16px;
   color: var(--color-text-subdued-strong);
   pointer-events: none;
   transition: opacity 0.2s ease;
+  opacity: 1;
 }
 
 /* Magnifying glass icon */
 .view-studies .form-item-keys::after {
   content: "";
   position: absolute;
+  top: 50%;
   right: var(--space-300);
+  transform: translateY(-50%);
   width: 16px;
   height: 16px;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' stroke='%235B5D60' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'/%3E%3C/svg%3E");
@@ -1143,6 +1148,7 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
   background-size: 16px 16px;
   pointer-events: none;
   transition: opacity 0.2s ease;
+  opacity: 1;
 }
 
 /* Hide label and icon on focus */
