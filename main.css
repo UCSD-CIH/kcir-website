@@ -80,16 +80,16 @@
 :root {
   --color-text-paragraph: #282929;
   --color-text-heading: #182B49;
-  --color-text-subdued-soft: #9FA1A3;
-  --color-text-subdued-strong: #5B5D60;
+  --color-text-subdued-soft: #B6B8BA;
+  --color-text-subdued-strong: #747678;
   --color-text-navy: #182B49;
   --color-text-blue: #00629B;
   --color-text-link: #00629B;
   --color-text-success: #3D7F32;
   --color-text-warning: #906A0E;
   --color-text-danger: #B01030;
-  --color-text-disabled-soft: #E0E2E4;
-  --color-text-disabled-strong: #A5AAAD;
+  --color-text-disabled-soft: #C5CCD3;
+  --color-text-disabled-strong: #7A8999;
   --color-text-on-light: #182B49;
   --color-text-on-dark: #FFFFFF;
 }
@@ -100,10 +100,10 @@
 
 :root {
   --color-border-plain: #D2D4D6;
-  --color-border-subdued-soft: #EFF1F3;
-  --color-border-subdued-strong: #CBD2D9;
-  --color-border-disabled-soft: #D8DFE4;
-  --color-border-disabled-strong: #AEB6BC;
+  --color-border-subdued-soft: #EAEDEF;
+  --color-border-subdued-strong: #C8CDD2;
+  --color-border-disabled-soft: #C5CCD3;
+  --color-border-disabled-strong: #B5B5B5;
   --color-border-strong: #9E9AA3;
   --color-border-navy: #182B49;
   --color-border-blue: #00629B;
