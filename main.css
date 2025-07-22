@@ -1358,13 +1358,14 @@ footer.submitted {
 }
 .field--name-field-study-focus .field__item a {
   display: inline-block;
-  background: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 999px;
-  padding: 4px 12px;
-  font-size: 0.9rem;
-  white-space: nowrap;
-  color: inherit;
+  border-radius: var(--radius-999);
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  line-height: 1;
+  margin: 0 var(--space-150) var(--space-150) 0;
+  padding: var(--space-100) var(--space-250);
 }
 .field--name-field-study-focus a::before {
   content: "🏷️";
