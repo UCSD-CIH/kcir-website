@@ -1296,6 +1296,7 @@ footer.submitted {
 .field--name-field-study-type {
   display: inline-block;
   border-radius: var(--radius-999);
+  border: var(--border-050) solid var(--color-border-stone-soft);
   font-family: 'Inter', sans-serif;
   font-weight: 500;
   font-size: 14px;
@@ -1359,6 +1360,7 @@ footer.submitted {
 .field--name-field-study-focus .field__item a {
   display: inline-block;
   border-radius: var(--radius-999);
+  border: var(--border-050) solid var(--color-border-stone-soft);
   font-family: 'Inter', sans-serif;
   font-weight: 500;
   font-size: 14px;
@@ -1372,9 +1374,6 @@ footer.submitted {
 }
 
 /* Study Type */
-.field--name-field-study-type {
-  border: var(--border-050) solid var(--color-border-stone-soft);
-}
 .field--name-field-study-type a::before {
   content: "🏥";
 }
