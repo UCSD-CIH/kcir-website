@@ -1293,8 +1293,8 @@ footer.submitted {
 
 /* Base pill style (inherited by all tag types) */
 .field--name-field-study-status,
-.field--name-field-study-type,
-.field--name-field-study-model {
+.field--name-field-study-focus,
+.field--name-field-study-type {
   display: inline-block;
   border-radius: var(--radius-999);
   font-family: 'Inter', sans-serif;
@@ -1306,14 +1306,15 @@ footer.submitted {
   padding: var(--space-100) var(--space-250);
 }
 
-.field--name-field-study-status {
+.field--name-field-study-status,
+.field--name-field-study-focus {
   margin: 0 0 var(--space-250) 0;
 }
 
 /* Disable tag links (keep them in DOM for styling) */
 .field--name-field-study-status a,
-.field--name-field-study-type a,
-.field--name-field-study-model a {
+.field--name-field-study-focus a,
+.field--name-field-study-type a {
   pointer-events: none;
   text-decoration: none;
   color: inherit;
@@ -1322,8 +1323,8 @@ footer.submitted {
 
 /* Shared styles for tag emojis */
 .field--name-field-study-status a::before,
-.field--name-field-study-type a::before,
-.field--name-field-study-model a::before {
+.field--name-field-study-focus a::before,
+.field--name-field-study-type a::before {
   margin-right: var(--space-150);
   font-size: 12px;
   position: relative;
@@ -1337,15 +1338,6 @@ footer.submitted {
 }
 .field--name-field-study-status:has(a[href$="/20"]) a::before {
   content: "🟢";
-}
-
-/* Status: Active — ⏳ (term ID 21) */
-.field--name-field-study-status:has(a[href$="/21"]) {
-  background-color: var(--color-bg-citron-20);
-  border: var(--border-050) solid var(--color-border-citron);
-}
-.field--name-field-study-status:has(a[href$="/21"]) a::before {
-  content: "⏳";
 }
 
 /* Status: Completed — 🎯 (term ID 22) */
@@ -1363,19 +1355,19 @@ footer.submitted {
   display: none;
 }
 
+/* Research Focus Area */
+.field--name-field-study-focus {
+  border: var(--border-050) solid var(--color-border-stone-soft);
+}
+.field--name-field-study-focus a::before {
+  content: "🏷️";	
+}
+
 /* Study Type */
 .field--name-field-study-type {
   border: var(--border-050) solid var(--color-border-stone-soft);
 }
 .field--name-field-study-type a::before {
-  content: "🏷️";
-}
-
-/* Model: PBR — 🏥 (term ID 23) */
-.field--name-field-study-model:has(a[href$="/23"]) {
-  border: var(--border-050) solid var(--color-border-stone-soft);
-}
-.field--name-field-study-model:has(a[href$="/23"]) a::before {
   content: "🏥";
 }
 
