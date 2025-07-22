@@ -1292,10 +1292,8 @@ footer.submitted {
 /* Study Tags */
 
 /* Base pill style for Status and Type */
-
-.field--name-field-study-status .field__item a,
-.field--name-field-study-focus .field__item a,
-.field--name-field-study-type .field__item a {
+.field--name-field-study-status,
+.field--name-field-study-type {
   display: inline-block;
   border-radius: var(--radius-999);
   border: var(--border-050) solid var(--color-border-stone-soft);
@@ -1355,12 +1353,22 @@ footer.submitted {
 .field--name-field-study-focus {
   margin: 0 0 var(--space-250) 0;
 }
-
 .field--name-field-study-focus .field__item {
   display: inline-block;
   margin: 0 4px 4px 0;
 }
-
+.field--name-field-study-focus .field__item a {
+  display: inline-block;
+  border-radius: var(--radius-999);
+  border: var(--border-050) solid var(--color-border-stone-soft);
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  line-height: 1;
+  margin: 0 var(--space-150) var(--space-150) 0;
+  padding: var(--space-100) var(--space-250);
+}
 .field--name-field-study-focus a::before {
   content: "🏷️";
 }
