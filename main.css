@@ -1291,9 +1291,8 @@ footer.submitted {
 
 /* Study Card: Tag Styles */
 
-/* Base pill style (inherited by all tag types) */
+/* Base pill style for Study Status and Study Type */
 .field--name-field-study-status,
-.field--name-field-study-focus,
 .field--name-field-study-type {
   display: inline-block;
   border-radius: var(--radius-999);
@@ -1304,11 +1303,6 @@ footer.submitted {
   line-height: 1;
   margin: 0 var(--space-150) var(--space-150) 0;
   padding: var(--space-100) var(--space-250);
-}
-
-.field--name-field-study-status,
-.field--name-field-study-focus {
-  margin: 0 0 var(--space-250) 0;
 }
 
 /* Disable tag links (keep them in DOM for styling) */
@@ -1323,7 +1317,6 @@ footer.submitted {
 
 /* Shared styles for tag emojis */
 .field--name-field-study-status a::before,
-.field--name-field-study-focus a::before,
 .field--name-field-study-type a::before {
   margin-right: var(--space-150);
   font-size: 12px;
@@ -1350,17 +1343,31 @@ footer.submitted {
 }
 
 /* Hide Sign Up button for Status: Completed */
-.study-card:has(.field--name-field-study-status a[href="/taxonomy/term/22"]) 
+.study-card:has(.field--name-field-study-status a[href="/taxonomy/term/22"])
   .field--name-field-study-apply {
   display: none;
 }
 
-/* Research Focus Area */
+/* Research Focus Area (each term = pill) */
 .field--name-field-study-focus {
-  border: var(--border-050) solid var(--color-border-stone-soft);
+  margin: 0 0 var(--space-250) 0;
+}
+.field--name-field-study-focus .field__item {
+  display: inline-block;
+  margin: 0 4px 4px 0;
+}
+.field--name-field-study-focus .field__item a {
+  display: inline-block;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 999px;
+  padding: 4px 12px;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  color: inherit;
 }
 .field--name-field-study-focus a::before {
-  content: "🏷️";	
+  content: "🏷️";
 }
 
 /* Study Type */
