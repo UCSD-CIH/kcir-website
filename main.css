@@ -1289,24 +1289,11 @@ footer.submitted {
   color: transparent;
 }
 
-/* Study Tags */
+/* ================================
+   STUDY TAGS
+================================ */
 
-/* Base pill style for Status and Type */
-.field--name-field-study-status,
-.field--name-field-study-type {
-  display: inline-block;
-  border-radius: var(--radius-999);
-  border: var(--border-050) solid var(--color-border-stone-soft);
-  font-family: 'Inter', sans-serif;
-  font-weight: 500;
-  font-size: 14px;
-  letter-spacing: 0.01em;
-  line-height: 1;
-  margin: 0 var(--space-150) var(--space-150) 0;
-  padding: var(--space-100) var(--space-250);
-}
-
-/* Disable tag links (keep them in DOM for styling) */
+/* Disable tag link interaction (used for visual tags only) */
 .field--name-field-study-status a,
 .field--name-field-study-focus a,
 .field--name-field-study-type a {
@@ -1316,66 +1303,73 @@ footer.submitted {
   cursor: default;
 }
 
-/* Shared styles for tag emojis */
+/* ======== Base Pill Styles ======== */
+
+.field--name-field-study-status a,
+.field--name-field-study-type a,
+.field--name-field-study-focus .field__item a {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.01em;
+  color: inherit;
+  text-decoration: none;
+  padding: var(--space-100) var(--space-250);
+  margin: 0 var(--space-150) var(--space-150) 0;
+  background-color: transparent;
+  border: var(--border-050) solid var(--color-border-stone-soft);
+  border-radius: var(--radius-999);
+  cursor: default;
+  pointer-events: none;
+}
+
+/* ======== Emoji Icons ======== */
+
 .field--name-field-study-status a::before,
-.field--name-field-study-type a::before {
-  margin-right: var(--space-150);
+.field--name-field-study-type a::before,
+.field--name-field-study-focus a::before {
+  content: "";
   font-size: 12px;
+  margin-right: var(--space-150);
   position: relative;
   top: -0.5px;
 }
 
-/* Status: Recruiting — 🟢 (term ID 20) */
-.field--name-field-study-status:has(a[href$="/20"]) {
+.field--name-field-study-status a[href$="/20"]::before { content: "🟢"; } /* Recruiting */
+.field--name-field-study-status a[href$="/22"]::before { content: "🎯"; } /* Completed */
+.field--name-field-study-type a::before { content: "🏥"; }
+.field--name-field-study-focus a::before { content: "🏷️"; }
+
+/* ======== Status Pill Variants ======== */
+
+.field--name-field-study-status a[href$="/20"] {
   background-color: var(--color-bg-green-20);
-  border: var(--border-050) solid var(--color-border-green-soft);
-}
-.field--name-field-study-status:has(a[href$="/20"]) a::before {
-  content: "🟢";
+  border-color: var(--color-border-green-soft);
 }
 
-/* Status: Completed — 🎯 (term ID 22) */
-.field--name-field-study-status:has(a[href$="/22"]) {
+.field--name-field-study-status a[href$="/22"] {
   background-color: var(--color-bg-orange-20);
-  border: var(--border-050) solid var(--color-border-orange-soft);
-}
-.field--name-field-study-status:has(a[href$="/22"]) a::before {
-  content: "🎯";
+  border-color: var(--color-border-orange-soft);
 }
 
-/* Hide Sign Up button for Status: Completed */
+/* ======== Hide CTA if status is Completed ======== */
+
 .study-card:has(.field--name-field-study-status a[href="/taxonomy/term/22"])
   .field--name-field-study-apply {
   display: none;
 }
 
-/* Research Focus Area (each term = pill) */
+/* ======== Layout Spacing ======== */
+
 .field--name-field-study-focus {
   margin: 0 0 var(--space-250) 0;
 }
+
 .field--name-field-study-focus .field__item {
   display: inline-block;
   margin: 0 4px 4px 0;
-}
-.field--name-field-study-focus .field__item a {
-  display: inline-block;
-  border-radius: var(--radius-999);
-  border: var(--border-050) solid var(--color-border-stone-soft);
-  font-family: 'Inter', sans-serif;
-  font-weight: 500;
-  font-size: 14px;
-  letter-spacing: 0.01em;
-  line-height: 1;
-  margin: 0 var(--space-150) var(--space-150) 0;
-  padding: var(--space-100) var(--space-250);
-}
-.field--name-field-study-focus a::before {
-  content: "🏷️";
-}
-
-/* Study Type */
-.field--name-field-study-type a::before {
-  content: "🏥";
 }
 
 /* ===================================
