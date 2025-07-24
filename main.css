@@ -1364,13 +1364,9 @@ footer.submitted {
 
 /* ======== Layout Spacing ======== */
 
-.field--name-field-study-focus {
-  margin-top: var(--space-050) !important;
-}
-
 .field--name-field-study-focus .field__item {
   display: inline-block;
-  margin: 0 4px 4px 0;
+  margin: 0 var(--space-100) 0 0;
 }
 
 /* ===================================
@@ -1401,7 +1397,7 @@ footer.submitted {
   margin-bottom: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-150);
+  gap: var(--space-100);
 }
 
 .page-node-type-study .group--study-tags .field {
