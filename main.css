@@ -1316,13 +1316,14 @@ footer.submitted {
   letter-spacing: 0.01em;
   color: inherit;
   text-decoration: none;
-  padding: var(--space-100) var(--space-250);
-  margin: 0 var(--space-150) var(--space-150) 0;
+  padding: var(--space-100) var(--space-150);
+  margin: 0 var(--space-050) var(--space-100) 0;
   background-color: transparent;
   border: var(--border-050) solid var(--color-border-stone-soft);
   border-radius: var(--radius-999);
   cursor: default;
   pointer-events: none;
+  white-space: nowrap;
 }
 
 /* ======== Emoji Icons ======== */
@@ -1332,7 +1333,7 @@ footer.submitted {
 .field--name-field-study-focus a::before {
   content: "";
   font-size: 12px;
-  margin-right: var(--space-150);
+  margin-right: var(--space-100);
   position: relative;
   top: -0.5px;
 }
@@ -1364,7 +1365,7 @@ footer.submitted {
 /* ======== Layout Spacing ======== */
 
 .field--name-field-study-focus {
-  margin: 0 0 var(--space-250) 0;
+  margin-top: var(--space-050) !important;
 }
 
 .field--name-field-study-focus .field__item {
@@ -1406,6 +1407,7 @@ footer.submitted {
 .page-node-type-study .group--study-tags .field {
   margin: 0;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
 }
 
