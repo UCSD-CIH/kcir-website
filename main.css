@@ -1828,3 +1828,58 @@ font-family: 'Inter', sans-serif;
   line-height: 24px;
   letter-spacing: 0; /*text body default*/
 }
+
+/* ===================================
+   WEBFORM: STYLING
+   Classes for all webform fields
+=================================== */
+
+/* General styling for all Webform field types */
+.webform-submission-form input[type="text"],
+.webform-submission-form input[type="email"],
+.webform-submission-form input[type="tel"],
+.webform-submission-form input[type="date"],
+.webform-submission-form select,
+textarea.form-textarea {
+  border: 1.5px solid #ccc !important;       /* Light grey default */
+  border-radius: 4px !important;
+  background-color: #fff !important;
+  color: #000 !important;
+  padding: 0.5rem !important;
+  font-size: 1rem !important;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Focus state: UCSD navy + soft blue glow */
+.webform-submission-form input:focus,
+.webform-submission-form select:focus,
+textarea.form-textarea:focus {
+  outline: none !important;
+  border-color: #182B49 !important;  /* UCSD navy */
+  box-shadow: 0 0 0 2px rgba(24, 43, 73, 0.2) !important;
+}
+
+/* Webform error message container */
+.webform-submission-form .form-item--error-message {
+  display: flex;
+  align-items: flex-start; /* Align icon to top of text */
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+  font-size: 0.95rem;
+  color: #b03; /* Accessible red */
+  font-weight: normal; /* Remove bold */
+}
+
+/* Style the icon inside error messages */
+.webform-submission-form .form-item--error-message .form-item--error-icon {
+  flex-shrink: 0;
+  margin-top: 0.15rem; /* Adjust for better vertical alignment */
+}
+
+/* Optional: Emphasize field border on error */
+.webform-submission-form .form-item--error input,
+.webform-submission-form .form-item--error textarea,
+.webform-submission-form .form-item--error select {
+  border-color: #c00 !important;
+  box-shadow: 0 0 0 1px rgba(204, 0, 0, 0.25) !important;
+}
