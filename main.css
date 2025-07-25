@@ -1159,7 +1159,7 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
 }
 
 /* ===================================
-   COMPONENT: STUDY CARDS
+   STUDY CARDS
 =================================== */
 
 .view-studies .view-header {
@@ -1190,7 +1190,7 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
   border: var(--border-050) solid var(--color-border-subdued-strong);
   border-radius: var(--radius-200);
   color: var(--color-text-paragraph);
-  padding: var(--space-500) var(--space-600) 0 var(--space-500);
+  padding: var(--space-500) var(--space-600) var(--space-500) var(--space-500);
 }
 
 /* Study Card: hide field labels */
@@ -1218,7 +1218,7 @@ footer.submitted {
 .study-card .field--name-field-study-apply,
 .study-card .field--name-field-study-learn-more {
   display: inline-block;
-  margin: var(--space-300) 0 var(--space-600) 0;
+  margin: 0 0 var(--space-100) 0;
 }
 
 .study-card .field--name-field-study-apply a,
@@ -1317,7 +1317,7 @@ footer.submitted {
   color: inherit;
   text-decoration: none;
   padding: var(--space-100) var(--space-150);
-  margin: 0 var(--space-050) var(--space-100) 0;
+  margin: 0 var(--space-050) var(--space-150) 0;
   background-color: transparent;
   border: var(--border-050) solid var(--color-border-stone-soft);
   border-radius: var(--radius-999);
@@ -1364,9 +1364,25 @@ footer.submitted {
 
 /* ======== Layout Spacing ======== */
 
+.group--study-status {
+  margin-bottom: var(--space-250);
+}
+
+.group--study-card-ctas {
+  margin: var(--space-400) 0 var(--space-200) 0;
+}
+
+.group--study-card-tags {
+  margin: var(--space-400) 0 0 0;
+}
+
 .field--name-field-study-focus .field__item {
   display: inline-block;
   margin: 0 var(--space-100) 0 0;
+}
+
+.field--name-field-study-focus .field__item:last-child {
+  margin-right: 0;
 }
 
 /* ===================================
