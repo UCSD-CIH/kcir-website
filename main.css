@@ -1117,7 +1117,6 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
   align-items: flex-start;
   gap: var(--space-050);
 }
-}
 
 .view-studies .view-content {
   column-count: 2;
