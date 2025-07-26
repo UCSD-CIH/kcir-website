@@ -1107,13 +1107,22 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
    STUDY CARDS
 =================================== */
 
-.view-studies .view-header {
+.view-filters {
+  margin: var(--space-200) 0 0 0;
+}
+
+.view-studies .form--inline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: var(--space-050);
+}
 }
 
 .view-studies .view-content {
   column-count: 2;
   column-gap: var(--space-400);
-  margin-top: var(--space-500);
+  margin-top: var(--space-400);
 }
 
 .view-studies .views-row {
@@ -1236,7 +1245,9 @@ footer.submitted {
 
 /* --- Study Card View Filters  --- */
 
-.view-studies
+.view-studies {
+  margin: var(--space-200) 0 0 0;
+}
 
 /* --- Studies View Filters: Search  --- */
 
