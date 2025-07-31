@@ -1857,7 +1857,7 @@ font-family: 'Inter', sans-serif;
 
 /* ===================================
    ACCORDION COMPONENT: ROUNDED ACCORDION
-   Apply accordion-color class only to collapse panel element to apply styles
+   Apply accordion-rounded class only to collapse panel element to apply styles
 =================================== */
 .accordion-rounded .accordion-button {
 border-radius: var(--radius-200) !important;
