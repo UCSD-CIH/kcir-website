@@ -1837,7 +1837,7 @@ footer.submitted {
     background: var(--accordion-bg);
     color: var(--dxt-color-headertext);
 font-family: 'Inter', sans-serif;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 20px;
   line-height: 32px;
   letter-spacing: -0.005em; /*text body large*/
@@ -1847,6 +1847,37 @@ font-family: 'Inter', sans-serif;
     color: var(--dxt-color-base);
 } 
 .accordion-item .accordion-body {
+  background: var(--accordion-bg);
+ font-family: 'Inter', sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0; /*text body default*/
+}
+
+/* ===================================
+   ACCORDION COMPONENT: ROUNDED ACCORDION
+   Apply accordion-color class only to collapse panel element to apply styles
+=================================== */
+.accordion-rounded .accordion-button {
+border-radius: var(--radius-200) !important;
+    background: var(--accordion-bg);
+    color: var(--dxt-color-headertext);
+font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+  letter-spacing: -0.005em; /*text body large bold*/
+}
+.accordion-rounded .accordion-button:not(.collapsed) {
+border-bottom-right-radius: var(--radius-0) !important;
+border-bottom-left-radius: var(--radius-0) !important;
+    background: var(--accordion-bg);
+    color: var(--dxt-color-base);
+} 
+.accordion-rounded .accordion-body {
+border-bottom-right-radius: var(--radius-200) !important;
+border-bottom-left-radius: var(--radius-200) !important;
   background: var(--accordion-bg);
  font-family: 'Inter', sans-serif !important;
   font-weight: 400 !important;
