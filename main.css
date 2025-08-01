@@ -1349,14 +1349,22 @@ footer.submitted {
 
 /* ======== SVG Icons ======== */
 
-.field--name-field-study-status a::before,
+.field--name-field-study-status a::before {
+  content: "";
+  font-size: 12px;
+  margin-right: var(--space-100);
+  margin: -8px auto;
+  position: relative;
+  top: -1.25px;
+}
+
 .field--name-field-study-type a::before,
 .field--name-field-study-focus a::before {
   content: "";
   font-size: 12px;
   margin-right: var(--space-100);
   position: relative;
-  top: -0.5px;
+  top: -0.75px;
 }
 
 /* .field--name-field-study-status a[href$="/20"]::before { content: "🟢"; } */ /* Recruiting */
@@ -1367,8 +1375,8 @@ footer.submitted {
 .field--name-field-study-status a[href$="/20"]::before {
   content: "";
   display: inline-block;
-  width: 1em;
-  height: 1em;
+  width: 1.35em;
+  height: 1.35em;
   margin-right: 0.4em;
   background-color: currentColor;
   -webkit-mask: url("https://cih.sdsc.edu/sites/default/files/2025-07/plus-circle-fill-icon_1_0.svg") no-repeat center;
@@ -1378,11 +1386,11 @@ footer.submitted {
   vertical-align: middle;
 }
 
-field--name-field-study-status a[href$="/22"]::before {
+.field--name-field-study-status a[href$="/22"]::before {
   content: "";
   display: inline-block;
-  width: 1em;
-  height: 1em;
+  width: 1.35em;
+  height: 1.35em;
   margin-right: 0.4em;
   background-color: currentColor;
   -webkit-mask: url("https://cih.sdsc.edu/sites/default/files/2025-07/check-circle-fill-icon_0.svg") no-repeat center;
@@ -1462,7 +1470,6 @@ content: "";
 .field--name-field-study-focus .field__item:last-child {
   margin-right: 0;
 }
-
 /* ===================================
    COMPONENT: STUDY PAGE
 =================================== */
