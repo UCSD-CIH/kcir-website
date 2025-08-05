@@ -1894,7 +1894,9 @@ footer.submitted {
 
 .accordion-item .accordion-button {
     background: var(--accordion-bg);
+border: var(--border-050) solid var(--color-border-subdued-strong);
     color: var(--dxt-color-headertext);
+border-radius: var(--radius-200) !important;
 font-family: 'Inter', sans-serif;
   font-weight: 600;
   font-size: 20px;
@@ -1904,6 +1906,9 @@ font-family: 'Inter', sans-serif;
 .accordion-item .accordion-button:not(.collapsed) {
     background: var(--accordion-bg);
     color: var(--dxt-color-base);
+border-bottom-right-radius: var(--radius-0) !important;
+border-bottom-left-radius: var(--radius-0) !important;
+border: var(--border-050) solid var(--color-border-subdued-strong);
 } 
 .accordion-item .accordion-body {
   background: var(--accordion-bg);
@@ -1912,22 +1917,9 @@ font-family: 'Inter', sans-serif;
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0; /*text body default*/
-}
-
-/* ===================================
-   ACCORDION COMPONENT: ROUNDED ACCORDION
-   Apply accordion-rounded class only to collapse panel element to apply styles
-=================================== */
-.accordion-rounded .accordion-button {
-border-radius: var(--radius-200) !important;
-}
-.accordion-rounded .accordion-button:not(.collapsed) {
-border-bottom-right-radius: var(--radius-0) !important;
-border-bottom-left-radius: var(--radius-0) !important;
-} 
-.accordion-rounded .accordion-body {
 border-bottom-right-radius: var(--radius-200) !important;
 border-bottom-left-radius: var(--radius-200) !important;
+border: var(--border-050) solid var(--color-border-subdued-strong);
 }
 
 /* ===================================
