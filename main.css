@@ -1580,10 +1580,10 @@ content: "";
 }
 
 .page-node-type-study .field--name-field-study-description p {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 400;
   letter-spacing: -0.005em;
-  line-height: 32px;
+  line-height: 24px;
 }
 
 .field--name-field-study-activities .field__label,
