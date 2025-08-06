@@ -289,7 +289,7 @@
   font-weight: 800 !important;
   letter-spacing: 0;
   line-height: 56px;
-  margin-bottom: var(--space-200);
+  margin-bottom: var(--space-250);
 }
 
 @supports (font-family: "Refrigerator Deluxe") {
@@ -306,7 +306,7 @@
   font-size: 48px !important;
   line-height: 48px;
   letter-spacing: 0;
-  margin-bottom: var(--space-150);
+  margin-bottom: var(--space-250);
 }
 
 @supports (font-family: "Refrigerator Deluxe") {
@@ -323,7 +323,7 @@
   font-size: 28px !important;
   line-height: 32px;
   letter-spacing: 0;
-  margin-bottom: var(--space-150);
+  margin-bottom: var(--space-250);
 }
 
 .main-container h4,
@@ -334,7 +334,7 @@
   font-size: 24px !important;
   line-height: 28px;
   letter-spacing: 0;
-  margin-bottom: var(--space-100);
+  margin-bottom: var(--space-150);
 }
 
 .main-container h5,
@@ -345,7 +345,7 @@
   font-size: 20px !important;
   line-height: 24px;
   letter-spacing: 0;
-  margin-bottom: var(--space-100);
+  margin-bottom: var(--space-150);
 }
 
 .main-container h6,
@@ -356,7 +356,7 @@
   font-size: 16px !important;
   line-height: 20px;
   letter-spacing: 0;
-  margin-bottom: var(--space-50);
+  margin-bottom: var(--space-100);
 }
 
 /* Body text styles for paragraphs and general content */
