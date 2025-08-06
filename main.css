@@ -6,6 +6,12 @@
 /* ===================================
   MASTER CSS FILE BEGINS - DO NOT MODIFY CODE BELOW HERE - COMMIT TO GIT FIRST
 =================================== */
+/* ===================================
+  MASTER CSS FILE BEGINS - DO NOT MODIFY CODE BELOW HERE - COMMIT TO GIT FIRST
+=================================== */
+/* ===================================
+  MASTER CSS FILE BEGINS - DO NOT MODIFY CODE BELOW HERE - COMMIT TO GIT FIRST
+=================================== */
 
 /* ===================================
    EXTERNAL FONT IMPORTS
@@ -14,6 +20,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Teko:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 
 /* ===================================
    DESIGN TOKENS: BACKGROUND COLORS
@@ -284,24 +291,36 @@ h1,
 .heading--h1 h1,
 .heading--h1 
  {
-  font-family: 'Teko', sans-serif !important;
+  font-family: 'Refrigerator Deluxe', 'Teko', sans-serif !important;
   font-size: 56px !important;
-  font-weight: 600 !important;
-  letter-spacing: -0.005em;
+  font-weight: 800 !important;
+  letter-spacing: 0.01em;
   line-height: 56px;
   margin-bottom: var(--space-200);
+}
+
+@supports (font-family: "Refrigerator Deluxe") {
+  h1 {
+    text-transform: uppercase;
+  }
 }
 
 h2,
 .heading--h2,
 .heading--h2 h2
  {
-  font-family: 'Inter', sans-serif;
-  font-weight: 700 !important;
-  font-size: 32px !important;
-  line-height: 40px;
-  letter-spacing: -0.01em;
+  font-family: 'Refrigerator Deluxe', 'Teko', sans-serif !important;
+  font-weight: 800 !important;
+  font-size: 48px !important;
+  line-height: 48px;
+  letter-spacing: 0.01em;
   margin-bottom: var(--space-150);
+}
+
+@supports (font-family: "Refrigerator Deluxe") {
+  h2 {
+    text-transform: uppercase;
+  }
 }
 
 h3,
@@ -309,7 +328,7 @@ h3,
 .heading--h3 h3 {
   font-family: 'Inter', sans-serif;
   font-weight: 700 !important;
-  font-size: 24px !important;
+  font-size: 28px !important;
   line-height: 32px;
   letter-spacing: 0;
   margin-bottom: var(--space-150);
@@ -320,8 +339,8 @@ h4,
 .heading--h4 h4 {
   font-family: 'Inter', sans-serif;
   font-weight: 600 !important;
-  font-size: 20px !important;
-  line-height: 24px;
+  font-size: 24px !important;
+  line-height: 28px;
   letter-spacing: 0;
   margin-bottom: var(--space-100);
 }
@@ -331,8 +350,8 @@ h5,
 .heading--h5 h5 {
   font-family: 'Inter', sans-serif;
   font-weight: 700 !important;
-  font-size: 16px !important;
-  line-height: 20px;
+  font-size: 20px !important;
+  line-height: 24px;
   letter-spacing: 0;
   margin-bottom: var(--space-100);
 }
@@ -342,8 +361,8 @@ h6,
 .heading--h6 h6 {
   font-family: 'Inter', sans-serif;
   font-weight: 600 !important;
-  font-size: 14px !important;
-  line-height: 18px;
+  font-size: 16px !important;
+  line-height: 20px;
   letter-spacing: 0;
   margin-bottom: var(--space-50);
 }
@@ -1335,110 +1354,45 @@ footer.submitted {
   font-weight: 500;
   line-height: 1;
   letter-spacing: 0.01em;
-  color: var(--color-text-disabled-strong);
+  color: inherit;
   text-decoration: none;
   padding: var(--space-100) var(--space-150);
   margin: 0 var(--space-050) var(--space-150) 0;
   background-color: transparent;
-  border: var(--border-050) solid var(--color-border-disabled-soft);
+  border: var(--border-050) solid var(--color-border-stone-soft);
   border-radius: var(--radius-999);
   cursor: default;
   pointer-events: none;
   white-space: nowrap;
 }
 
-/* ======== SVG Icons ======== */
+/* ======== Emoji Icons ======== */
 
-.field--name-field-study-status a::before {
-  content: "";
-  font-size: 12px;
-  margin-right: var(--space-100);
-  margin: -8px auto;
-  position: relative;
-  top: -1.25px;
-}
-
+.field--name-field-study-status a::before,
 .field--name-field-study-type a::before,
 .field--name-field-study-focus a::before {
   content: "";
   font-size: 12px;
   margin-right: var(--space-100);
   position: relative;
-  top: -0.75px;
+  top: -0.5px;
 }
 
-/* .field--name-field-study-status a[href$="/20"]::before { content: "🟢"; } */ /* Recruiting */
-/* .field--name-field-study-status a[href$="/22"]::before { content: "🎯"; } */ /* Completed */
-/* .field--name-field-study-type a::before { content: "🏥"; } */
-/* .field--name-field-study-focus a::before { content: "🏷️"; } */
-
-.field--name-field-study-status a[href$="/20"]::before {
-  content: "";
-  display: inline-block;
-  width: 1.35em;
-  height: 1.35em;
-  margin-right: 0.4em;
-  background-color: currentColor;
-  -webkit-mask: url("https://cih.sdsc.edu/sites/default/files/2025-07/plus-circle-fill-icon_1_0.svg") no-repeat center;
-  -webkit-mask-size: contain;
-  mask: url("https://cih.sdsc.edu/sites/default/files/2025-07/plus-circle-fill-icon_1_0.svg") no-repeat center;
-  mask-size: contain;
-  vertical-align: middle;
-}
-
-.field--name-field-study-status a[href$="/22"]::before {
-  content: "";
-  display: inline-block;
-  width: 1.35em;
-  height: 1.35em;
-  margin-right: 0.4em;
-  background-color: currentColor;
-  -webkit-mask: url("https://cih.sdsc.edu/sites/default/files/2025-07/check-circle-fill-icon_0.svg") no-repeat center;
-  -webkit-mask-size: contain;
-  mask: url("https://cih.sdsc.edu/sites/default/files/2025-07/check-circle-fill-icon_0.svg") no-repeat center;
-  mask-size: contain;
-  vertical-align: middle;
-}
-
-.field--name-field-study-type a::before {
-content: "";
-  display: inline-block;
-  width: 1em;
-  height: 1em;
-  margin-right: 0.4em;
-  background-color: currentColor;
-  -webkit-mask: url("https://cih.sdsc.edu/sites/default/files/2025-07/grid-fill-icon_0.svg") no-repeat center;
-  -webkit-mask-size: contain;
-  mask: url("https://cih.sdsc.edu/sites/default/files/2025-07/grid-fill-icon_0.svg") no-repeat center;
-  mask-size: contain;
-  vertical-align: middle;
- }
-
-.field--name-field-study-focus a::before {
-  content: "";
-  display: inline-block;
-  width: 1em;
-  height: 1em;
-  margin-right: 0.4em;
-  background-color: currentColor;
-  -webkit-mask: url("https://cih.sdsc.edu/sites/default/files/2025-07/leaf-fill-icon_0.svg") no-repeat center;
-  -webkit-mask-size: contain;
-  mask: url("https://cih.sdsc.edu/sites/default/files/2025-07/leaf-fill-icon_0.svg") no-repeat center;
-  mask-size: contain;
-  vertical-align: middle;
-}
+.field--name-field-study-status a[href$="/20"]::before { content: "🟢"; } /* Recruiting */
+.field--name-field-study-status a[href$="/22"]::before { content: "🎯"; } /* Completed */
+.field--name-field-study-type a::before { content: "🏥"; }
+.field--name-field-study-focus a::before { content: "🏷️"; }
 
 /* ======== Status Pill Variants ======== */
 
 .field--name-field-study-status a[href$="/20"] {
   background-color: var(--color-bg-green-20);
   border-color: var(--color-border-green-soft);
-  color: var(--color-text-green);
 }
 
 .field--name-field-study-status a[href$="/22"] {
-  color: var(--color-text-disabled-strong);
-  border-color: var(--color-border-disabled-soft);
+  background-color: var(--color-bg-orange-20);
+  border-color: var(--color-border-orange-soft);
 }
 
 /* ======== Hide CTA if status is Completed ======== */
@@ -1470,6 +1424,7 @@ content: "";
 .field--name-field-study-focus .field__item:last-child {
   margin-right: 0;
 }
+
 /* ===================================
    COMPONENT: STUDY PAGE
 =================================== */
@@ -1894,11 +1849,9 @@ footer.submitted {
 
 .accordion-item .accordion-button {
     background: var(--accordion-bg);
-border: var(--border-050) solid var(--color-border-subdued-strong);
     color: var(--dxt-color-headertext);
-border-radius: var(--radius-200) !important;
 font-family: 'Inter', sans-serif;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 20px;
   line-height: 32px;
   letter-spacing: -0.005em; /*text body large*/
@@ -1906,9 +1859,6 @@ font-family: 'Inter', sans-serif;
 .accordion-item .accordion-button:not(.collapsed) {
     background: var(--accordion-bg);
     color: var(--dxt-color-base);
-border-bottom-right-radius: var(--radius-0) !important;
-border-bottom-left-radius: var(--radius-0) !important;
-border: var(--border-050) solid var(--color-border-subdued-strong);
 } 
 .accordion-item .accordion-body {
   background: var(--accordion-bg);
@@ -1917,9 +1867,6 @@ border: var(--border-050) solid var(--color-border-subdued-strong);
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0; /*text body default*/
-border-bottom-right-radius: var(--radius-200) !important;
-border-bottom-left-radius: var(--radius-200) !important;
-border: var(--border-050) solid var(--color-border-subdued-strong);
 }
 
 /* ===================================
