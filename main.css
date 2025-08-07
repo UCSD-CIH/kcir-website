@@ -280,10 +280,9 @@
 
 /* Semantic heading styles for structured content */
 
-.main-container h1,
-.main-container .heading--primary h1,
-.main-container .heading--h1 h1,
-.main-container .heading--h1 {
+h1, 
+h1.page-title
+ {
   font-family: 'Refrigerator Deluxe', 'Teko', sans-serif !important;
   font-size: 56px !important;
   font-weight: 800 !important;
@@ -293,7 +292,8 @@
 }
 
 @supports (font-family: "Refrigerator Deluxe") {
-  .main-container h1 {
+h1, 
+h1.page-title {
     text-transform: uppercase;
   }
 }
