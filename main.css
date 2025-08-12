@@ -288,11 +288,7 @@ h1.page-title {
   letter-spacing: 0;
   line-height: 56px;
   margin-bottom: var(--space-250);
-}
-
-body.has-refrigerator h1,
-body.has-refrigerator h1.page-title {
-  text-transform: uppercase !important;
+  text-transform: uppercase;
 }
 
 /* H2 */
@@ -305,9 +301,6 @@ body.has-refrigerator h1.page-title {
   line-height: 48px;
   letter-spacing: 0;
   margin-bottom: var(--space-250);
-}
-
-body.has-refrigerator .main-container h2 {
   text-transform: uppercase;
 }
 
@@ -1152,6 +1145,7 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
   color: var(--color-text-heading);
   margin: 0 0 var(--space-150) 0;
   text-decoration: none;
+  text-transform: none !important;
 }
 
 /* Press & Media cards: move title under thumbnail */
