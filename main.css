@@ -294,7 +294,7 @@ h1.page-title
 @supports (font-family: "Refrigerator Deluxe") {
 h1, 
 h1.page-title {
-    text-transform: uppercase;
+    text-transform: uppercase !important;
   }
 }
 
@@ -1877,6 +1877,10 @@ footer.submitted {
     rgba(226, 234, 216, 0) 100%
   );
 }
+
+/* ================================
+   MEDIA CARDS
+================================ */
 
 /* ===================================
    HERO COMPONENT: GRADIENT OVERLAY
