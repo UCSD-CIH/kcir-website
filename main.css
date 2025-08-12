@@ -1047,7 +1047,7 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
   color: var(--color-text-on-dark);
   border: var(--border-100) solid transparent;
   text-decoration: none;
-  border-radius: var(--radius-999)
+  border-radius: var(--radius-999);
   padding-top: var(--space-200);
   padding-bottom: var(--space-200);
   padding-left: var(--space-250);
@@ -1140,6 +1140,125 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
 .btn-link .az-button-content,
 .btn-link .az-button-content * {
   text-transform: none !important;
+}
+
+/* ================================
+   MEDIA CARDS
+================================ */
+
+.main-container .press-media-card h2,
+.main-container .press-media-card h2 a {
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 20px !important;
+  line-height: 24px !important;
+  letter-spacing: 0;
+  color: var(--color-text-heading);
+  margin: 0 0 var(--space-150) 0;
+  text-decoration: none;
+}
+
+/* Press & Media cards: move title under thumbnail */
+/* 1) Flatten the .content wrapper so its children behave like siblings of <h2> */
+.press-media.press-media-card { display: flex; flex-direction: column; }
+.press-media.press-media-card .content { display: contents; } /* key trick */
+
+/* 2) Reorder visual flow: thumbnail → title → source → tags */
+.press-media.press-media-card .group--press-media-thumbnail { order: 10; }
+.press-media.press-media-card h2 { order: 20; margin-top: var(--space-200); }
+.press-media.press-media-card .group--press-media-body { order: 30; }
+.press-media.press-media-card .group--press-media-tags { order: 40; }
+
+.press-media.press-media-card 
+.field--name-field-press-thumbnail .field__label,
+.press-media.press-media-card 
+.field--name-field-press-type .field__label,
+.press-media.press-media-card 
+.field--name-field-press-source .field__label,
+.press-media.press-media-card 
+.field--name-field-study-focus .field__label {
+  display: none;
+}
+
+/* --- Press & Media Card: show date only, above tags --- */
+
+/* Put the footer between Body (30) and Tags (40) */
+.press-media.press-media-card footer.submitted {
+  order: 32;
+  margin: var(--space-050) 0 0;
+}
+
+/* Hide the "Submitted by … on" text without JS */
+.press-media.press-media-card footer.submitted .author {
+  font-size: 0;          /* nukes the wrapper text */
+  line-height: 0;
+  color: transparent;
+}
+
+/* Re‑enable and style just the date (time element) */
+.press-media.press-media-card footer.submitted .author .datetime {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;       /* body small */
+  line-height: 20px;
+  letter-spacing: 0;
+  color: var(--color-text-subdued-strong);
+}
+
+/* Optional: drop the empty profile stub */
+.press-media.press-media-card footer.submitted article.profile { display: none; }
+
+/* Make the thumbnail a positioning context */
+.press-media-card .group--press-media-thumbnail {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-200);
+}
+
+.press-media-card .group--press-media-thumbnail img {
+  border-radius: var(--space-150);
+}
+
+/* Default: show a pill with the type in the top‑right */
+.press-media-card .group--press-media-thumbnail .field--name-field-press-type {
+  position: absolute;
+  top: var(--space-200);
+  right: var(--space-200);
+  z-index: 2;
+}
+
+.press-media-card .group--press-media-thumbnail .field--name-field-press-type a {
+  display: inline-block;
+  padding: var(--space-100) var(--space-250);
+  border: var(--border-050) solid var(--color-border-subdued-strong);
+  border-radius: var(--radius-999);
+  background: var(--shade-white);
+  color: var(--color-text-heading);
+  font: var(--font-label-medium);
+  letter-spacing: var(--letter-spacing-label);
+  text-decoration: none;
+}
+
+/* If the type is VIDEO (term id 49), hide the pill and show a play overlay */
+/* Change 49 if your Video term id differs */
+.press-media-card:has(.field--name-field-press-type a[href*="/taxonomy/term/49"])
+  .group--press-media-thumbnail .field--name-field-press-type { display: none; }
+
+.press-media-card:has(.field--name-field-press-type a[href*="/taxonomy/term/49"])
+  .group--press-media-thumbnail::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;        /* keep the thumbnail link clickable */
+  margin: auto;
+  width: clamp(72px, 18vw, 140px);
+  height: clamp(52px, 13vw, 100px);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  /* inline SVG play button with soft white bezel */
+  background-image: url("data:image/svg+xml,%3Csvg width='140' height='100' viewBox='0 0 140 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.96'%3E%3Cpath d='M20 50c0-16.569 0-24.853 5.144-29.997C30.288 14.86 38.571 14.86 55.14 14.86h29.72c16.569 0 24.853 0 29.997 5.143C120 25.147 120 33.431 120 50s0 24.853-5.143 29.997c-5.144 5.143-13.428 5.143-29.997 5.143H55.14c-16.569 0-24.853 0-29.996-5.143C20 74.853 20 66.569 20 50Z' fill='%23ffffff'/%3E%3Cpath d='M62 36.5v27l23-13.5L62 36.5Z' fill='%238F96A3'/%3E%3Cpath d='M62 36.5v27l23-13.5L62 36.5Z' fill='none' stroke='%23ffffff' stroke-width='6' stroke-linejoin='round'/%3E%3C/g%3E%3C/svg%3E");
 }
 
 /* ===================================
@@ -1877,10 +1996,6 @@ footer.submitted {
     rgba(226, 234, 216, 0) 100%
   );
 }
-
-/* ================================
-   MEDIA CARDS
-================================ */
 
 /* ===================================
    HERO COMPONENT: GRADIENT OVERLAY
