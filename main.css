@@ -279,10 +279,9 @@
 }
 
 /* Semantic heading styles for structured content */
-
-h1, 
-h1.page-title
- {
+/* H1 / Page title */
+h1,
+h1.page-title {
   font-family: 'Refrigerator Deluxe', 'Teko', sans-serif !important;
   font-size: 56px !important;
   font-weight: 800 !important;
@@ -291,13 +290,12 @@ h1.page-title
   margin-bottom: var(--space-250);
 }
 
-@supports (font-family: "Refrigerator Deluxe") {
-h1, 
-h1.page-title {
-    text-transform: uppercase !important;
-  }
+body.has-refrigerator h1,
+body.has-refrigerator h1.page-title {
+  text-transform: uppercase !important;
 }
 
+/* H2 */
 .main-container h2,
 .main-container .heading--h2,
 .main-container .heading--h2 h2 {
@@ -309,10 +307,8 @@ h1.page-title {
   margin-bottom: var(--space-250);
 }
 
-@supports (font-family: "Refrigerator Deluxe") {
-  .main-container h2 {
-    text-transform: uppercase;
-  }
+body.has-refrigerator .main-container h2 {
+  text-transform: uppercase;
 }
 
 .main-container h3,
