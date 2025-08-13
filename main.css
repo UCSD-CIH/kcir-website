@@ -288,7 +288,7 @@ h1.page-title {
   letter-spacing: 0;
   line-height: 56px;
   margin-bottom: var(--space-250);
-  text-transform: uppercase;
+  text-transform: uppercase !important;
 }
 
 /* H2 */
@@ -301,7 +301,7 @@ h1.page-title {
   line-height: 48px;
   letter-spacing: 0;
   margin-bottom: var(--space-250);
-  text-transform: uppercase;
+  text-transform: uppercase !important;
 }
 
 .main-container h3,
