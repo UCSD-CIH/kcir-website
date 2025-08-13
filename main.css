@@ -1135,6 +1135,45 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
    MEDIA CARDS
 ================================ */
 
+/* Press & Media grid — 3-up with horizontal + vertical gaps */
+.view-press-media .view-content {
+  display: block; /* keep default; rows handle layout */
+}
+
+/* Each row becomes a flex row with gaps */
+.view-press-media .views-row {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: var(--space-300);              /* horizontal spacing between cards */
+  margin-bottom: var(--space-300);    /* vertical spacing between rows */
+}
+
+/* Make the columns flex children, not floats, and size to 1/3 */
+.view-press-media .views-col {
+  float: none !important;
+  display: block;
+  flex: 0 0 calc((100% - (var(--space-300) * 2)) / 3) !important;
+  width: calc((100% - (var(--space-300) * 2)) / 3) !important; /* override inline 33.33% */
+  margin: 0 !important;               /* override any previous margin hacks */
+}
+
+/* Responsive: 2-up then 1-up */
+@media (max-width: 960px) {
+  .view-press-media .views-row {
+    flex-wrap: wrap; /* allow wrap on narrower screens */
+  }
+  .view-press-media .views-col {
+    flex-basis: calc((100% - var(--space-300)) / 2) !important;
+    width:      calc((100% - var(--space-300)) / 2) !important;
+  }
+}
+@media (max-width: 640px) {
+  .view-press-media .views-col {
+    flex-basis: 100% !important;
+    width: 100% !important;
+  }
+}
+
 .main-container .press-media-card h2,
 .main-container .press-media-card h2 a {
   font-family: 'Inter', sans-serif !important;
@@ -1265,6 +1304,8 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
   /* inline SVG play button with soft white bezel */
   background-image: url("data:image/svg+xml,%3Csvg width='140' height='100' viewBox='0 0 140 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.96'%3E%3Cpath d='M20 50c0-16.569 0-24.853 5.144-29.997C30.288 14.86 38.571 14.86 55.14 14.86h29.72c16.569 0 24.853 0 29.997 5.143C120 25.147 120 33.431 120 50s0 24.853-5.143 29.997c-5.144 5.143-13.428 5.143-29.997 5.143H55.14c-16.569 0-24.853 0-29.996-5.143C20 74.853 20 66.569 20 50Z' fill='%23ffffff'/%3E%3Cpath d='M62 36.5v27l23-13.5L62 36.5Z' fill='%238F96A3'/%3E%3Cpath d='M62 36.5v27l23-13.5L62 36.5Z' fill='none' stroke='%23ffffff' stroke-width='6' stroke-linejoin='round'/%3E%3C/g%3E%3C/svg%3E");
 }
+
+
 
 /* ===================================
    STUDY CARDS
