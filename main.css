@@ -472,6 +472,14 @@ p,
   text-transform: uppercase;
 }
 
+.label--xsmall * {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 0.03em;
+}
+
 address,
 .text--body-address * {
   font-family: 'Inter', sans-serif;
@@ -1136,45 +1144,6 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
    MEDIA CARDS
 ================================ */
 
-/* Press & Media grid — 3-up with horizontal + vertical gaps */
-.view-press-media .view-content {
-  display: block; /* keep default; rows handle layout */
-}
-
-/* Each row becomes a flex row with gaps */
-.view-press-media .views-row {
-  display: flex;
-  flex-wrap: nowrap;
-  gap: var(--space-300);              /* horizontal spacing between cards */
-  margin-bottom: var(--space-300);    /* vertical spacing between rows */
-}
-
-/* Make the columns flex children, not floats, and size to 1/3 */
-.view-press-media .views-col {
-  float: none !important;
-  display: block;
-  flex: 0 0 calc((100% - (var(--space-300) * 2)) / 3) !important;
-  width: calc((100% - (var(--space-300) * 2)) / 3) !important; /* override inline 33.33% */
-  margin: 0 !important;               /* override any previous margin hacks */
-}
-
-/* Responsive: 2-up then 1-up */
-@media (max-width: 960px) {
-  .view-press-media .views-row {
-    flex-wrap: wrap; /* allow wrap on narrower screens */
-  }
-  .view-press-media .views-col {
-    flex-basis: calc((100% - var(--space-300)) / 2) !important;
-    width:      calc((100% - var(--space-300)) / 2) !important;
-  }
-}
-@media (max-width: 640px) {
-  .view-press-media .views-col {
-    flex-basis: 100% !important;
-    width: 100% !important;
-  }
-}
-
 .main-container .press-media-card h2,
 .main-container .press-media-card h2 a {
   font-family: 'Inter', sans-serif !important;
@@ -1188,6 +1157,9 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
   text-transform: none !important;
 }
 
+.press-media-card h2 a:hover { text-decoration: underline; }
+.press-media-card h2 a:focus-visible { outline: 2px solid var(--color-bg-blue-100); outline-offset: 2px; }
+
 /* Media source = body-small (14/20) */
 .press-media-card .group--press-media-body
   .field--name-field-press-source .field__item {
@@ -1198,10 +1170,6 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
   letter-spacing: 0;
   color: var(--color-text-paragraph);
 }
-
-/* Press & Media view: vertical spacing between grid rows */
-.view-press-media .views-row { margin-bottom: var(--space-300); }
-.view-press-media .views-row:last-child { margin-bottom: 0; }
 
 /* Press & Media cards: move title under thumbnail */
 /* 1) Flatten the .content wrapper so its children behave like siblings of <h2> */
@@ -1262,7 +1230,7 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
 }
 
 .press-media-card .group--press-media-thumbnail img {
-  border-radius: var(--space-150);
+  border-radius: var(--radius-200);
 }
 
 /* Default: show a pill with the type in the top‑right */
@@ -1273,40 +1241,100 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
   z-index: 2;
 }
 
-.press-media-card .group--press-media-thumbnail .field--name-field-press-type a {
-  display: inline-block;
-  padding: var(--space-100) var(--space-250);
-  border: var(--border-050) solid var(--color-border-subdued-strong);
-  border-radius: var(--radius-999);
-  background: var(--shade-white);
+/* Base visuals for Press Type + Focus pills */
+.view-press-media :is(
+  .group--press-media-thumbnail .field--name-field-press-type .field__item a,
+  .group--press-media-tags .field--name-field-study-focus .field__item a
+),
+.view-id-press_media :is(
+  .group--press-media-thumbnail .field--name-field-press-type .field__item a,
+  .group--press-media-tags .field--name-field-study-focus .field__item a
+) {
   color: var(--color-text-heading);
-  font: var(--font-label-medium);
-  letter-spacing: var(--letter-spacing-label);
+  background: var(--shade-white);
+  border: var(--border-050) solid var(--color-border-disabled-soft);
+  border-radius: var(--radius-999);
   text-decoration: none;
+  box-shadow: none;
 }
 
-/* If the type is VIDEO (term id 49), hide the pill and show a play overlay */
-/* Change 49 if your Video term id differs */
-.press-media-card:has(.field--name-field-press-type a[href*="/taxonomy/term/49"])
-  .group--press-media-thumbnail .field--name-field-press-type { display: none; }
-
-.press-media-card:has(.field--name-field-press-type a[href*="/taxonomy/term/49"])
-  .group--press-media-thumbnail::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;        /* keep the thumbnail link clickable */
-  margin: auto;
-  width: clamp(72px, 18vw, 140px);
-  height: clamp(52px, 13vw, 100px);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  /* inline SVG play button with soft white bezel */
-  background-image: url("data:image/svg+xml,%3Csvg width='140' height='100' viewBox='0 0 140 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.96'%3E%3Cpath d='M20 50c0-16.569 0-24.853 5.144-29.997C30.288 14.86 38.571 14.86 55.14 14.86h29.72c16.569 0 24.853 0 29.997 5.143C120 25.147 120 33.431 120 50s0 24.853-5.143 29.997c-5.144 5.143-13.428 5.143-29.997 5.143H55.14c-16.569 0-24.853 0-29.996-5.143C20 74.853 20 66.569 20 50Z' fill='%23ffffff'/%3E%3Cpath d='M62 36.5v27l23-13.5L62 36.5Z' fill='%238F96A3'/%3E%3Cpath d='M62 36.5v27l23-13.5L62 36.5Z' fill='none' stroke='%23ffffff' stroke-width='6' stroke-linejoin='round'/%3E%3C/g%3E%3C/svg%3E");
+/* Compact sizing */
+.view-press-media :is(
+  .group--press-media-thumbnail .field--name-field-press-type .field__item a,
+  .group--press-media-tags .field--name-field-study-focus .field__item a
+),
+.view-id-press_media :is(
+  .group--press-media-thumbnail .field--name-field-press-type .field__item a,
+  .group--press-media-tags .field--name-field-study-focus .field__item a
+) {
+  padding: var(--space-075) var(--space-150);
+  gap: var(--space-075);
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
 }
 
+/* Optional: nudge icon size a touch for compact */
+.view-press-media
+  .group--press-media-tags .field--name-field-study-focus .field__item a::before {
+  width: 0.9em;
+  height: 0.9em;
+}
 
+.view-press-media .group--press-media-thumbnail .field--name-field-press-type .field__item a:hover,
+.view-id-press_media .group--press-media-thumbnail .field--name-field-press-type .field__item a:hover {
+  background: var(--color-bg-sand-100);
+  border-color: var(--color-border-subdued-strong);
+}
+
+.view-press-media .views-row,
+.view-id-press_media .views-row {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: var(--space-300);
+  margin-bottom: var(--space-300);
+}
+.view-press-media .views-row:last-child,
+.view-id-press_media .views-row:last-child { margin-bottom: 0; }
+
+.view-press-media .views-col,
+.view-id-press_media .views-col {
+  float: none !important;
+  display: block;
+  flex: 0 0 calc((100% - (var(--space-300) * 2)) / 3) !important;
+  width: calc((100% - (var(--space-300) * 2)) / 3) !important;
+  margin: 0 !important;
+  min-width: 0;
+}
+@media (max-width: 960px) {
+  .view-press-media .views-row,
+  .view-id-press_media .views-row { flex-wrap: wrap; }
+  .view-press-media .views-col,
+  .view-id-press_media .views-col {
+    flex-basis: calc((100% - var(--space-300)) / 2) !important;
+    width:      calc((100% - var(--space-300)) / 2) !important;
+  }
+}
+@media (max-width: 640px) {
+  .view-press-media .views-col,
+  .view-id-press_media .views-col { flex-basis: 100% !important; width: 100% !important; }
+}
+
+/* Fallback: always hide the External Link field block on cards */
+.press-media-card .field--name-field-press-link { display: none !important; }
+
+/* (Optional) Kill any inherited border/shadow on thumbs */
+.press-media-card .group--press-media-thumbnail,
+.press-media-card .group--press-media-thumbnail .field--name-field-press-thumbnail,
+.press-media-card .group--press-media-thumbnail .field__item,
+.press-media-card .pm-card-thumb-link,
+.press-media-card .group--press-media-thumbnail img {
+  border: 0;
+  box-shadow: none;
+  background: transparent;
+}
 
 /* ===================================
    STUDY CARDS
