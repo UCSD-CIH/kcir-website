@@ -1171,12 +1171,10 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
   color: var(--color-text-paragraph);
 }
 
-/* Press & Media cards: move title under thumbnail */
-/* 1) Flatten the .content wrapper so its children behave like siblings of <h2> */
+/* Press & Media cards: flatten .content so title can follow thumbnail */
 .press-media.press-media-card { display: flex; flex-direction: column; }
-.press-media.press-media-card .content { display: contents; } /* key trick */
+.press-media.press-media-card .content { display: contents; }
 
-/* 2) Reorder visual flow: thumbnail → title → source → tags */
 .press-media.press-media-card .group--press-media-thumbnail { order: 10; }
 .press-media.press-media-card h2 { order: 20; margin-top: var(--space-200); }
 .press-media.press-media-card .group--press-media-body { order: 30; }
@@ -1193,47 +1191,22 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
   display: none;
 }
 
-/* --- Press & Media Card: show date only, above tags --- */
-
-/* Put the footer between Body (30) and Tags (40) */
+/* Hide entire footer for now */
 .press-media.press-media-card footer.submitted {
-  order: 32;
-  margin: var(--space-050) 0 0;
+  display: none !important;
 }
 
-/* Hide the "Submitted by … on" text without JS */
-.press-media.press-media-card footer.submitted .author {
-  font-size: 0;          /* nukes the wrapper text */
-  line-height: 0;
-  color: transparent;
-}
-
-/* Re‑enable and style just the date (time element) */
-.press-media.press-media-card footer.submitted .author .datetime {
-  display: block;
-  font-family: 'Inter', sans-serif;
-  font-weight: 400;
-  font-size: 14px;       /* body small */
-  line-height: 20px;
-  letter-spacing: 0;
-  color: var(--color-text-subdued-strong);
-}
-
-/* Optional: drop the empty profile stub */
-.press-media.press-media-card footer.submitted article.profile { display: none; }
-
-/* Make the thumbnail a positioning context */
+/* Make thumbnail a positioning context */
 .press-media-card .group--press-media-thumbnail {
   position: relative;
   overflow: hidden;
   border-radius: var(--radius-200);
 }
-
 .press-media-card .group--press-media-thumbnail img {
   border-radius: var(--radius-200);
 }
 
-/* Default: show a pill with the type in the top‑right */
+/* Type pill (top-right of thumbnail) */
 .press-media-card .group--press-media-thumbnail .field--name-field-press-type {
   position: absolute;
   top: var(--space-200);
@@ -1241,17 +1214,21 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
   z-index: 2;
 }
 
-/* Base visuals for Press Type + Focus pills */
-.view-press-media :is(
-  .group--press-media-thumbnail .field--name-field-press-type .field__item a,
-  .group--press-media-tags .field--name-field-study-focus .field__item a
-),
-.view-id-press_media :is(
-  .group--press-media-thumbnail .field--name-field-press-type .field__item a,
-  .group--press-media-tags .field--name-field-study-focus .field__item a
-) {
-  color: var(--color-text-heading);
-  background: var(--shade-white);
+/* Base visuals */
+.view-press-media .group--press-media-thumbnail .field--name-field-press-type .field__item a,
+.view-id-press_media .group--press-media-thumbnail .field--name-field-press-type .field__item a {
+  color: var(--color-text-disabled-strong);
+  background: rgba(255, 255, 255, 0.85);
+  border: var(--border-050) solid var(--color-border-disabled-soft);
+  border-radius: var(--radius-999);
+  text-decoration: none;
+  box-shadow: none;
+}
+
+.view-press-media .group--press-media-tags .field--name-field-study-focus .field__item a,
+.view-id-press_media .group--press-media-tags .field--name-field-study-focus .field__item a {
+  color: var(--color-text-disabled-strong);
+  background: none;
   border: var(--border-050) solid var(--color-border-disabled-soft);
   border-radius: var(--radius-999);
   text-decoration: none;
@@ -1276,17 +1253,12 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
   letter-spacing: 0.03em;
 }
 
-/* Optional: nudge icon size a touch for compact */
-.view-press-media
-  .group--press-media-tags .field--name-field-study-focus .field__item a::before {
+/* Icons */
+.view-press-media .group--press-media-tags .field--name-field-study-focus .field__item a::before,
+.view-id-press_media .group--press-media-tags .field--name-field-study-focus .field__item a::before {
   width: 0.9em;
   height: 0.9em;
-}
-
-.view-press-media .group--press-media-thumbnail .field--name-field-press-type .field__item a:hover,
-.view-id-press_media .group--press-media-thumbnail .field--name-field-press-type .field__item a:hover {
-  background: var(--color-bg-sand-100);
-  border-color: var(--color-border-subdued-strong);
+  color: var(--color-text-disabled-strong);
 }
 
 .view-press-media .views-row,
@@ -1322,10 +1294,10 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
   .view-id-press_media .views-col { flex-basis: 100% !important; width: 100% !important; }
 }
 
-/* Fallback: always hide the External Link field block on cards */
+/* Hide external link field */
 .press-media-card .field--name-field-press-link { display: none !important; }
 
-/* (Optional) Kill any inherited border/shadow on thumbs */
+/* Kill inherited borders/shadows on thumbs */
 .press-media-card .group--press-media-thumbnail,
 .press-media-card .group--press-media-thumbnail .field--name-field-press-thumbnail,
 .press-media-card .group--press-media-thumbnail .field__item,
