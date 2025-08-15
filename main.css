@@ -1144,123 +1144,22 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
    MEDIA CARDS
 ================================ */
 
-.main-container .press-media-card h2,
-.main-container .press-media-card h2 a {
-  font-family: 'Inter', sans-serif !important;
-  font-weight: 600 !important;
-  font-size: 16px !important;
-  line-height: 20px !important;
-  letter-spacing: 0;
-  color: var(--color-text-heading);
-  margin: 0 0 var(--space-150) 0;
-  text-decoration: none;
-  text-transform: none !important;
+/* ---- Layout / structure ---- */
+.press-media.press-media-card {
+  display: flex;
+  flex-direction: column;
+}
+.press-media.press-media-card .content {
+  display: contents; /* flatten so title can follow thumbnail */
 }
 
-.press-media-card h2 a:hover { text-decoration: underline; }
-.press-media-card h2 a:focus-visible { outline: 2px solid var(--color-bg-blue-100); outline-offset: 2px; }
-
-/* Media source = body-small (14/20) */
-.press-media-card .group--press-media-body
-  .field--name-field-press-source .field__item {
-  font-family: 'Inter', sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
-  letter-spacing: 0;
-  color: var(--color-text-paragraph);
-}
-
-/* Press & Media cards: flatten .content so title can follow thumbnail */
-.press-media.press-media-card { display: flex; flex-direction: column; }
-.press-media.press-media-card .content { display: contents; }
-
+/* Order: thumbnail → title → source → tags */
 .press-media.press-media-card .group--press-media-thumbnail { order: 10; }
 .press-media.press-media-card h2 { order: 20; margin-top: var(--space-200); }
 .press-media.press-media-card .group--press-media-body { order: 30; }
-.press-media.press-media-card .group--press-media-tags { order: 40; }
+.press-media.press-media-card .group--press-media-tags { order: 40; margin-top: var(--space-200); }
 
-.press-media.press-media-card 
-.field--name-field-press-thumbnail .field__label,
-.press-media.press-media-card 
-.field--name-field-press-type .field__label,
-.press-media.press-media-card 
-.field--name-field-press-source .field__label,
-.press-media.press-media-card 
-.field--name-field-study-focus .field__label {
-  display: none;
-}
-
-/* Hide entire footer for now */
-.press-media.press-media-card footer.submitted {
-  display: none !important;
-}
-
-/* Make thumbnail a positioning context */
-.press-media-card .group--press-media-thumbnail {
-  position: relative;
-  overflow: hidden;
-  border-radius: var(--radius-200);
-}
-.press-media-card .group--press-media-thumbnail img {
-  border-radius: var(--radius-200);
-}
-
-/* Type pill (top-right of thumbnail) */
-.press-media-card .group--press-media-thumbnail .field--name-field-press-type {
-  position: absolute;
-  top: var(--space-200);
-  right: var(--space-200);
-  z-index: 2;
-}
-
-/* Base visuals */
-.view-press-media .group--press-media-thumbnail .field--name-field-press-type .field__item a,
-.view-id-press_media .group--press-media-thumbnail .field--name-field-press-type .field__item a {
-  color: var(--color-text-disabled-strong);
-  background: rgba(255, 255, 255, 0.85);
-  border: var(--border-050) solid var(--color-border-disabled-soft);
-  border-radius: var(--radius-999);
-  text-decoration: none;
-  box-shadow: none;
-}
-
-.view-press-media .group--press-media-tags .field--name-field-study-focus .field__item a,
-.view-id-press_media .group--press-media-tags .field--name-field-study-focus .field__item a {
-  color: var(--color-text-disabled-strong);
-  background: none;
-  border: var(--border-050) solid var(--color-border-disabled-soft);
-  border-radius: var(--radius-999);
-  text-decoration: none;
-  box-shadow: none;
-}
-
-/* Compact sizing */
-.view-press-media :is(
-  .group--press-media-thumbnail .field--name-field-press-type .field__item a,
-  .group--press-media-tags .field--name-field-study-focus .field__item a
-),
-.view-id-press_media :is(
-  .group--press-media-thumbnail .field--name-field-press-type .field__item a,
-  .group--press-media-tags .field--name-field-study-focus .field__item a
-) {
-  padding: var(--space-075) var(--space-150);
-  gap: var(--space-075);
-  font-family: 'Inter', sans-serif;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 16px;
-  letter-spacing: 0.03em;
-}
-
-/* Icons */
-.view-press-media .group--press-media-tags .field--name-field-study-focus .field__item a::before,
-.view-id-press_media .group--press-media-tags .field--name-field-study-focus .field__item a::before {
-  width: 0.9em;
-  height: 0.9em;
-  color: var(--color-text-disabled-strong);
-}
-
+/* 3-up grid with gaps */
 .view-press-media .views-row,
 .view-id-press_media .views-row {
   display: flex;
@@ -1273,10 +1172,10 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
 
 .view-press-media .views-col,
 .view-id-press_media .views-col {
-  float: none !important;
   display: block;
   flex: 0 0 calc((100% - (var(--space-300) * 2)) / 3) !important;
   width: calc((100% - (var(--space-300) * 2)) / 3) !important;
+  float: none !important;
   margin: 0 !important;
   min-width: 0;
 }
@@ -1294,19 +1193,179 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
   .view-id-press_media .views-col { flex-basis: 100% !important; width: 100% !important; }
 }
 
-/* Hide external link field */
-.press-media-card .field--name-field-press-link { display: none !important; }
+/* ---- Field labels off ---- */
+.press-media.press-media-card 
+.field--name-field-press-thumbnail .field__label,
+.press-media.press-media-card 
+.field--name-field-press-type .field__label,
+.press-media.press-media-card 
+.field--name-field-press-source .field__label,
+.press-media.press-media-card 
+.field--name-field-study-focus .field__label { display: none; }
 
-/* Kill inherited borders/shadows on thumbs */
-.press-media-card .group--press-media-thumbnail,
-.press-media-card .group--press-media-thumbnail .field--name-field-press-thumbnail,
-.press-media-card .group--press-media-thumbnail .field__item,
-.press-media-card .pm-card-thumb-link,
-.press-media-card .group--press-media-thumbnail img {
-  border: 0;
-  box-shadow: none;
-  background: transparent;
+/* ---- Title (use DS h6 styling) ---- */
+.main-container .press-media-card h2,
+.main-container .press-media-card h2 a {
+  margin: 0 0 var(--space-150) 0;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  line-height: 20px !important;
+  letter-spacing: 0;
+  color: var(--color-text-heading);
+  text-decoration: none;
+  text-transform: none !important;
 }
+.press-media-card h2 a:hover { text-decoration: underline; }
+.press-media-card h2 a:focus-visible { outline: 2px solid var(--color-bg-blue-100); outline-offset: 2px; }
+
+/* ---- Media source = body-small ---- */
+.press-media-card .group--press-media-body
+  .field--name-field-press-source .field__item {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0;
+  color: var(--color-text-paragraph);
+}
+
+/* ---- Hide the author/timestamp footer for now ---- */
+.press-media.press-media-card footer.submitted { display: none !important; }
+
+/* ---- Thumbnail framing & clipping ---- */
+.press-media-card .group--press-media-thumbnail {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-200);
+}
+.press-media-card .group--press-media-thumbnail .field__item {
+  border: var(--border-050) solid var(--color-border-subdued-strong); /* subtle frame */
+  border-radius: inherit;
+  overflow: hidden; /* clip inner corners */
+}
+.press-media-card .pm-card-thumb-link {
+  display: block;
+  border-radius: inherit;
+  overflow: hidden;
+}
+.press-media-card .group--press-media-thumbnail img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-200);
+}
+
+/* ---- Type pill pinned top-right of thumbnail ---- */
+.press-media.press-media-card .group--press-media-thumbnail
+  .field--name-field-press-type {
+  position: absolute !important;
+  top: var(--space-200);
+  right: var(--space-200);
+  z-index: 2;
+}
+
+/* ================================
+   Component: Tags
+   - Type (frosted white)
+   - Focus (no background)
+   - Compact sizing, icon + label
+================================ */
+
+/* Base visuals */
+.view-press-media .group--press-media-thumbnail .field--name-field-press-type .field__item a,
+.view-id-press_media .group--press-media-thumbnail .field--name-field-press-type .field__item a {
+  font-weight: 500;
+  color: var(--color-text-subdued-strong);
+  background-color: rgba(255, 255, 255, 0.92);
+  border: var(--border-050) solid var(--color-border-disabled-soft);
+  border-radius: var(--radius-999);
+  text-decoration: none;
+  box-shadow: none;
+}
+.view-press-media .group--press-media-tags .field--name-field-study-focus .field__item a,
+.view-id-press_media .group--press-media-tags .field--name-field-study-focus .field__item a {
+  font-weight: 300;
+  color: var(--color-text-disabled-strong);
+  background: none;
+  border: var(--border-050) solid var(--color-border-disabled-soft);
+  border-radius: var(--radius-999);
+  text-decoration: none;
+  box-shadow: none;
+}
+
+/* Compact sizing + icon spacing (gap only) */
+.view-press-media :is(
+  .group--press-media-thumbnail .field--name-field-press-type .field__item a,
+  .group--press-media-tags .field--name-field-study-focus .field__item a
+),
+.view-id-press_media :is(
+  .group--press-media-thumbnail .field--name-field-press-type .field__item a,
+  .group--press-media-tags .field--name-field-study-focus .field__item a
+) {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-075) var(--space-150);
+  gap: var(--space-050); /* tighter icon/label spacing */
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+}
+
+/* Focus tag icon size/tint */
+.view-press-media .group--press-media-tags .field--name-field-study-focus .field__item a::before,
+.view-id-press_media .group--press-media-tags .field--name-field-study-focus .field__item a::before {
+  width: 0.9em;
+  height: 0.9em;
+  color: var(--color-text-disabled-strong);
+}
+
+/* Type tag icons (mask-based, color = currentColor) */
+.view-press-media .group--press-media-thumbnail .field--name-field-press-type .field__item a::before,
+.view-id-press_media .group--press-media-thumbnail .field--name-field-press-type .field__item a::before {
+  content: "";
+  display: inline-block;
+  width: 0.9em;
+  height: 0.9em;
+  margin-right: 0;          /* gap handles spacing */
+  vertical-align: -0.1em;
+  background-color: currentColor;
+}
+/* Video (term 49) */
+.view-press-media  .field--name-field-press-type .field__item a[href$="/49"]::before,
+.view-id-press_media .field--name-field-press-type .field__item a[href$="/49"]::before {
+  -webkit-mask: url("https://cih.sdsc.edu/sites/default/files/2025-08/video-fill-icon.svg") no-repeat center / contain;
+          mask: url("https://cih.sdsc.edu/sites/default/files/2025-08/video-fill-icon.svg") no-repeat center / contain;
+}
+/* Article (term 50) */
+.view-press-media  .field--name-field-press-type .field__item a[href$="/50"]::before,
+.view-id-press_media .field--name-field-press-type .field__item a[href$="/50"]::before {
+  -webkit-mask: url("https://cih.sdsc.edu/sites/default/files/2025-08/doc-text-fill-icon.svg") no-repeat center / contain;
+          mask: url("https://cih.sdsc.edu/sites/default/files/2025-08/doc-text-fill-icon.svg") no-repeat center / contain;
+}
+/* Publication (term 51) */
+.view-press-media  .field--name-field-press-type .field__item a[href$="/51"]::before,
+.view-id-press_media .field--name-field-press-type .field__item a[href$="/51"]::before {
+  -webkit-mask: url("https://cih.sdsc.edu/sites/default/files/2025-08/book-fill-icon.svg") no-repeat center / contain;
+          mask: url("https://cih.sdsc.edu/sites/default/files/2025-08/book-fill-icon.svg") no-repeat center / contain;
+}
+/* External Link (term 52) */
+.view-press-media  .field--name-field-press-type .field__item a[href$="/52"]::before,
+.view-id-press_media .field--name-field-press-type .field__item a[href$="/52"]::before {
+  -webkit-mask: url("https://cih.sdsc.edu/sites/default/files/2025-08/link-icon.svg") no-repeat center / contain;
+          mask: url("https://cih.sdsc.edu/sites/default/files/2025-08/link-icon.svg") no-repeat center / contain;
+}
+
+/* Hover tweak for Type pill */
+.view-press-media .group--press-media-thumbnail .field--name-field-press-type .field__item a:hover,
+.view-id-press_media .group--press-media-thumbnail .field--name-field-press-type .field__item a:hover {
+  background: var(--color-bg-sand-100);
+  border-color: var(--color-border-subdued-strong);
+}
+
+/* ---- Utilities ---- */
+.press-media-card .field--name-field-press-link { display: none !important; } /* hide raw link field */
 
 /* ===================================
    STUDY CARDS
