@@ -1206,7 +1206,7 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
 /* ---- Title (use DS h6 styling) ---- */
 .main-container .press-media-card h2,
 .main-container .press-media-card h2 a {
-  margin: 0 0 var(--space-150) 0;
+  margin: var(--space-200) 0 0 0;
   font-family: 'Inter', sans-serif !important;
   font-size: 16px !important;
   font-weight: 600 !important;
@@ -1222,6 +1222,7 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
 /* ---- Media source = body-small ---- */
 .press-media-card .group--press-media-body
   .field--name-field-press-source .field__item {
+  margin: var(--space-150) 0 0 0;
   font-family: 'Inter', sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -1240,7 +1241,6 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
   border-radius: var(--radius-200);
 }
 .press-media-card .group--press-media-thumbnail .field__item {
-  border: var(--border-050) solid var(--color-border-subdued-strong); /* subtle frame */
   border-radius: inherit;
   overflow: hidden; /* clip inner corners */
 }
@@ -1253,6 +1253,7 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
   display: block;
   width: 100%;
   height: auto;
+  border: var(--border-050) solid var(--color-border-subdued-strong); /* subtle frame */
   border-radius: var(--radius-200);
 }
 
