@@ -1156,18 +1156,18 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
   gap: var(--space-050);
 }
 
-.view-studies .form-item-keys {
+.view-filters .form-item-keys {
   position: relative;
   display: flex;
   align-items: stretch;
 }
 
 /* Hide the label above the field */
-.view-studies .form-item-keys label {
+.view-filters .form-item-keys label {
   display: none;
 }
 
-.view-studies .form-item-keys input.form-text {
+.view-filters .form-item-keys input.form-text {
   position: relative;
   width: 100%;
   padding-top: var(--space-100);
@@ -1183,7 +1183,7 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
 }
 
 /* Faux placeholder label */
-.view-studies .form-item-keys::before {
+.view-filters .form-item-keys::before {
   content: "Search Studies";
   position: absolute;
   top: 50%;
@@ -1199,7 +1199,7 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
 }
 
 /* Magnifying glass icon */
-.view-studies .form-item-keys::after {
+.view-filters .form-item-keys::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -1216,8 +1216,8 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
 }
 
 /* Hide label and icon on focus */
-.view-studies .form-item-keys:focus-within::before,
-.view-studies .form-item-keys:focus-within::after {
+.view-filters .form-item-keys:focus-within::before,
+.view-filters .form-item-keys:focus-within::after {
   opacity: 0;
 }
 
