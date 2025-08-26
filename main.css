@@ -2248,3 +2248,45 @@ textarea.form-textarea:focus {
   border-color: #c00 !important;
   box-shadow: 0 0 0 1px rgba(204, 0, 0, 0.25) !important;
 }
+
+/* ===================================
+   WEBFORM: FOOTER
+   Footer webform styling 
+=================================== */
+.hide-label label {
+  display: none !important;
+}
+
+/* Flex wrapper for email + button */
+.email-submit-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* space between input and button */
+  max-width: 400px; /* adjust for footer */
+  margin: 0;
+  padding: 0;
+}
+
+/* Email input styles */
+.email-submit-wrapper input.form-email {
+  flex: 1;
+  border: none;
+  border-radius: 0; /* reset first */
+  border-top-left-radius: 6px; /* rounded left side */
+  border-bottom-left-radius: 6px;
+  padding: .5rem;
+  font-size: 16px;
+  outline: none;
+  min-width: 0;
+}
+
+/* Submit button with your .btn-secondary styles */
+.email-submit-wrapper input.webform-button--submit {
+  border: none;
+  border-radius: 6px
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14.5px 16px;
+  cursor: pointer;
+}
