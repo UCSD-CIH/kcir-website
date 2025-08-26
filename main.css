@@ -1182,9 +1182,8 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
   background-color: var(--shade-white);
 }
 
-/* Faux placeholder label */
+/* Faux placeholder labels */
 .view-filters .form-item-keys::before {
-  content: "Search Studies";
   position: absolute;
   top: 50%;
   left: var(--space-400);
@@ -1196,6 +1195,14 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
   opacity: 1;
   transition: opacity 0.2s ease;
   z-index: 1;
+}
+
+.view-studies .form-item-keys::before {
+content: "Search Studies";
+}
+
+.view-press-media .form-item-keys::before {
+content: "Search Media";
 }
 
 /* Magnifying glass icon */
