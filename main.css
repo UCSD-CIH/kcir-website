@@ -1172,7 +1172,7 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
   width: 100%;
   padding-top: var(--space-100);
   padding-bottom: var(--space-100);
-  padding-left: var(--space-600);
+  padding-left: var(--space-300);
   padding-right: var(--space-600);
   border: var(--border-050) solid var(--color-border-strong);
   border-radius: var(--radius-999);
