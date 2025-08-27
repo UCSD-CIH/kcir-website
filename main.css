@@ -1182,27 +1182,13 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
   background-color: var(--shade-white);
 }
 
-/* Faux placeholder labels */
-.view-filters .form-item-keys::before {
-  position: absolute;
-  top: 50%;
-  left: var(--space-400);
-  transform: translateY(-50%);
+/* Native placeholder styling */
+.view-filters .form-item-keys input.form-text::placeholder {
   font-family: 'Inter', sans-serif;
   font-size: 16px;
+  line-height: 24px;
   color: var(--color-text-subdued-strong);
-  pointer-events: none;
-  opacity: 1;
-  transition: opacity 0.2s ease;
-  z-index: 1;
-}
-
-.view-studies .form-item-keys::before {
-content: "Search Studies";
-}
-
-.view-press-media .form-item-keys::before {
-content: "Search Media";
+  opacity: 1; /* avoid browser-dimmed look */
 }
 
 /* Magnifying glass icon */
@@ -1219,6 +1205,16 @@ content: "Search Media";
   background-size: 16px 16px;
   pointer-events: none;
   transition: opacity 0.2s ease;
+  opacity: 1; /* default: visible */
+}
+
+/* Hide icon when the field has a value */
+.view-filters .form-item-keys:has(input:not(:placeholder-shown))::after {
+  opacity: 0;
+}
+
+/* Keep icon visible when focused & empty */
+.view-filters .form-item-keys:has(input:focus:placeholder-shown)::after {
   opacity: 1;
 }
 
