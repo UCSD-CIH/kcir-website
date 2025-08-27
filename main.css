@@ -1236,6 +1236,9 @@ content: "Search Media";
 .view-press-media .view-content {
   margin-top: var(--space-400);
 }
+.view-press-media .view-filters {
+  margin-top: 0;
+}
 
 /* ---- Layout / structure ---- */
 .press-media.press-media-card {
