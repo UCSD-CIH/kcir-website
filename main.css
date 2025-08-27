@@ -1223,10 +1223,26 @@ content: "Search Media";
 }
 
 /* Hide label and icon on focus */
-.view-filters .form-item-keys:focus-within::before,
+/* .view-filters .form-item-keys:focus-within::before,
 .view-filters .form-item-keys:focus-within::after {
   opacity: 0;
+} */
+
+/* Keep the faux label/icon visible on focus when empty */
+.view-filters .form-item-keys:has(input:focus:placeholder-shown)::before,
+.view-filters .form-item-keys:has(input:focus:placeholder-shown)::after {
+  opacity: 1;
 }
+
+/* Hide the faux label/icon once there is content (even after blur) */
+.view-filters .form-item-keys:has(input:not(:placeholder-shown))::before,
+.view-filters .form-item-keys:has(input:not(:placeholder-shown))::after {
+  opacity: 0;
+}
+
+/* remove the old focus rule */
+ /* .view-filters .form-item-keys:focus-within::before,
+    .view-filters .form-item-keys:focus-within::after { opacity: 0; } */
 
 /* ================================
    MEDIA CARDS
