@@ -990,19 +990,22 @@ code.bg-light {
 /* Primary Button */
 .btn-primary,
 .btn-primary:visited {
+  border: var(--border-100) solid transparent;
   background-color: var(--color-bg-yellow-100);
   color: var(--color-text-on-light);
-  border: var(--border-100) solid transparent;
   text-decoration: none;
 }
 
 .btn-primary:hover,
 .btn-primary:visited:hover {
+  border: var(--border-100) solid transparent;
   background-color: var(--color-bg-turquoise-100);
   color: var(--color-text-on-light);
+  text-decoration: none;
 }
 
 .btn-primary:active {
+  border: var(--border-100) solid transparent;
   background-color: var(--color-bg-turquoise-120) !important;
   color: var(--color-text-navy) !important;
   border-color: transparent !important;
@@ -1010,9 +1013,9 @@ code.bg-light {
 
 .btn-primary:disabled,
 input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
+  border: var(--border-100) solid transparent;
   background-color: var(--color-bg-yellow-100) !important;
   color: var(--color-text-on-light) !important;
-  border: var(--border-100) solid transparent !important;
   opacity: 1 !important;
   text-transform: uppercase;
 }
@@ -1028,14 +1031,16 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
 
 .btn-secondary:hover,
 .btn-secondary:visited:hover {
+  border: var(--border-100) solid transparent;
   background-color: var(--color-bg-navy-100);
   color: var(--color-text-on-dark);
+  text-decoration: none;
 }
 
 .btn-secondary:active {
+  border: var(--border-100) solid transparent !important;
   background-color: var(--color-bg-blue-120) !important;
   color: var(--color-text-on-dark) !important;
-  border-color: transparent !important;
 }
 
 /* Secondary Alt Button */
@@ -1054,11 +1059,13 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
 
 .btn-secondary-alt:hover,
 .btn-secondary-alt:visited:hover {
+  border: var(--border-100) solid transparent;
   background-color: var(--color-bg-navy-100);
   color: var(--color-text-on-dark);
 }
 
 .btn-secondary-alt:active {
+  border: var(--border-100) solid transparent !important;
   background-color: var(--color-bg-blue-120) !important;
   color: var(--color-text-on-dark) !important;
   border-color: transparent !important;
@@ -1067,40 +1074,40 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
 /* Tertiary Button (Info Variant) */
 .btn-info,
 .az-button-content.btn-info {
-  background-color: transparent;
-  color: var(--color-bg-blue-100);
   border: var(--border-100) solid var(--color-bg-blue-100);
   box-sizing: border-box;
+  background-color: transparent;
+  color: var(--color-bg-blue-100);
 }
 
 .btn-info:hover,
 .az-button-content.btn-info:hover {
+  border-color: var(--color-bg-blue-100);
   background-color: var(--color-bg-blue-100);
   color: var(--color-text-on-dark);
-  border-color: var(--color-bg-blue-100);
 }
 
 .btn-info:active,
 .az-button-content.btn-info:active {
+  border-color: var(--color-bg-blue-120) !important;
   background-color: var(--color-bg-blue-120) !important;
   color: var(--color-text-on-dark) !important;
-  border-color: var(--color-bg-blue-120) !important;
 }
 
 .btn-info:visited,
 .az-button-content.btn-info:visited {
+  border-color: var(--color-bg-blue-100);
   background-color: transparent;
   color: var(--color-bg-blue-100);
-  border-color: var(--color-bg-blue-100);
 }
 
 .btn-info:disabled,
 .btn-info[aria-disabled="true"],
 .az-button-content.btn-info:disabled,
 .az-button-content.btn-info[aria-disabled="true"] {
+  border: var(--border-100) solid var(--color-border-disabled-soft);
   background-color: var(--color-bg-disabled-soft);
   color: var(--color-text-disabled-soft);
-  border: var(--border-100) solid var(--color-border-disabled-soft);
   cursor: not-allowed;
   opacity: 1;
   pointer-events: none;
