@@ -1085,6 +1085,7 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
   border-color: var(--color-bg-blue-100);
   background-color: var(--color-bg-blue-100);
   color: var(--color-text-on-dark);
+  text-decoration: none;
 }
 
 .btn-info:active,
