@@ -956,8 +956,24 @@ code.bg-light {
 /* Accessible focus ring for keyboard navigation */
 
 .btn:focus-visible:not(:disabled) {
-  outline: 2px solid var(--color-bg-blue-100);
+  outline: 2px solid var(--color-bg-navy-100);
   outline-offset: 2px;
+}
+
+/* Variant-specific focus fixes: Primary button only */
+.btn-primary:focus:not(:disabled) {
+  /* prevent Bootstrap periwinkle flash + unintended color shifts */
+  outline: none;
+  box-shadow: none;
+  color: var(--color-text-on-light); /* keep white text on yellow */
+}
+
+.btn-primary:focus-visible:not(:disabled) {
+  /* accessible keyboard ring in brand navy; no halo; keep text color stable */
+
+  outline-offset: 2px;
+  box-shadow: none;
+  color: var(--color-text-on-light);
 }
 
 .btn:disabled,
@@ -998,7 +1014,7 @@ code.bg-light {
 .btn-primary:visited {
   border: var(--border-100) solid transparent;
   background-color: var(--color-bg-yellow-100);
-  color: var(--color-text-on-light);
+  color: var(--color-text-on-light) !important;
   text-decoration: none;
 }
 
@@ -1006,7 +1022,7 @@ code.bg-light {
 .btn-primary:visited:hover {
   border: var(--border-100) solid transparent;
   background-color: var(--color-bg-turquoise-100);
-  color: var(--color-text-on-light);
+  color: var(--color-text-on-light) !important;
   text-decoration: none;
 }
 
@@ -1030,7 +1046,7 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
 .btn-secondary,
 .btn-secondary:visited {
   background-color: var(--color-bg-blue-100);
-  color: var(--color-text-on-dark);
+  color: var(--color-text-on-dark) !important;
   border: var(--border-100) solid transparent;
   text-decoration: none;
 }
@@ -1039,7 +1055,7 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
 .btn-secondary:visited:hover {
   border: var(--border-100) solid transparent;
   background-color: var(--color-bg-navy-100);
-  color: var(--color-text-on-dark);
+  color: var(--color-text-on-dark) !important;
   text-decoration: none;
 }
 
@@ -1053,7 +1069,7 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
 .btn-secondary-alt,
 .btn-secondary-alt:visited {
   background-color: var(--color-bg-blue-100);
-  color: var(--color-text-on-dark);
+  color: var(--color-text-on-dark) !important;
   border: var(--border-100) solid transparent;
   text-decoration: none;
   border-radius: var(--radius-999);
@@ -1067,7 +1083,7 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
 .btn-secondary-alt:visited:hover {
   border: var(--border-100) solid transparent;
   background-color: var(--color-bg-navy-100);
-  color: var(--color-text-on-dark);
+  color: var(--color-text-on-dark) !important;
 }
 
 .btn-secondary-alt:active {
@@ -1083,14 +1099,14 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
   border: var(--border-100) solid var(--color-bg-blue-100);
   box-sizing: border-box;
   background-color: transparent;
-  color: var(--color-bg-blue-100);
+  color: var(--color-bg-blue-100) !important;
 }
 
 .btn-info:hover,
 .az-button-content.btn-info:hover {
   border-color: var(--color-bg-blue-100);
   background-color: var(--color-bg-blue-100);
-  color: var(--color-text-on-dark);
+  color: var(--color-text-on-dark) !important;
   text-decoration: none;
 }
 
@@ -1105,7 +1121,7 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
 .az-button-content.btn-info:visited {
   border-color: var(--color-bg-blue-100);
   background-color: transparent;
-  color: var(--color-bg-blue-100);
+  color: var(--color-bg-blue-100) !important;
 }
 
 .btn-info:disabled,
