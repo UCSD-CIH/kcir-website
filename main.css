@@ -1511,7 +1511,11 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
 =================================== */
 
 .view-publications .views-row {
-  margin-bottom: var(--space-400);
+  margin-bottom: var(--space-200);
+}
+
+.view-publications h3 {
+  margin-bottom: var(--space-050);
 }
 
 .view-publications .views-field-title a,
@@ -1535,8 +1539,7 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
 
 .view-publications .views-field-field-pub-authors {
   color: var(--color-text-subdued-strong);
-  margin-top: var(--space-050);
-  margin-bottom: var(--space-200);
+
   display: block;
 }
 
