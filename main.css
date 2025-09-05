@@ -1507,6 +1507,45 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
 .press-media-card .field--name-field-press-link { display: none !important; } /* hide raw link field */
 
 /* ===================================
+   PUBLICATION CONTENT TYPE
+=================================== */
+
+.view-publications .views-row {
+  margin-bottom: var(--space-400);
+}
+
+.view-publications .views-field-title a,
+.view-publications .views-field-title a:visited {
+  font-weight: 600;
+  color: var(--color-text-link);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.view-publications .views-field-title a:hover {
+  color: var(--color-text-blue);
+  text-decoration: none;
+}
+
+.view-publications .views-field-title a:focus-visible {
+  outline: 2px solid var(--color-bg-blue-100);
+  outline-offset: 2px;
+  text-decoration: none;
+}
+
+.view-publications .views-field-field-pub-authors {
+  color: var(--color-text-subdued-strong);
+  margin-top: var(--space-050);
+  margin-bottom: var(--space-200);
+  display: block;
+}
+
+/* If you don't want the per-item date showing under titles */
+.view-publications .views-field-field-pub-date {
+  display: none;
+}
+
+/* ===================================
    STUDY CARDS
 =================================== */
 
