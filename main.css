@@ -916,6 +916,109 @@ code.bg-light {
 }
 
 /* ===================================
+   KCIR NAV DROPDOWNS — TEMPORARY UNTIL SUPERFISH
+=================================== */
+.center-nav.kcir-nav > li {
+  position: relative;
+}
+
+.center-nav.kcir-nav > li > ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+  z-index: 1000;
+
+  background: #fff;
+  border: 1px solid var(--color-border-subdued-strong, #E0E3E6);
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .06);
+
+  margin: 0;
+  padding: 12px 0;
+  list-style: none;
+  min-width: 260px;
+}
+
+/* Show on hover/focus */
+.center-nav.kcir-nav > li:hover > ul,
+.center-nav.kcir-nav > li:focus-within > ul {
+  display: block;
+}
+
+/* Submenu link styles */
+.center-nav.kcir-nav > li > ul > li,
+.center-nav.kcir-nav > li > ul > li > a,
+.center-nav.kcir-nav > li > ul > li > a.nav-link,
+.center-nav.kcir-nav > li > ul > li > a.menu__link {
+  display: block;
+  margin: 0;
+  padding: 10px 16px;
+  text-decoration: none;
+  white-space: nowrap;
+
+  font-size: 14px !important;
+  line-height: 20px !important;
+  font-weight: 600 !important;
+  letter-spacing: normal !important;
+  text-transform: none !important;
+  font-family: var(--dxt-font-family, "Inter", system-ui, sans-serif) !important;
+
+  color: var(--color-text-on-light, #182B49) !important;
+}
+
+.center-nav.kcir-nav > li > ul > li > a:hover,
+.center-nav.kcir-nav > li > ul > li > a:focus {
+  background: var(--shade-lightest, #F7F9FC);
+}
+
+/* Third level flyout (if used) */
+.center-nav.kcir-nav > li > ul > li {
+  position: relative;
+}
+
+.center-nav.kcir-nav > li > ul > li > ul {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  display: none;
+  z-index: 1000;
+
+  background: #fff;
+  border: 1px solid var(--color-border-subdued-strong, #E0E3E6);
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .06);
+
+  margin: 0;
+  padding: 12px 0;
+  list-style: none;
+  min-width: 260px;
+}
+
+.center-nav.kcir-nav > li > ul > li:hover > ul,
+.center-nav.kcir-nav > li > ul > li:focus-within > ul {
+  display: block;
+}
+
+/* Don’t interfere with mobile collapsible nav */
+@media (max-width: 991.98px) {
+  .center-nav.kcir-nav > li {
+    position: static;
+  }
+
+  .center-nav.kcir-nav > li > ul,
+  .center-nav.kcir-nav > li > ul > li > ul {
+    position: static;
+    display: none;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+/* ===================================
    COMPONENT: DIVIDER
    Horizontal rules for section separation
 =================================== */
