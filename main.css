@@ -250,6 +250,11 @@
   --letter-spacing-label: 0.035em;
   --text-transform-label-medium: none;
   --text-transform-label-caps: uppercase;
+
+  /* Center site title token */
+  --font-site-title: 500 20px/20px 'Inter', sans-serif;
+  --letter-spacing-site-title: 0.02em;
+  --text-transform-site-title: uppercase;
 }
 
 /* Display styles for large visual headlines */
@@ -913,6 +918,50 @@ code.bg-light {
 
 .page-title-container {
   margin-top: var(--space-600);
+}
+
+/* ===================================
+   CENTER BRANDING BLOCK
+   Shared styling for secondary header site titles
+=================================== */
+#secondary-header {
+  background-color: var(--color-bg-plain);
+  border-bottom: var(--border-050) solid var(--color-border-subdued-soft);
+}
+
+#secondary-header .secondary-header-container {
+  padding-block: var(--space-200);
+}
+
+#secondary-header .center-brand.block {
+  margin: 0;
+}
+
+#secondary-header .center-brand.block .block-hr {
+  display: none;
+}
+
+#secondary-header .center-brand.block .field__item,
+#secondary-header .center-brand.block p {
+  margin: 0;
+}
+
+#secondary-header a.center-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-075);
+  font: var(--font-site-title);
+  letter-spacing: var(--letter-spacing-site-title);
+  text-transform: var(--text-transform-site-title);
+  color: var(--color-text-heading);
+  text-decoration: none;
+}
+
+#secondary-header a.center-brand:hover,
+#secondary-header a.center-brand:focus {
+  color: var(--color-text-blue);
+  text-decoration: underline;
+  text-underline-offset: var(--space-050);
 }
 
 /* ===================================
