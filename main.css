@@ -916,13 +916,13 @@ code.bg-light {
 }
 
 /* ===================================
-   KCIR NAV DROPDOWNS — TEMPORARY UNTIL SUPERFISH
+   CENTER NAV DROPDOWNS — TEMPORARY UNTIL SUPERFISH
 =================================== */
-.center-nav.kcir-nav > li {
+.center-nav > li {
   position: relative;
 }
 
-.center-nav.kcir-nav > li > ul {
+.center-nav > li > ul {
   position: absolute;
   top: 100%;
   left: 0;
@@ -941,16 +941,16 @@ code.bg-light {
 }
 
 /* Show on hover/focus */
-.center-nav.kcir-nav > li:hover > ul,
-.center-nav.kcir-nav > li:focus-within > ul {
+.center-nav > li:hover > ul,
+.center-nav > li:focus-within > ul {
   display: block;
 }
 
 /* Submenu link styles */
-.center-nav.kcir-nav > li > ul > li,
-.center-nav.kcir-nav > li > ul > li > a,
-.center-nav.kcir-nav > li > ul > li > a.nav-link,
-.center-nav.kcir-nav > li > ul > li > a.menu__link {
+.center-nav > li > ul > li,
+.center-nav > li > ul > li > a,
+.center-nav > li > ul > li > a.nav-link,
+.center-nav > li > ul > li > a.menu__link {
   display: block;
   margin: 0;
   padding: 10px 16px;
@@ -967,17 +967,17 @@ code.bg-light {
   color: var(--color-text-on-light, #182B49) !important;
 }
 
-.center-nav.kcir-nav > li > ul > li > a:hover,
-.center-nav.kcir-nav > li > ul > li > a:focus {
+.center-nav > li > ul > li > a:hover,
+.center-nav > li > ul > li > a:focus {
   background: var(--shade-lightest, #F7F9FC);
 }
 
 /* Third level flyout (if used) */
-.center-nav.kcir-nav > li > ul > li {
+.center-nav > li > ul > li {
   position: relative;
 }
 
-.center-nav.kcir-nav > li > ul > li > ul {
+.center-nav > li > ul > li > ul {
   position: absolute;
   top: 0;
   left: 100%;
@@ -995,19 +995,19 @@ code.bg-light {
   min-width: 260px;
 }
 
-.center-nav.kcir-nav > li > ul > li:hover > ul,
-.center-nav.kcir-nav > li > ul > li:focus-within > ul {
+.center-nav > li > ul > li:hover > ul,
+.center-nav > li > ul > li:focus-within > ul {
   display: block;
 }
 
 /* Don’t interfere with mobile collapsible nav */
 @media (max-width: 991.98px) {
-  .center-nav.kcir-nav > li {
+  .center-nav > li {
     position: static;
   }
 
-  .center-nav.kcir-nav > li > ul,
-  .center-nav.kcir-nav > li > ul > li > ul {
+  .center-nav > li > ul,
+  .center-nav > li > ul > li > ul {
     position: static;
     display: none;
     background: transparent;
