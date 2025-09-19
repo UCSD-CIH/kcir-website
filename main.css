@@ -927,10 +927,11 @@ code.bg-light {
 #secondary-header {
   background-color: var(--color-bg-plain);
   border-bottom: var(--border-050) solid var(--color-border-subdued-soft);
+  padding-block: 0;
 }
 
 #secondary-header .secondary-header-container {
-  padding-block: var(--space-200);
+  padding-block: var(--space-400);
 }
 
 #secondary-header .center-brand.block {
@@ -953,13 +954,17 @@ code.bg-light {
   font: var(--font-site-title);
   letter-spacing: var(--letter-spacing-site-title);
   text-transform: var(--text-transform-site-title);
-  color: var(--color-text-heading);
+  color: var(--shade-black);
   text-decoration: none;
+}
+
+#secondary-header a.center-brand:visited {
+  color: var(--shade-black);
 }
 
 #secondary-header a.center-brand:hover,
 #secondary-header a.center-brand:focus {
-  color: var(--color-text-blue);
+  color: var(--color-text-subdued-strong);
   text-decoration: underline;
   text-underline-offset: var(--space-050);
 }
