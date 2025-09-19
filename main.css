@@ -932,6 +932,9 @@ code.bg-light {
 
 #secondary-header .secondary-header-container {
   padding-block: var(--space-300);
+  padding-inline: var(--space-400);
+  max-width: 1184px;
+  margin-inline: auto;
 }
 
 #secondary-header .center-brand.block {
@@ -955,18 +958,18 @@ code.bg-light {
   letter-spacing: var(--letter-spacing-site-title);
   text-transform: var(--text-transform-site-title);
   color: var(--shade-black);
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 #secondary-header a.center-brand:visited {
   color: var(--shade-black);
+  text-decoration: none !important;
 }
 
 #secondary-header a.center-brand:hover,
 #secondary-header a.center-brand:focus {
   color: var(--color-text-subdued-strong);
-  text-decoration: underline;
-  text-underline-offset: var(--space-050);
+  text-decoration: none !important;
 }
 
 #secondary-header .region-secondary-header {
@@ -1017,6 +1020,12 @@ code.bg-light {
 =================================== */
 .center-nav > li {
   position: relative;
+}
+
+.center-nav {
+  width: min(100%, 1184px);
+  margin-inline: auto;
+  padding-inline: var(--space-400);
 }
 
 .center-nav > li > ul {
@@ -1099,6 +1108,11 @@ code.bg-light {
 
 /* Don’t interfere with mobile collapsible nav */
 @media (max-width: 991.98px) {
+  .center-nav {
+    width: 100%;
+    padding-inline: var(--space-300);
+  }
+
   .center-nav > li {
     position: static;
   }
