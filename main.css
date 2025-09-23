@@ -1024,7 +1024,7 @@ code.bg-light {
 }
 
 #navbar.dxpr-theme-header--top .menu,
-#navbar.dxpr-theme-header--top .menu a,
+#navbar.dxpr-theme-header--top .menu > li > a,
 #navbar.dxpr-theme-header--top .block,
 #navbar.dxpr-theme-header--top .block a,
 #navbar.dxpr-theme-header--top .block .btn-link {
