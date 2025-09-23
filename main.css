@@ -1028,17 +1028,17 @@ code.bg-light {
 #navbar.dxpr-theme-header--top .block,
 #navbar.dxpr-theme-header--top .block a,
 #navbar.dxpr-theme-header--top .block .btn-link {
-  color: var(--color-text-on-light) !important;
+  color: var(--color-text-on-dark) !important;
 }
 
 #navbar.dxpr-theme-header--top .menu a {
-  color: var(--color-text-on-light) !important;
+  color: var(--color-text-on-dark) !important;
 }
 
 #navbar.dxpr-theme-header--top .menu a:hover,
 #navbar.dxpr-theme-header--top .menu a:focus {
   background-color: transparent !important;
-  color: var(--color-text-on-light) !important;
+  color: var(--color-text-on-dark) !important;
   text-decoration: underline;
 }
 
