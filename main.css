@@ -1023,6 +1023,18 @@ code.bg-light {
   background-color: transparent !important;
 }
 
+#navbar.dxpr-theme-header--top .menu,
+#navbar.dxpr-theme-header--top .menu a,
+#navbar.dxpr-theme-header--top .block,
+#navbar.dxpr-theme-header--top .block a,
+#navbar.dxpr-theme-header--top .block .btn-link {
+  color: var(--color-text-on-light) !important;
+}
+
+#navbar.dxpr-theme-header--top .menu a {
+  color: var(--color-text-on-light) !important;
+}
+
 #navbar.dxpr-theme-header--top .menu a:hover,
 #navbar.dxpr-theme-header--top .menu a:focus {
   background-color: transparent !important;
@@ -1110,7 +1122,7 @@ code.bg-light {
   display: none;
   z-index: 1000;
 
-  background: var(--color-bg-blue-20);
+  background: #D0DFE7;
   border: 0;
   border-radius: 0;
   box-shadow: 0 10px 30px rgba(0, 0, 0, .06);
@@ -1134,7 +1146,6 @@ code.bg-light {
 .center-nav > li > ul > li > a.menu__link {
   display: block;
   margin: 0;
-  padding: 10px 16px;
   text-decoration: none;
   white-space: nowrap;
 
@@ -2696,4 +2707,11 @@ textarea.form-textarea:focus {
   justify-content: center;
   padding: 14.5px 16px;
   cursor: pointer;
+}
+.center-nav > li > ul > li.nav-item {
+  padding: 0 var(--space-050);
+}
+
+.center-nav > li > ul > li > a.nav-link {
+  padding: var(--space-150) var(--space-200);
 }
