@@ -1175,7 +1175,9 @@ code.bg-light {
 
 .center-nav > li > ul > li > a:hover,
 .center-nav > li > ul > li > a:focus {
-  background: var(--shade-lightest, #F7F9FC);
+  background: transparent;
+  color: var(--color-text-on-light, #182B49) !important;
+  text-decoration: none !important;
 }
 
 /* Third level flyout (if used) */
