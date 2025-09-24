@@ -1177,7 +1177,7 @@ code.bg-light {
 .center-nav > li > ul > li > a:focus {
   background: transparent;
   color: var(--color-text-on-light, #182B49) !important;
-  text-decoration: none !important;
+  text-decoration: underline !important;
 }
 
 /* Third level flyout (if used) */
