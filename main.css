@@ -1182,6 +1182,14 @@ code.bg-light {
   text-decoration: underline !important;
 }
 
+/* Override DXPR theme global link colors inside dropdowns */
+#navbar.dxpr-theme-header--top .center-nav > li > ul > li > a,
+#navbar.dxpr-theme-header--top .center-nav > li > ul > li > a:visited,
+#navbar.dxpr-theme-header--top .center-nav > li > ul > li > a:hover,
+#navbar.dxpr-theme-header--top .center-nav > li > ul > li > a:focus {
+  color: var(--color-text-on-light, #182B49) !important;
+}
+
 /* Third level flyout (if used) */
 .center-nav > li > ul > li {
   position: relative;
