@@ -1171,11 +1171,13 @@ code.bg-light {
   font-family: var(--dxt-font-family, "Inter", system-ui, sans-serif) !important;
 
   color: var(--color-text-on-light, #182B49) !important;
+  background-color: transparent !important; /* keep submenu links on-light */
 }
 
 .center-nav > li > ul > li > a:hover,
 .center-nav > li > ul > li > a:focus {
-  background: transparent;
+  background: none !important;
+  background-color: transparent !important;
   color: var(--color-text-on-light, #182B49) !important;
   text-decoration: underline !important;
 }
