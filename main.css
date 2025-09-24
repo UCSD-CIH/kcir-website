@@ -1024,22 +1024,36 @@ code.bg-light {
 }
 
 #navbar.dxpr-theme-header--top .menu,
-#navbar.dxpr-theme-header--top .menu > li > a,
 #navbar.dxpr-theme-header--top .block,
 #navbar.dxpr-theme-header--top .block a,
 #navbar.dxpr-theme-header--top .block .btn-link {
   color: var(--color-text-on-dark) !important;
 }
 
-#navbar.dxpr-theme-header--top .menu a {
+#navbar.dxpr-theme-header--top .menu > li > a {
   color: var(--color-text-on-dark) !important;
+  background-color: transparent;
+  text-decoration: none;
 }
 
-#navbar.dxpr-theme-header--top .menu a:hover,
-#navbar.dxpr-theme-header--top .menu a:focus {
-  background-color: transparent !important;
+#navbar.dxpr-theme-header--top .menu > li > a:hover,
+#navbar.dxpr-theme-header--top .menu > li > a:focus,
+#navbar.dxpr-theme-header--top .menu > li > a:focus-visible {
+  background-color: var(--color-bg-turquoise-100) !important;
+  color: var(--color-text-on-light) !important;
+  text-decoration: none !important;
+}
+
+#navbar.dxpr-theme-header--top .menu > li > a:active,
+#navbar.dxpr-theme-header--top .menu > li.is-active > a,
+#navbar.dxpr-theme-header--top .menu > li.active > a,
+#navbar.dxpr-theme-header--top .menu > li.active-trail > a,
+#navbar.dxpr-theme-header--top .menu > li.menu-item--active-trail > a,
+#navbar.dxpr-theme-header--top .menu > li > a.is-active,
+#navbar.dxpr-theme-header--top .menu > li > a.active {
+  background-color: var(--color-bg-navy-100) !important;
   color: var(--color-text-on-dark) !important;
-  text-decoration: underline;
+  text-decoration: none !important;
 }
 
 #dxpr-theme-main-menu {
