@@ -1281,7 +1281,7 @@ code.bg-light {
 .hero-image-row {
   max-width: 1184px;
   margin-inline: auto;
-  margin-bottom: var(--space-400);
+  margin-bottom: var(--space-200);
 }
 
 .hero-image-row img {
