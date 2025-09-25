@@ -939,6 +939,16 @@ code.bg-light {
 
 #secondary-header .center-brand.block {
   margin: 0;
+  max-width: 50%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+@media (max-width: 989.98px) {
+  #secondary-header .center-brand.block {
+    max-width: 100%;
+    display: block;
+  }
 }
 
 #secondary-header .center-brand.block .block-hr {
@@ -958,6 +968,7 @@ code.bg-light {
   letter-spacing: var(--letter-spacing-site-title);
   text-transform: var(--text-transform-site-title);
   color: var(--shade-black);
+  line-height: 1.2;
   text-decoration: none !important;
 }
 
