@@ -2235,10 +2235,11 @@ content: "";
 
 .page-node-type-study h1.page-title {
   font-family: 'Inter', sans-serif !important;
-  font-size: 32px !important;
+  font-size: 36px !important;
   font-weight: 700 !important;
   letter-spacing: -0.01em;
-  line-height: 40px;
+  line-height: 44px;
+  text-transform: none !important;
 }
 
 .page-node-type-study .group--study-tags {
