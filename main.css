@@ -920,9 +920,35 @@ code.bg-light {
   margin-top: var(--space-600);
 }
 
-.main-container a:not(.btn):not(.btn-link):not(.nav-link),
-.main-container a:not(.btn):not(.btn-link):not(.nav-link):visited {
+.main-container .text-formatted a:not(.btn):not(.btn-link):not(.nav-link),
+.main-container .text-formatted a:not(.btn):not(.btn-link):not(.nav-link):visited,
+.main-container .field--type-text-long a:not(.btn):not(.btn-link):not(.nav-link),
+.main-container .field--type-text-long a:not(.btn):not(.btn-link):not(.nav-link):visited,
+.main-container .field--type-text-with-summary a:not(.btn):not(.btn-link):not(.nav-link),
+.main-container .field--type-text-with-summary a:not(.btn):not(.btn-link):not(.nav-link):visited,
+.main-container .field--type-string-long a:not(.btn):not(.btn-link):not(.nav-link),
+.main-container .field--type-string-long a:not(.btn):not(.btn-link):not(.nav-link):visited {
   color: var(--color-text-link) !important;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.main-container .text-formatted a:not(.btn):not(.btn-link):not(.nav-link):hover,
+.main-container .field--type-text-long a:not(.btn):not(.btn-link):not(.nav-link):hover,
+.main-container .field--type-text-with-summary a:not(.btn):not(.btn-link):not(.nav-link):hover,
+.main-container .field--type-string-long a:not(.btn):not(.btn-link):not(.nav-link):hover {
+  color: var(--color-text-blue) !important;
+  text-decoration: none;
+}
+
+.main-container .text-formatted a:not(.btn):not(.btn-link):not(.nav-link):focus-visible,
+.main-container .field--type-text-long a:not(.btn):not(.btn-link):not(.nav-link):focus-visible,
+.main-container .field--type-text-with-summary a:not(.btn):not(.btn-link):not(.nav-link):focus-visible,
+.main-container .field--type-string-long a:not(.btn):not(.btn-link):not(.nav-link):focus-visible {
+  outline: 2px solid var(--color-bg-blue-100);
+  outline-offset: 2px;
+  text-decoration: none;
 }
 
 /* ===================================
@@ -2314,6 +2340,11 @@ content: "";
   text-decoration: none;
   text-transform: uppercase;
   transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.page-node-type-study:has(.field--name-field-study-status a[href="/taxonomy/term/22"])
+  .group--study-sidebar .field--name-field-study-apply {
+  display: none;
 }
 
 .group--study-sidebar .field--name-field-study-apply {
