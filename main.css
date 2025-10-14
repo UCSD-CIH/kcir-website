@@ -95,7 +95,7 @@
   --color-text-navy: #182B49;
   --color-text-blue: #00629B;
   --color-text-green: #497413;
-  --color-text-link: #00629B;
+  --color-text-link: #2B4A7A;
   --color-text-success: #3D7F32;
   --color-text-warning: #906A0E;
   --color-text-danger: #B01030;
@@ -918,6 +918,11 @@ code.bg-light {
 
 .page-title-container {
   margin-top: var(--space-600);
+}
+
+.main-container a:not(.btn):not(.btn-link):not(.nav-link),
+.main-container a:not(.btn):not(.btn-link):not(.nav-link):visited {
+  color: var(--color-text-link) !important;
 }
 
 /* ===================================
