@@ -2218,6 +2218,10 @@ content: "";
    COMPONENT: STUDY PAGE
 =================================== */
 
+.page-node-type-study .field--name-field-center-name {
+  display: none !important;
+}
+
 .page-node-type-study .group--study-layout {
   align-items: flex-start;
   display: flex;
