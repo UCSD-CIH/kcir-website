@@ -1364,6 +1364,10 @@ code.bg-light {
   margin: var(--space-600) 0;
 }
 
+.divider--compact {
+  margin: var(--space-300) 0;
+}
+
 /* ===================================
    BUTTON COMPONENT (DXPR CUSTOMIZED)
    Standardizes default DXPR buttons:
