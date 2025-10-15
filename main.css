@@ -1986,6 +1986,12 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
   border-radius: var(--radius-200);
   color: var(--color-text-paragraph);
   padding: var(--space-500) var(--space-600) var(--space-500) var(--space-500);
+  display: flex;
+  flex-direction: column;
+}
+
+.study-card .content {
+  display: contents;
 }
 
 /* Study Card: hide field labels */
@@ -2007,6 +2013,15 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
 footer.submitted {
   margin-bottom: 0 !important;
 }
+
+/* Study Card: layout ordering */
+.study-card > * { order: 30; }
+.study-card .group--study-status { order: 10; }
+.study-card h2 { order: 20; }
+.study-card .field--name-field-study-summary { order: 30; }
+.study-card .group--study-card-ctas { order: 40; }
+.study-card .group--study-card-tags { order: 50; }
+.study-card footer.submitted { order: 60; }
 
 /* Study Card: CTA buttons */
 
@@ -2063,25 +2078,43 @@ footer.submitted {
 }
 
 /* Study Card: Study Name (H2 styled as H3) */
-.study-card .field--name-field-study-name .field__item {
+.study-card h2,
+.study-card h2 a {
   color: var(--color-text-heading);
-  font-family: var(--font-heading);
+  font-family: 'Inter', sans-serif !important;
   font-size: 24px !important;
   font-weight: 600 !important;
   letter-spacing: 0;
-  line-height: 1.1;
-  margin: 0 0 var(--space-200);
+  line-height: 28px !important;
+  margin: 0 0 var(--space-150) 0;
+  text-transform: none !important;
+  text-decoration: none;
 }
 
-/* Study Card: Hide Title field */
-.study-card h2:first-of-type {
-  display: none;
+.study-card h2 a:visited {
+  color: var(--color-text-heading);
+  text-decoration: none;
+}
+
+.study-card h2 a:hover {
+  text-decoration: underline;
+}
+
+.study-card h2 a:focus-visible {
+  outline: 2px solid var(--color-bg-blue-100);
+  outline-offset: 2px;
+  text-decoration: none;
 }
 
 .study-card .field--name-field-clearfix {
   font-size: 0;
   line-height: 0;
   color: transparent;
+}
+
+/* Study Card: hide duplicate Study Name field */
+.study-card .field--name-field-study-name {
+  display: none;
 }
 
 /* ================================
@@ -2248,6 +2281,10 @@ content: "";
 /* ===================================
    COMPONENT: STUDY PAGE
 =================================== */
+
+.page-node-type-study .field--name-field-study-name {
+  display: none !important;
+}
 
 .page-node-type-study .field--name-field-center-name {
   display: none !important;
