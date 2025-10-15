@@ -2215,10 +2215,10 @@ content: "";
   border-color: var(--color-border-disabled-soft);
 }
 
-/* ======== Hide CTA if status is Completed ======== */
+/* ======== Hide CTA if status is Completed or Pending ======== */
 
-.study-card:has(.field--name-field-study-status a[href="/taxonomy/term/22"])
-  .field--name-field-study-apply {
+.study-card:has(.field--name-field-study-status a[href="/taxonomy/term/22"]) .field--name-field-study-apply,
+.study-card:has(.field--name-field-study-status a[href="/taxonomy/term/61"]) .field--name-field-study-apply {
   display: none;
 }
 
@@ -2342,8 +2342,8 @@ content: "";
   transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
-.page-node-type-study:has(.field--name-field-study-status a[href="/taxonomy/term/22"])
-  .group--study-sidebar .field--name-field-study-apply {
+.page-node-type-study:has(.field--name-field-study-status a[href="/taxonomy/term/22"]) .group--study-sidebar .field--name-field-study-apply,
+.page-node-type-study:has(.field--name-field-study-status a[href="/taxonomy/term/61"]) .group--study-sidebar .field--name-field-study-apply {
   display: none;
 }
 
