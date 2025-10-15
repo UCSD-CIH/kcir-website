@@ -1348,6 +1348,11 @@ code.bg-light {
   border-radius: var(--radius-200);
 }
 
+.img-rounded {
+  border-radius: var(--radius-200);
+  overflow: hidden;
+}
+
 /* ===================================
    COMPONENT: DIVIDER
    Horizontal rules for section separation
