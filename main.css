@@ -2675,7 +2675,7 @@ footer.submitted {
 .hero--overlay {
   position: relative;
   padding: 80px 0;
-  min-height: 800px;
+  min-height: 400px;
 }
 
 .hero--overlay::before {
