@@ -260,27 +260,27 @@
 /* Display styles for large visual headlines */
 
 .text--display-large * {
-  font-family: 'Teko', sans-serif;
-  font-weight: 600;
+  font-family: 'Refrigerator Deluxe', 'Teko', sans-serif !important;
+  font-weight: 800;
   font-size: 64px;
   line-height: 64px;
-  letter-spacing: -0.01em;
+  letter-spacing: 0;
 }
 
 .text--display-medium * {
-  font-family: 'Teko', sans-serif;
-  font-weight: 600;
+  font-family: 'Refrigerator Deluxe', 'Teko', sans-serif !important;
+  font-weight: 800;
   font-size: 48px;
   line-height: 48px;
-  letter-spacing: -0.01em;
+  letter-spacing: 0;
 }
 
 .text--display-small * {
-  font-family: 'Teko', sans-serif;
-  font-weight: 600;
+  font-family: 'Refrigerator Deluxe', 'Teko', sans-serif !important;
+  font-weight: 800;
   font-size: 32px;
   line-height: 36px;
-  letter-spacing: -0.005em;
+  letter-spacing: 0;
 }
 
 /* Semantic heading styles for structured content */
