@@ -1009,7 +1009,7 @@ code.bg-light {
 #secondary-header .secondary-header-container {
   padding-block: var(--space-300);
   padding-inline: var(--space-400);
-  max-width: 1184px;
+  max-width: 1200px;
   margin-inline: auto;
 }
 
@@ -1092,7 +1092,7 @@ code.bg-light {
   align-items: center;
   justify-content: space-between;
   gap: var(--space-300);
-  max-width: 1184px;
+  max-width: 1200px;
   margin-inline: auto;
   padding-inline: var(--space-400);
 }
@@ -1355,7 +1355,7 @@ code.bg-light {
 ============================ */
 
 .hero-image-row {
-  max-width: 1184px;
+  max-width: 1200px;
   margin-inline: auto;
   margin-bottom: var(--space-200);
 }
@@ -2738,7 +2738,7 @@ footer.submitted {
 
 /* Override for Bootstrap's .container-fluid inside hero */
 .hero--overlay .container-fluid {
-  max-width: 1184px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
