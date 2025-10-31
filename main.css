@@ -1044,7 +1044,7 @@ code.bg-light {
   justify-content: space-between;
   align-items: center;
   gap: var(--space-400);
-  min-height: calc(var(--space-1200) + var(--space-300));
+  min-height: var(--space-1000);
 }
 
 #secondary-header .wrap-branding {
