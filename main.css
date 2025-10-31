@@ -50,6 +50,7 @@
   --color-bg-sand-20: rgba(245, 240, 230, 0.20);
   --color-bg-sand-100: #F5F0E6;
 
+  --color-bg-citron-10: rgba(243, 229, 0, 0.10);
   --color-bg-citron-20: rgba(243, 229, 0, 0.20);
   --color-bg-citron-100: #F3E500;
 
@@ -119,6 +120,7 @@
   --color-border-navy: #182B49;
   --color-border-blue: #00629B;
   --color-border-citron: #E5D800;
+  --color-border-stone: #B6B1A9;
   --color-border-magenta-soft: rgba(224, 0, 148, 0.3);
   --color-border-green-soft: rgba(110, 150, 59, 0.5);
   --color-border-orange-soft: rgba(252, 137, 0, 0.5);
@@ -184,6 +186,10 @@
   --gradient-bg-start: rgba(253, 250, 204, 1);
   --gradient-bg-mid: rgba(253, 250, 204, 0.4);
   --gradient-bg-end: rgba(253, 250, 204, 0);
+}
+
+.bg-citron-10 {
+  background-color: var(--color-bg-citron-10);
 }
 
 .bg-orange {
@@ -424,6 +430,13 @@ p,
   font-size: 14px;
   line-height: 20px;
   letter-spacing: 0;
+}
+
+.emoji--body-large {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 24px;
+  line-height: 1;
 }
 
 .text--body-xsmall * {
@@ -1008,7 +1021,7 @@ code.bg-light {
 
 #secondary-header .secondary-header-container {
   padding-block: var(--space-300);
-  padding-inline: var(--space-400);
+  padding-inline: var(--space-300);
   max-width: 1200px;
   margin-inline: auto;
 }
@@ -2748,6 +2761,65 @@ footer.submitted {
 .hero--overlay .row {
   padding-left: 0 !important;
   padding-right: 0 !important;
+}
+
+/* ===================================
+   ANNOUNCEMENT BANNER
+=================================== */
+
+.view-announcement-banner .views-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-250);
+  padding: var(--space-300);
+  border: 1px solid var(--color-border-stone);
+  border-radius: var(--radius-200);
+  background-color: var(--color-bg-citron-10);
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+.view-announcement-banner .views-field-title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-200);
+  flex: 1 1 auto;
+}
+
+.view-announcement-banner .views-field-title::before {
+  content: "🔔";
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 24px;
+  line-height: 1;
+}
+
+.view-announcement-banner .views-field-title a {
+  color: var(--color-text-heading);
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  letter-spacing: -0.005em;
+  text-decoration: underline;
+}
+
+.view-announcement-banner .views-field-title a:hover,
+.view-announcement-banner .views-field-title a:focus {
+  color: var(--color-text-heading);
+  text-decoration: none;
+}
+
+.view-announcement-banner .views-field-nothing {
+  flex: 0 0 auto;
+}
+
+.view-announcement-banner .announcement-archive-link {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  color: #00629B;
 }
 
 /* ===================================
