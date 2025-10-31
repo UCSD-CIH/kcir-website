@@ -329,6 +329,18 @@ h1.page-title {
   text-transform: none !important;
 }
 
+/* Apply alt H2 styling across Drupal admin (Gin) screens */
+body[class*="gin"] .main-container h2,
+body[class*="gin"] .main-container h2 * {
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 36px !important;
+  line-height: 40px !important;
+  letter-spacing: 0;
+  margin-bottom: var(--space-250);
+  text-transform: none !important;
+}
+
 .main-container h3,
 .main-container .heading--h3,
 .main-container .heading--h3 h3 {
