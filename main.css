@@ -334,9 +334,9 @@ body[class*="gin"] .main-container h2,
 body[class*="gin"] .main-container h2 * {
   font-family: 'Inter', sans-serif !important;
   font-weight: 700 !important;
-  font-size: 36px !important;
-  line-height: 40px !important;
-  letter-spacing: 0;
+  font-size: 24px !important;
+  line-height: 28px !important;
+  letter-spacing: -0.02em;
   margin-bottom: var(--space-250);
   text-transform: none !important;
 }
@@ -361,6 +361,14 @@ body[class*="gin"] .main-container h2 * {
   line-height: 28px;
   letter-spacing: 0;
   margin-bottom: var(--space-150);
+}
+
+body[class*="gin"] .main-container h5,
+body[class*="gin"] .main-container .heading--h5,
+body[class*="gin"] .main-container .heading--h5 h5 {
+  font-weight: 600 !important;
+  font-size: 18px !important;
+  line-height: 22px !important;
 }
 
 .main-container h5,
