@@ -96,7 +96,7 @@
   --color-text-navy: #182B49;
   --color-text-blue: #00629B;
   --color-text-green: #497413;
-  --color-text-link: #2B4A7A;
+  --color-text-link: #00629B;
   --color-text-success: #3D7F32;
   --color-text-warning: #906A0E;
   --color-text-danger: #B01030;
@@ -1131,6 +1131,12 @@ code.bg-light {
 }
 
 #navbar.dxpr-theme-header--top .menu > li > a {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 16px !important;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
   color: var(--color-text-on-dark) !important;
   background-color: transparent;
   text-decoration: none;
@@ -1373,12 +1379,20 @@ code.bg-light {
   margin-bottom: var(--space-200);
 }
 
+.hero-image-row .container-fluid {
+  padding-inline: 0;
+}
+
 .hero-image-row img {
   width: 100%;
   height: auto;
   display: block;
   object-fit: cover;
   border-radius: var(--radius-200);
+}
+
+.container {
+  padding-inline: var(--space-300);
 }
 
 .img-rounded {
@@ -2795,18 +2809,20 @@ footer.submitted {
   line-height: 1;
 }
 
-.view-announcement-banner .views-field-title a {
-  color: var(--color-text-heading);
+.view-announcement-banner .views-field-title .field-content > a {
+  color: var(--color-text-heading) !important;
   font-family: 'Inter', sans-serif;
-  font-weight: 400;
+  font-weight: 400 !important;
   font-size: 20px;
   line-height: 32px;
   letter-spacing: -0.005em;
   text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px !important;
 }
 
-.view-announcement-banner .views-field-title a:hover,
-.view-announcement-banner .views-field-title a:focus {
+.view-announcement-banner .views-field-title .field-content > a:hover,
+.view-announcement-banner .views-field-title .field-content > a:focus {
   color: var(--color-text-heading);
   text-decoration: none;
 }
