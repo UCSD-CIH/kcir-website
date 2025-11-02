@@ -61,5 +61,39 @@
       });
     }
   };
+  Drupal.behaviors.announcementBannerLinker = {
+    attach: function (context) {
+      var rows = context.querySelectorAll('.view-announcement-banner .views-row');
+      rows.forEach(function (row) {
+        if (row.hasAttribute('data-ab-linked')) return;
+
+        var externalLink = row.querySelector(
+          '.views-field-field-post-link a,' +
+          '.views-field-field-link a,' +
+          '[data-field-name="field_post_link"] a,' +
+          '[data-field-name="field_link"] a'
+        );
+        if (!externalLink || !externalLink.href) return;
+
+        var url = externalLink.href;
+
+        var hiddenField = externalLink.closest(
+          '.views-field-field-post-link,' +
+          '.views-field-field-link,' +
+          '[data-field-name="field_post_link"],' +
+          '[data-field-name="field_link"]'
+        );
+        if (hiddenField) hiddenField.style.display = 'none';
+
+        var primaryLink = row.querySelector('.views-field-title .field-content > a');
+        if (primaryLink) {
+          primaryLink.href = url;
+          primaryLink.target = '_blank';
+          primaryLink.rel = 'noopener noreferrer';
+          row.setAttribute('data-ab-linked', '1');
+        }
+      });
+    }
+  };
 })(Drupal);
 </script>

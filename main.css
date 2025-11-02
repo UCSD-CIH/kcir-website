@@ -2838,6 +2838,15 @@ footer.submitted {
   color: #00629B;
 }
 
+.view-announcement-banner .views-field-field-post-link,
+.view-announcement-banner .views-field-field-link,
+.view-announcement-banner .field--name-field-post-link,
+.view-announcement-banner .field--name-field-link,
+.view-announcement-banner [data-field-name="field_post_link"],
+.view-announcement-banner [data-field-name="field_link"] {
+  display: none !important;
+}
+
 /* ===================================
    ACCORDION COMPONENT: COLOR & TEXT STYLING
    Apply accordion-color class only to collapse panel element to apply styles
