@@ -2790,6 +2790,7 @@ footer.submitted {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
   gap: var(--space-250);
   padding: var(--space-300);
   border: var(--border-050) solid var(--color-border-strong);
@@ -2802,8 +2803,10 @@ footer.submitted {
 .view-announcement-banner .views-field-title {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: var(--space-200);
-  flex: 1 1 auto;
+  flex: 0 1 auto;
+  text-align: center;
 }
 
 .view-announcement-banner .views-field-title::before {
@@ -2821,14 +2824,25 @@ footer.submitted {
   font-size: 20px;
   line-height: 32px;
   letter-spacing: -0.005em;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 3px !important;
+}
+
+.main-container .view-announcement-banner .views-field-title .field-content a:not(.btn):not(.btn-link):not(.nav-link) {
+  text-decoration: none !important;
+}
+
+.main-container .view-announcement-banner .views-field-title .field-content a:not(.btn):not(.btn-link):not(.nav-link):visited {
+  text-decoration: none !important;
+}
+
+.main-container .text-formatted .view-announcement-banner .field-content a:not(.btn):not(.btn-link):not(.nav-link),
+.main-container .text-formatted .view-announcement-banner .field-content a:not(.btn):not(.btn-link):not(.nav-link):visited {
+  text-decoration: none !important;
 }
 
 .view-announcement-banner .field-content > a {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: var(--space-200);
   color: inherit;
   text-decoration: none;
@@ -2837,7 +2851,6 @@ footer.submitted {
 .view-announcement-banner .views-field-title .field-content > a:hover,
 .view-announcement-banner .views-field-title .field-content > a:focus {
   color: var(--color-text-heading);
-  text-decoration: none;
 }
 
 .view-announcement-banner .field-content > a:hover .announcement-banner-title,
@@ -2850,6 +2863,13 @@ footer.submitted {
   display: inline-block;
   font-size: 24px;
   line-height: 1;
+  text-decoration: none !important;
+  transition: transform 0.15s ease;
+}
+
+.view-announcement-banner .field-content > a:hover .announcement-banner-icon,
+.view-announcement-banner .field-content > a:focus .announcement-banner-icon {
+  transform: scale(1.1);
 }
 
 .view-announcement-banner .announcement-banner-title {
@@ -2869,7 +2889,7 @@ footer.submitted {
 }
 
 .view-announcement-banner .views-row > .views-field:first-child {
-  flex: 1 1 auto;
+  flex: 0 1 auto;
 }
 
 .view-announcement-banner .announcement-archive-link {
