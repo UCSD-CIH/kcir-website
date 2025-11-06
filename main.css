@@ -2148,19 +2148,27 @@ footer.submitted {
 }
 
 .field--name-field-study-learn-more a {
+  /* Tertiary CTA styles — restore when Sign Up buttons are active 
   background-color: none;
   border: var(--border-100) solid var(--color-border-blue);
-  color: var(--color-text-link);
+  color: var(--color-text-link); */
+  background-color: var(--color-bg-blue-100);
+  border: var(--border-100) solid transparent;
+  color: var(--color-text-on-dark);
 }
 
 .field--name-field-study-learn-more a:hover {
+ /* Tertiary CTA styles — restore when Sign Up buttons are active 
   background-color: var(--color-bg-blue-100);
-  color: var(--color-text-on-dark);
+  /* color: var(--color-text-on-dark); */
+  background-color: var(--color-bg-navy-100);
 }
 
 .field--name-field-study-learn-more a:active {
+   /* Tertiary CTA styles — restore when Sign Up buttons are active 
   background-color: var(--color-bg-blue-120);
-  color: var(--color-text-on-dark);
+  /* color: var(--color-text-on-dark); */
+  background-color: var(--color-bg-blue-120);
 }
 
 /* Study Card: Study Name (H2 styled as H3) */
@@ -2334,8 +2342,9 @@ content: "";
   border-color: var(--color-border-disabled-soft);
 }
 
-/* ======== Hide CTA if status is Completed or Pending ======== */
-
+/* ======== Hide Sign Up Buttons on Study Cards ======== */
+/* Delete selector for term 20 (Recruiting) once Study CTA buttons are active */
+.study-card:has(.field--name-field-study-status a[href="/taxonomy/term/20"]) .field--name-field-study-apply,
 .study-card:has(.field--name-field-study-status a[href="/taxonomy/term/22"]) .field--name-field-study-apply,
 .study-card:has(.field--name-field-study-status a[href="/taxonomy/term/61"]) .field--name-field-study-apply {
   display: none;
@@ -2465,6 +2474,9 @@ content: "";
   transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
+/* ======== Hide Sign Up Buttons on Study Pages ======== */
+/* Delete selector for term 20 (Recruiting) once Study CTA buttons are active */
+.page-node-type-study:has(.field--name-field-study-status a[href="/taxonomy/term/20"]) .group--study-sidebar .field--name-field-study-apply,
 .page-node-type-study:has(.field--name-field-study-status a[href="/taxonomy/term/22"]) .group--study-sidebar .field--name-field-study-apply,
 .page-node-type-study:has(.field--name-field-study-status a[href="/taxonomy/term/61"]) .group--study-sidebar .field--name-field-study-apply {
   display: none;
