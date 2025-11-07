@@ -60,5 +60,29 @@
       });
     }
   };
+
+Drupal.behaviors.extLinkOverride = {
+  attach: function (context) {
+    // Limit to main nav only
+    const mainNav = context.querySelector('#block-dxpr-theme-main-menu');
+    if (!mainNav) return;
+
+    // Example: disable _blank target for selected external menu items
+    mainNav.querySelectorAll('a[target="_blank"]').forEach(link => {
+      const href = link.getAttribute('href');
+      
+      // Add any URLs here that should open in the same tab
+      if (
+        href.includes('cih.ucsd.edu/medicine') ||
+        href.includes('cih.ucsd.edu/education') ||
+        href.includes('cih.ucsd.edu/nutrition')
+      ) {
+        link.setAttribute('target', '_self');
+        link.removeAttribute('rel');
+      }
+    });
+  }
+};
+
 })(Drupal);
 </script>
