@@ -2815,6 +2815,10 @@ footer.submitted {
    ANNOUNCEMENT BANNER
 =================================== */
 
+.announcement-banner {
+  margin-block: var(--space-400) 0;
+}
+
 .view-announcement-banner .views-row {
   display: flex;
   flex-wrap: wrap;
