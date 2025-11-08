@@ -2819,7 +2819,9 @@ footer.submitted {
   margin-block: var(--space-400) 0;
 }
 
-.view-announcement-banner .views-row {
+.view-announcement-banner .views-row,
+.view-announcement-banner-reach-home .views-row,
+.view-announcement-banner-kcir-home .views-row {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -2833,7 +2835,9 @@ footer.submitted {
   margin-inline: auto;
 }
 
-.view-announcement-banner .views-field-title {
+.view-announcement-banner .views-field-title,
+.view-announcement-banner-reach-home .views-field-title,
+.view-announcement-banner-kcir-home .views-field-title {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2842,7 +2846,9 @@ footer.submitted {
   text-align: center;
 }
 
-.view-announcement-banner .views-field-title::before {
+.view-announcement-banner .views-field-title::before,
+.view-announcement-banner-reach-home .views-field-title::before,
+.view-announcement-banner-kcir-home .views-field-title::before {
   content: "🔔";
   display: inline-block;
   vertical-align: middle;
@@ -2850,7 +2856,9 @@ footer.submitted {
   line-height: 1;
 }
 
-.view-announcement-banner .views-field-title .field-content > a {
+.view-announcement-banner .views-field-title .field-content > a,
+.view-announcement-banner-reach-home .views-field-title .field-content > a,
+.view-announcement-banner-kcir-home .views-field-title .field-content > a {
   color: var(--color-text-heading) !important;
   font-family: 'Inter', sans-serif;
   font-weight: 400 !important;
@@ -2859,20 +2867,30 @@ footer.submitted {
   letter-spacing: -0.005em;
 }
 
-.main-container .view-announcement-banner .views-field-title .field-content a:not(.btn):not(.btn-link):not(.nav-link) {
+.main-container .view-announcement-banner .views-field-title .field-content a:not(.btn):not(.btn-link):not(.nav-link),
+.main-container .view-announcement-banner-reach-home .views-field-title .field-content a:not(.btn):not(.btn-link):not(.nav-link),
+.main-container .view-announcement-banner-kcir-home .views-field-title .field-content a:not(.btn):not(.btn-link):not(.nav-link) {
   text-decoration: none !important;
 }
 
-.main-container .view-announcement-banner .views-field-title .field-content a:not(.btn):not(.btn-link):not(.nav-link):visited {
+.main-container .view-announcement-banner .views-field-title .field-content a:not(.btn):not(.btn-link):not(.nav-link):visited,
+.main-container .view-announcement-banner-reach-home .views-field-title .field-content a:not(.btn):not(.btn-link):not(.nav-link):visited,
+.main-container .view-announcement-banner-kcir-home .views-field-title .field-content a:not(.btn):not(.btn-link):not(.nav-link):visited {
   text-decoration: none !important;
 }
 
 .main-container .text-formatted .view-announcement-banner .field-content a:not(.btn):not(.btn-link):not(.nav-link),
-.main-container .text-formatted .view-announcement-banner .field-content a:not(.btn):not(.btn-link):not(.nav-link):visited {
+.main-container .text-formatted .view-announcement-banner .field-content a:not(.btn):not(.btn-link):not(.nav-link):visited,
+.main-container .text-formatted .view-announcement-banner-reach-home .field-content a:not(.btn):not(.btn-link):not(.nav-link),
+.main-container .text-formatted .view-announcement-banner-reach-home .field-content a:not(.btn):not(.btn-link):not(.nav-link):visited,
+.main-container .text-formatted .view-announcement-banner-kcir-home .field-content a:not(.btn):not(.btn-link):not(.nav-link),
+.main-container .text-formatted .view-announcement-banner-kcir-home .field-content a:not(.btn):not(.btn-link):not(.nav-link):visited {
   text-decoration: none !important;
 }
 
-.view-announcement-banner .field-content > a {
+.view-announcement-banner .field-content > a,
+.view-announcement-banner-reach-home .field-content > a,
+.view-announcement-banner-kcir-home .field-content > a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -2882,17 +2900,27 @@ footer.submitted {
 }
 
 .view-announcement-banner .views-field-title .field-content > a:hover,
-.view-announcement-banner .views-field-title .field-content > a:focus {
+.view-announcement-banner .views-field-title .field-content > a:focus,
+.view-announcement-banner-reach-home .views-field-title .field-content > a:hover,
+.view-announcement-banner-reach-home .views-field-title .field-content > a:focus,
+.view-announcement-banner-kcir-home .views-field-title .field-content > a:hover,
+.view-announcement-banner-kcir-home .views-field-title .field-content > a:focus {
   color: var(--color-text-heading);
 }
 
 .view-announcement-banner .field-content > a:hover .announcement-banner-title,
-.view-announcement-banner .field-content > a:focus .announcement-banner-title {
+.view-announcement-banner .field-content > a:focus .announcement-banner-title,
+.view-announcement-banner-reach-home .field-content > a:hover .announcement-banner-title,
+.view-announcement-banner-reach-home .field-content > a:focus .announcement-banner-title,
+.view-announcement-banner-kcir-home .field-content > a:hover .announcement-banner-title,
+.view-announcement-banner-kcir-home .field-content > a:focus .announcement-banner-title {
   color: var(--color-text-heading);
   text-decoration: none;
 }
 
-.view-announcement-banner .announcement-banner-icon {
+.view-announcement-banner .announcement-banner-icon,
+.view-announcement-banner-reach-home .announcement-banner-icon,
+.view-announcement-banner-kcir-home .announcement-banner-icon {
   display: inline-block;
   font-size: 24px;
   line-height: 1;
@@ -2901,11 +2929,17 @@ footer.submitted {
 }
 
 .view-announcement-banner .field-content > a:hover .announcement-banner-icon,
-.view-announcement-banner .field-content > a:focus .announcement-banner-icon {
+.view-announcement-banner .field-content > a:focus .announcement-banner-icon,
+.view-announcement-banner-reach-home .field-content > a:hover .announcement-banner-icon,
+.view-announcement-banner-reach-home .field-content > a:focus .announcement-banner-icon,
+.view-announcement-banner-kcir-home .field-content > a:hover .announcement-banner-icon,
+.view-announcement-banner-kcir-home .field-content > a:focus .announcement-banner-icon {
   transform: scale(1.1);
 }
 
-.view-announcement-banner .announcement-banner-title {
+.view-announcement-banner .announcement-banner-title,
+.view-announcement-banner-reach-home .announcement-banner-title,
+.view-announcement-banner-kcir-home .announcement-banner-title {
   color: var(--color-text-heading) !important;
   font-family: 'Inter', sans-serif;
   font-weight: 400 !important;
@@ -2917,15 +2951,21 @@ footer.submitted {
   text-underline-offset: 3px !important;
 }
 
-.view-announcement-banner .views-field-nothing {
+.view-announcement-banner .views-field-nothing,
+.view-announcement-banner-reach-home .views-field-nothing,
+.view-announcement-banner-kcir-home .views-field-nothing {
   flex: 0 0 auto;
 }
 
-.view-announcement-banner .views-row > .views-field:first-child {
+.view-announcement-banner .views-row > .views-field:first-child,
+.view-announcement-banner-reach-home .views-row > .views-field:first-child,
+.view-announcement-banner-kcir-home .views-row > .views-field:first-child {
   flex: 0 1 auto;
 }
 
-.view-announcement-banner .announcement-archive-link {
+.view-announcement-banner .announcement-archive-link,
+.view-announcement-banner-reach-home .announcement-archive-link,
+.view-announcement-banner-kcir-home .announcement-archive-link {
   font-weight: 600;
   font-size: 14px;
   line-height: 20px;
@@ -2937,7 +2977,19 @@ footer.submitted {
 .view-announcement-banner .field--name-field-post-link,
 .view-announcement-banner .field--name-field-link,
 .view-announcement-banner [data-field-name="field_post_link"],
-.view-announcement-banner [data-field-name="field_link"] {
+.view-announcement-banner [data-field-name="field_link"],
+.view-announcement-banner-reach-home .views-field-field-post-link,
+.view-announcement-banner-reach-home .views-field-field-link,
+.view-announcement-banner-reach-home .field--name-field-post-link,
+.view-announcement-banner-reach-home .field--name-field-link,
+.view-announcement-banner-reach-home [data-field-name="field_post_link"],
+.view-announcement-banner-reach-home [data-field-name="field_link"],
+.view-announcement-banner-kcir-home .views-field-field-post-link,
+.view-announcement-banner-kcir-home .views-field-field-link,
+.view-announcement-banner-kcir-home .field--name-field-post-link,
+.view-announcement-banner-kcir-home .field--name-field-link,
+.view-announcement-banner-kcir-home [data-field-name="field_post_link"],
+.view-announcement-banner-kcir-home [data-field-name="field_link"] {
   display: none !important;
 }
 

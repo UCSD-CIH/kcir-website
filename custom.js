@@ -8,6 +8,7 @@
     'broadcast': '53',
     'video': '49'
   };
+  var studyFocusCollapseTimers = new WeakMap();
 
   function buildPressTypeFilterUrl(termId) {
     var encodedId = encodeURIComponent(termId);
@@ -46,6 +47,60 @@
     link.removeAttribute('target');
     removeNoopener(link);
     return true;
+  }
+
+  function manageStudyFocusDetails(details) {
+    if (!details || details.dataset.pmStudyFocusBound === '1') return;
+
+    var checkboxSelector = 'input[type="checkbox"][name*="field_study_focus"]';
+    var checkboxes = details.querySelectorAll(checkboxSelector);
+    if (!checkboxes.length) return;
+
+    details.dataset.pmStudyFocusBound = '1';
+
+    function clearScheduledCollapse() {
+      var timer = studyFocusCollapseTimers.get(details);
+      if (timer) {
+        clearTimeout(timer);
+        studyFocusCollapseTimers.delete(details);
+      }
+    }
+
+    function scheduleCollapse(delay) {
+      clearScheduledCollapse();
+      var timer = setTimeout(function () {
+        details.removeAttribute('open');
+        studyFocusCollapseTimers.delete(details);
+      }, delay);
+      studyFocusCollapseTimers.set(details, timer);
+    }
+
+    function anyChecked() {
+      return !!details.querySelector(checkboxSelector + ':checked');
+    }
+
+    function handleChange() {
+      if (anyChecked()) {
+        clearScheduledCollapse();
+        details.setAttribute('open', 'open');
+      } else {
+        scheduleCollapse(500);
+      }
+    }
+
+    checkboxes.forEach(function (checkbox) {
+      checkbox.addEventListener('change', handleChange);
+      checkbox.addEventListener('focus', function () {
+        clearScheduledCollapse();
+        details.setAttribute('open', 'open');
+      });
+    });
+
+    if (anyChecked()) {
+      details.setAttribute('open', 'open');
+    } else {
+      details.removeAttribute('open');
+    }
   }
 
   // Syncs each Press & Media card's title and thumbnail with the external link field.
@@ -145,6 +200,11 @@
             var typeDetails = typeInput.closest('details');
             if (typeDetails) typeDetails.setAttribute('open', 'open');
           }
+        }
+
+        var studyFocusInput = filters.querySelector('input[name*="field_study_focus"]');
+        if (studyFocusInput) {
+          manageStudyFocusDetails(studyFocusInput.closest('details'));
         }
       });
     }
