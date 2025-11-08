@@ -1680,6 +1680,23 @@ input.button--primary.btn-primary.js-form-submit.form-submit:disabled {
   gap: var(--space-050);
 }
 
+.view-press-media .view-filters .form--inline {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: var(--space-150);
+}
+
+.view-press-media .view-filters .form--inline > *:not(.form-item-keys) {
+  flex: 0 0 auto;
+}
+
+.view-press-media .view-filters .form-item-keys {
+  flex: 1 1 320px;
+  min-width: 240px;
+  width: auto;
+}
+
 .view-filters .form-item-keys {
   position: relative;
   display: flex;
