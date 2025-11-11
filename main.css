@@ -2994,6 +2994,111 @@ footer.submitted {
 }
 
 /* ===================================
+   ANNOUNCEMENT BANNER — KCIR ALL PAGES
+   Keep styling isolated from home so we can diverge later
+=================================== */
+
+.view-announcement-banner-kcir-all {
+  margin-block: var(--space-400) 0;
+}
+
+.view-announcement-banner-kcir-all .views-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-250);
+  padding: var(--space-300);
+  border: var(--border-050) solid var(--color-border-strong);
+  border-radius: var(--radius-200);
+  background-color: var(--color-bg-turquoise-10);
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+.view-announcement-banner-kcir-all .views-field-nothing {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-200);
+  flex: 0 1 auto;
+  text-align: center;
+}
+
+.view-announcement-banner-kcir-all .views-field-nothing .field-content {
+  width: 100%;
+}
+
+.view-announcement-banner-kcir-all .field-content > a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-200);
+  color: var(--color-text-heading) !important;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400 !important;
+  font-size: 20px;
+  line-height: 32px;
+  letter-spacing: -0.005em;
+}
+
+.main-container .view-announcement-banner-kcir-all .field-content a:not(.btn):not(.btn-link):not(.nav-link),
+.main-container .view-announcement-banner-kcir-all .field-content a:not(.btn):not(.btn-link):not(.nav-link):visited,
+.main-container .text-formatted .view-announcement-banner-kcir-all .field-content a:not(.btn):not(.btn-link):not(.nav-link),
+.main-container .text-formatted .view-announcement-banner-kcir-all .field-content a:not(.btn):not(.btn-link):not(.nav-link):visited {
+  text-decoration: none !important;
+}
+
+.view-announcement-banner-kcir-all .field-content > a:hover,
+.view-announcement-banner-kcir-all .field-content > a:focus {
+  color: var(--color-text-heading);
+  text-decoration: none;
+}
+
+.view-announcement-banner-kcir-all .field-content > a:hover .announcement-banner-title,
+.view-announcement-banner-kcir-all .field-content > a:focus .announcement-banner-title {
+  color: var(--color-text-heading);
+  text-decoration: none;
+}
+
+.view-announcement-banner-kcir-all .announcement-banner-icon {
+  display: inline-block;
+  font-size: 24px;
+  line-height: 1;
+  text-decoration: none !important;
+  transition: transform 0.15s ease;
+}
+
+.view-announcement-banner-kcir-all .field-content > a:hover .announcement-banner-icon,
+.view-announcement-banner-kcir-all .field-content > a:focus .announcement-banner-icon {
+  transform: scale(1.1);
+}
+
+.view-announcement-banner-kcir-all .announcement-banner-title {
+  color: var(--color-text-heading) !important;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400 !important;
+  font-size: 20px;
+  line-height: 32px;
+  letter-spacing: -0.005em;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px !important;
+}
+
+.view-announcement-banner-kcir-all .views-row > .views-field:first-child {
+  flex: 0 1 auto;
+}
+
+.view-announcement-banner-kcir-all .views-field-field-post-link,
+.view-announcement-banner-kcir-all .views-field-field-link,
+.view-announcement-banner-kcir-all .field--name-field-post-link,
+.view-announcement-banner-kcir-all .field--name-field-link,
+.view-announcement-banner-kcir-all [data-field-name="field_post_link"],
+.view-announcement-banner-kcir-all [data-field-name="field_link"] {
+  display: none !important;
+}
+/* ===================================
    ACCORDION COMPONENT: COLOR & TEXT STYLING
    Apply accordion-color class only to collapse panel element to apply styles
 =================================== */
